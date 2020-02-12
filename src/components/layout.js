@@ -8,6 +8,7 @@ const Layout = props => {
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
         <div className="site-head-container">
+
           <a
             className="nav-burger"
             href={`#`}
@@ -24,6 +25,7 @@ const Layout = props => {
               </div>
             </div>
           </a>
+
           <nav id="swup" class="site-head-left">
             <ul className="nav" role="menu">
               <li className="nav-home nav-current" role="menuitem">
@@ -31,6 +33,9 @@ const Layout = props => {
               </li>
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
+              </li>
+              <li className="nav-work" role="menuitem">
+                <Link to={`/works`}>Work</Link>
               </li>
               <li className="nav-elements" role="menuitem">
                 <Link to={`/elements`}>Elements</Link>
@@ -43,7 +48,12 @@ const Layout = props => {
             </Link>
           </div>
           <div className="site-head-right">
-            <div className="social-links">
+            <ul className="nav" role="menu">
+              <li className="nav-home" role="menuitem">
+                <Link to={`/contact`}>Contact</Link>
+              </li>
+            </ul>
+{/*          <div className="social-links">
               <a
                 href="https://www.facebook.com"
                 title="Facebook"
@@ -60,15 +70,8 @@ const Layout = props => {
               >
                 Twitter
               </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
             </div>
+            */}
           </div>
         </div>
       </header>

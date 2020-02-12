@@ -507,7 +507,7 @@ body {
 /* ---------------------------------------------------------- */
 
 .post-content {
-    max-width: 720px;
+    max-width: 840px;
     margin: 0 auto;
     padding: 6vw 0;
 }
@@ -539,7 +539,6 @@ body {
 }
 
 .post-content-image {
-    margin: 4vw 0;
     position: relative;
     width: 75vw;
     min-width: 100%;

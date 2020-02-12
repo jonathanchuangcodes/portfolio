@@ -13,13 +13,12 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="ABout" keywords={[`portfolio`, `gatsby`, `javascript`, `react`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
+          <h2 id="introduction">
+            Clean, minimal, and deeply customisable. That's what Jonasan is all about!
           </h2>
           <figure className="kg-card kg-image-card kg-width-full">
             <Img

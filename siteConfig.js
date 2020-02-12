@@ -1,9 +1,9 @@
 module.exports = {
-  name: 'London',
-  shortName: 'London',
-  description: 'A bold, minimal theme for Gatsby, focused on clean typography & beautiful imagery',
+  name: 'JYC Designs',
+  shortName: 'JYC',
+  description: 'Hi there, My name is Jonathan, welcome to my portfolio',
   url: 'https://gatsby-london.netlify.com', // Domain of your site without prefix!
   prefix: '/',
-  author: 'Imed Adel',
-  twitter: 'Imed_Adel'
+  author: 'Jonathan Chuang',
+  linkedin: 'https://www.linkedin.com/in/jchuang02/'
 }

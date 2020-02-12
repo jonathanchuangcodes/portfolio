@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
@@ -37,10 +38,46 @@ class BlogPostTemplate extends React.Component {
             </div>
           )}
 
-          <div
-            className="post-content-body"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+
+          <div className="row">
+            {post.frontmatter.project_timeline && (
+              <div className="col">
+                <div
+                  style={{
+                    textAlign: "center",
+                  }}
+                >
+                  <h3>Project Timeline</h3>
+                  <p>{post.frontmatter.project_timeline}</p>
+                </div>
+              </div>
+            )}
+            {post.frontmatter.deliverable && (
+              <div className="col">
+                <div
+                  style={{
+                    textAlign: "center",
+                  }}
+                >
+                  <h3>Deliverable</h3>
+                  <p>{post.frontmatter.deliverable}</p>
+                </div>
+              </div>
+            )}
+            {post.frontmatter.my_role && (
+              <div className="col">
+                <div
+                  style={{
+                    textAlign: "center",
+                  }}
+                >
+                  <h3>My Role</h3>
+                  <p>{post.frontmatter.my_role}</p>
+                </div>
+              </div>
+            )}
+          </div>
+          <MDXRenderer className="post-content-body">{post.body}</MDXRenderer>
 
           <footer className="post-content-footer">
             {/* There are two options for how we display the byline/author-info.
@@ -64,10 +101,10 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -79,6 +116,9 @@ export const pageQuery = graphql`
             }
           }
         }
+        project_timeline
+        deliverable
+        my_role
       }
     }
   }
