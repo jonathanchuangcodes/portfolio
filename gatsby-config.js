@@ -1,14 +1,13 @@
 const urljoin = require("url-join")
-const siteConfig = require("./siteConfig")
 
 module.exports = {
   siteMetadata: {
-    title: siteConfig.name,
-    author: siteConfig.author,
-    description: siteConfig.description,
-    siteUrl: urljoin(siteConfig.url, siteConfig.prefix),
+    title: 'JYC Designs',
+    author: 'Jonathan Chuang',
+    description: 'Hi there, My name is Jonathan, welcome to my portfolio',
+    siteUrl: urljoin('https://jycdesigns.com', '/'),
     social: {
-      linkedin: siteConfig.linkedin,
+      linkedin: 'https://www.linkedin.com/in/jchuang02/',
     },
   },
   plugins: [
@@ -87,9 +86,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: siteConfig.name,
-        short_name: siteConfig.shortName,
-        start_url: siteConfig.prefix,
+        name: 'JYC Designs',
+        short_name: 'JYC',
+        start_url: '/',
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,

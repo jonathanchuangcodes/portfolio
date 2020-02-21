@@ -8,11 +8,12 @@ import PostCard from "../components/postCard"
 // import "../utils/global.scss"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
-//TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
+
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.AllMdx.edges
+  const posts = data.allMdx.edges
   let postCounter = 0
+
 
   return (
     <Layout title={siteTitle}>
@@ -20,7 +21,6 @@ const BlogIndex = ({ data }, location) => {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-
       <div className="post-feed">
         {posts.map(({ node }) => {
           postCounter++
@@ -46,7 +46,7 @@ const indexQuery = graphql`
         description
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx {
       edges {
         node {
           excerpt
@@ -54,9 +54,9 @@ const indexQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             description
+            type
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1360) {

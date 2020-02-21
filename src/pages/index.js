@@ -3,8 +3,7 @@ import { graphql, StaticQuery } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import PostCard from "../components/postCard";
-import FeaturedWork from "../components/FeaturedWork";
+import FeaturedWork from "../components/featuredWork";
 
 // import "../utils/global.scss"
 import "../utils/normalize.css";
@@ -13,15 +12,15 @@ import "../utils/css/screen.css";
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMdx.edges
+  const works = data.allMdx.edges
   let postCounter = 0
 
 
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="Featured works"
+        keywords={[`portfolio`, `gatsby`, `javascript`, `react`]}
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
@@ -33,14 +32,14 @@ const BlogIndex = ({ data }, location) => {
         </header>
       )}
       <div className="post-feed">
-        {posts.map(({ node }) => {
+        {works.map(({ node }) => {
           postCounter++
           return (
-            <PostCard
+            <FeaturedWork
               key={node.fields.slug}
               count={postCounter}
               node={node}
-              postClass={`post`}
+              postClass={`work`}
             />
           )
         })}
@@ -57,7 +56,7 @@ const indexQuery = graphql`
         description
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx {
       edges {
         node {
           excerpt
@@ -65,9 +64,11 @@ const indexQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             description
+            type
+            my_role
+            color
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1360) {

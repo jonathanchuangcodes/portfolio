@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
                     textAlign: "center",
                   }}
                 >
-                  <h3>Project Timeline</h3>
+                  <h3>Timeline</h3>
                   <p>{post.frontmatter.project_timeline}</p>
                 </div>
               </div>
@@ -107,7 +107,6 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
         thumbnail {
           childImageSharp {
