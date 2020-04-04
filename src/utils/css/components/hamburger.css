@@ -1,94 +1,77 @@
-/* https://github.com/jonsuh/hamburgers */
-.hamburger {
-    display: flex;
-    overflow: visible;
-    margin: 0;
-    padding: 2px 0;
-    border: 0;
-    color: inherit;
-    font: inherit;
-    text-transform: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: opacity 0.15s linear, filter 0.15s linear;
-}
-
-.hamburger-box {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 13px;
-}
-
-.hamburger-inner {
-    top: 50%;
-    display: block;
-    margin-top: -2px;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-    position: absolute;
-    width: 20px;
-    height: 1px;
-    background-color: color(var(--color-border) l(-20%));
-    border-radius: 4px;
-    transition: transform 0.15s ease;
-}
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: "";
-    display: block;
-}
-.hamburger-inner::before {
-    top: -6px;
-}
-.hamburger-inner::after {
-    bottom: -6px;
-}
-
 /*
- * Collapse
- */
-.hamburger--collapse .hamburger-inner {
-    top: auto;
-    bottom: 0;
-    transition-delay: 0.15s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition-duration: 0.15s;
-}
-.hamburger--collapse .hamburger-inner::after {
-    top: -12px;
-    transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-    opacity 0.1s linear;
-}
-.hamburger--collapse .hamburger-inner::before {
-    transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-    transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
+Error: Undefined variable: "$color-border".
+        on line 31 of C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\hamburger.scss
 
-.site-head-open .hamburger-inner,
-.site-head-open .hamburger-inner::before,
-.site-head-open .hamburger-inner::after {
-    background-color: var(--color-base);
-}
+26:   display: block;
+27:   margin-top: -2px;
+28:   position: absolute;
+29:   width: 20px;
+30:   height: 1px;
+31:   background-color: color($color-border l(-20%));
+32:   border-radius: 4px;
+33:   transition: transform 0.15s ease;
+34: 
+35:   &::before, &::after {
+36:     position: absolute;
 
-.site-head-open .hamburger-inner {
-    transition-delay: 0.32s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, -6px, 0) rotate(-45deg);
-}
-
-.site-head-open .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-    opacity 0.1s 0.27s linear;
-}
-.site-head-open .hamburger-inner::before {
-    top: 0;
-    transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-    transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: rotate(-90deg);
-}
+Backtrace:
+C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\hamburger.scss:31
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:186:in `perform_arg'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `block in _perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each_with_index'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$color-border\".\A         on line 31 of C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\hamburger.scss\A \A 26:   display: block;\A 27:   margin-top: -2px;\A 28:   position: absolute;\A 29:   width: 20px;\A 30:   height: 1px;\A 31:   background-color: color($color-border l(-20%));\A 32:   border-radius: 4px;\A 33:   transition: transform 0.15s ease;\A 34: \A 35:   &::before, &::after {\A 36:     position: absolute;"; }

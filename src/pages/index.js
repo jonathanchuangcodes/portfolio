@@ -5,17 +5,14 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import FeaturedWork from "../components/featuredWork";
 
-// import "../utils/global.scss"
 import "../utils/normalize.css";
-import "../utils/css/screen.css";
+import "../utils/sass/screen.scss";
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const works = data.allMdx.edges
-  let postCounter = 0
-
-
+  const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured);
+  let postCounter = 0;
   return (
     <Layout title={siteTitle}>
       <SEO
@@ -31,7 +28,7 @@ const BlogIndex = ({ data }, location) => {
 
         </header>
       )}
-      <div className="post-feed">
+      <div className="featured-works">
         {works.map(({ node }) => {
           postCounter++
           return (
@@ -69,6 +66,7 @@ const indexQuery = graphql`
             type
             my_role
             color
+            featured
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1360) {

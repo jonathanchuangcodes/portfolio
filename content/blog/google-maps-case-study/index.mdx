@@ -8,9 +8,10 @@ deliverable: Prototype
 my_role: UX/UI Designer, Wireframing and Prototyping, User flows, User Research
 type: Case Study
 color: '#1FA463'
+featured: true
 ---
 
-# When it comes to Navigation, Google is King 👑
+## When it comes to Navigation, Google is King 👑
 
 Google Maps has remained the go-to service that users trust to get them where they need to go for more than a decade. With more than [1 billion active users](https://www.theverge.com/2017/5/17/15654454/android-reaches-2-billion-monthly-active-users) and counting, it far overshadows its competition.
 
@@ -22,17 +23,26 @@ Utilizing a [wealth of data available to them](https://www.blog.google/products/
 
 Google designed this navigation experience with speed and efficiency in mind; not only is it super quick and easy to to start navigating, google utilizes all of the data available to them to get you where you need to go as fast as possible.
 
-![assets/Untitled.png](assets/Untitled.png)
+<div className="row">
+  <div className="col">
 
-Step 1: Search for Destination
+  ![Step 1: Search for Destination](assets/Untitled.png)
+  Step 1: Search for Destination
 
-![assets/Untitled-1.png](assets/Untitled-1.png)
+  </div>
+  <div className="col">
 
-Step 2: Confirm and Start Navigation
+  ![Step 2: Confirm and Start Navigation](assets/Untitled-1.png)
+  Step 2: Confirm and Start Navigation
 
-![assets/Untitled-2.png](assets/Untitled-2.png)
+  </div>
+  <div className="col">
 
-Step 3: Follow and Drive
+  ![Step 3: Follow and Drive](assets/Untitled-1.png)
+  Step 3: Follow and Drive
+
+  </div>
+</div>
 
 ## Time is Money
 
@@ -55,7 +65,7 @@ At worst, their design choice is a poor reflection of human needs.
 
 If you consider individual drivers, every driver is different in some way; they have distinct driving habits, road preferences, and other external factors that impact the route they may want to take. Google Maps current implementation makes the assumption that every driver is the same, with the same capabilities, priorities, and states. But there are certainly other use cases and driving situations in which the fastest route is not the most ideal route. Here are just a few examples:
 
-### 1. D**riving Long Distances**
+### 1. Driving Long Distances
 
 ![assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg](assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg)
 
@@ -118,7 +128,7 @@ If you're in a foreign country, this can be further exacerbated by differing dri
 
 ---
 
-# Approaching these Problems
+## Approaching these Problems
 
 Based on these few instances, you can clearly see how Google Map's prioritization of fastest routes can not only leave a user need unfulfilled, it can potentially be unsafe for users trying to navigate with the app. User safety should be a number one priority when designing a navigation experience involving such a dangerous activity, and based on user feedback, that isn't always the case.
 
@@ -147,7 +157,7 @@ For this use case, I wanted to keep the options as simple and minimal as possibl
 
 ![assets/preliminary_sketches_3.png](assets/preliminary_sketches_3.png)
 
-Use Case #2: D**rivers who will prefer easier, less complicated driving routes**
+Use Case #2: Drivers who will prefer easier, less complicated driving routes
 
 Adding an assistive driving mode option to the default navigation menu gives users the choice to enhance their navigation experience with more feedback and more simplified route options. This mode will be easily toggleable and essentially enables:
 
@@ -172,7 +182,7 @@ After gathering some feedback on these initial sketches from fellow google maps 
 
 For the full prototype experience, click the link here
 
-![assets/Google_Maps_Mockup_3_Screens.png](assets/Google_Maps_Mockup_3_Screens.png)
+![High fidelity mockups](assets/thumbnail.png)
 
 These metrics are extremely important considering the situations in which users would be interacting with them. For many of these screens, users may be driving on the road already, and minimizing distraction, confusion, and maximizing user understanding is pivotal to their success.
 
@@ -182,7 +192,7 @@ Here is a preview of the final prototype screens for each use case with a writte
 
 ## Case 1: Creating a Lightweight Road Trip Itinerary
 
-![assets/Google_Maps_Mockup_Case_1.png](assets/Google_Maps_Mockup_Case_1.png)
+![Google Maps Mockup Case 1](assets/Google-Maps-Mockup-Case-1.png)
 
 ### User Flow
 
@@ -194,7 +204,7 @@ Implementing a road trip planning experience into Google Maps would require a lo
 
 ## Case 2: Assisted Driving Mode
 
-![assets/Google_Maps_Mockup_Case_2.png](assets/Google_Maps_Mockup_Case_2.png)
+![Google Maps Mockup Case 2](assets/Google-Maps-Mockup-Case-2.png)
 
 ### User Flow
 
@@ -206,7 +216,7 @@ For this particular use case and the pain points expressed, it seemed easy enoug
 
 ## Case 3: Drivers in Unfamiliar Surroundings
 
-![assets/Google_Maps_Mockup_Case_3.png](assets/Google_Maps_Mockup_Case_3.png)
+![Google Maps Mockup Case 3](assets/Google-Maps-Mockup-Case-3.png)
 
 ### User Flow
 
@@ -216,7 +226,7 @@ Location based prompts would appear for any drivers starting up the navigation e
 
 I also mention "prioritizing the simplest routes" in case #2, but don't go into any detail of how that might work. Based on my limited algorithmic knowledge, it would probably involve finding the route with the least amount of turns (edges/nodes). Otherwise, what is to be considered a "simplified" route may not hold the same definition for every user. However in this case, I simply mean limiting the amount of driving maneuvers needed to get a user from point A to point B, instead of possibly going through whirlwind of turns, intersections, etc. to reach a destination a couple minutes faster.
 
-# Reflection
+## Reflection
 
 This case study was purely exploratory; any comprehensive testing and its resulting success metrics would be difficult to achieve and obtain considering the nature of the application. I treated this more as a thought exercise and an introductory study into the shortcomings of Google Maps' user experience.
 

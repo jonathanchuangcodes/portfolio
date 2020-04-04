@@ -1,100 +1,65 @@
-/* Styling for Ghost-specific elements
-/* ---------------------------------------------------------- */
+/*
+Error: Undefined variable: "$color-base".
+        on line 25 of C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\ghost.scss
 
-.kg-card {
-    margin: 7vw 0;
-}
+20: .kg-card figcaption {
+21:   padding: 1.5rem;
+22:   font-size: 1.3rem;
+23:   line-height: 1.4em;
+24:   font-weight: 600;
+25:   color: $color-base;
+26:   text-align: center;
+27:   opacity: 0.4;
+28: }
+29: 
+30: .kg-width-wide {
 
-.kg-embed-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 100%;
-}
-
-.kg-image {
-    max-width: 100%;
-    width: 100%;
-}
-
-.kg-card figcaption {
-    padding: 1.5rem;
-    font-size: 1.3rem;
-    line-height: 1.4em;
-    font-weight: 600;
-    color: var(--color-base);
-    text-align: center;
-    opacity: 0.4;
-}
-
-.kg-width-wide {
-    position: relative;
-    width: 75vw;
-    min-width: 100%;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
-}
-
-.kg-width-full {
-    position: relative;
-    width: 94vw;
-    min-width: 100%;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
-}
-
-.kg-width-full figcaption {
-    padding-left: 0;
-    padding-right: 0;
-    text-align: left;
-}
-
-@media (max-width: 800px) {
-    .kg-width-full {
-        width: 100vw;
-    }
-    .kg-width-full figcaption {
-        padding-left: 6vw;
-    }
-}
-
-.kg-gallery-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 75vw;
-    min-width: 100%;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    transform: translateX(calc(50vw - 50%));
-}
-
-.kg-gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.kg-gallery-image img {
-    display: block;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.kg-gallery-row:not(:first-of-type) {
-    margin: 0.75em 0 0 0;
-}
-
-.kg-gallery-image:not(:first-of-type) {
-    margin: 0 0 0 0.75em;
-}
-
-.kg-gallery-card + .kg-image-card.kg-width-wide,
-.kg-gallery-card + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
-    margin-top: calc( -7vw + 0.75em );
-}
+Backtrace:
+C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\ghost.scss:25
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$color-base\".\A         on line 25 of C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\ghost.scss\A \A 20: .kg-card figcaption {\A 21:   padding: 1.5rem;\A 22:   font-size: 1.3rem;\A 23:   line-height: 1.4em;\A 24:   font-weight: 600;\A 25:   color: $color-base;\A 26:   text-align: center;\A 27:   opacity: 0.4;\A 28: }\A 29: \A 30: .kg-width-wide {"; }

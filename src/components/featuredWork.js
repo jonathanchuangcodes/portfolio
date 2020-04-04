@@ -11,16 +11,15 @@ const featuredWork = props => {
       >
         <Link to={props.node.fields.slug} className="featured-work-link">
           <div className="featured-work-content">
-              <div className="featured-work-description" style={{backgroundColor: props.node.frontmatter.color}}>
+              <div className="featured-work-text" style={{backgroundColor: props.node.frontmatter.color}}>
                 <h2>
                   {props.node.frontmatter.title || props.node.fields.slug}
                 </h2>
-                <p>{props.node.frontmatter.type + ' | ' + props.node.frontmatter.my_role}</p>
-                <br></br>
-                <p>{props.node.frontmatter.description}</p>
+                <p className="featured-work-role">{props.node.frontmatter.type + ' | ' + props.node.frontmatter.my_role}</p>
+                <p className="featured-work-description">{props.node.frontmatter.description}</p>
               </div>
               <div className="featured-work-image">
-                <img src={props.node.frontmatter.thumbnail.childImageSharp.fluid.src}></img>
+                <img src={props.node.frontmatter.thumbnail.childImageSharp.fluid.src} alt={props.node.frontmatter.title + " thumbnail"}></img>
               </div>
           </div>
         </Link>
@@ -35,16 +34,15 @@ const featuredWork = props => {
       >
         <Link to={props.node.fields.slug} className="featured-work-link">
           <div className="featured-work-content">
-                <div className="featured-work-image">
-                  <img src={props.node.frontmatter.thumbnail.childImageSharp.fluid.src}></img>
-                </div>
-              <div className="featured-work-description" style={{backgroundColor: props.node.frontmatter.color}}>
+              <div className="featured-work-image">
+                <img src={props.node.frontmatter.thumbnail.childImageSharp.fluid.src} alt={props.node.frontmatter.title + " thumbnail"}></img>
+              </div>
+              <div className="featured-work-text" style={{backgroundColor: props.node.frontmatter.color}}>
                 <h2>
                   {props.node.frontmatter.title || props.node.fields.slug}
                 </h2>
-                <p>{props.node.frontmatter.type + ' | ' + props.node.frontmatter.my_role}</p>
-                <br></br>
-                <p>{props.node.frontmatter.description}</p>
+                <p className="featured-work-role">{props.node.frontmatter.type + ' | ' + props.node.frontmatter.my_role}</p>
+                <p className="featured-work-description">{props.node.frontmatter.description}</p>
               </div>
           </div>
         </Link>
