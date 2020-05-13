@@ -1,54 +1,87 @@
-/*
-Error: File to import not found or unreadable: variables.
-       Load path: C:/Users/jonat/Documents/github/portfolio/src/utils/sass/components
-        on line 3 of C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\actions.scss
+/* Actions
+/* ---------------------------------------------------------- */
+/* Variables
+/* ---------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap");
+/* Colours */
+/* Fonts */
+/* Breakpoints */
+/* Sizes */
+.actions {
+  display: flex;
+  cursor: default;
+  list-style: none;
+  margin: calc(2rem * -0.5);
+  padding-left: 0;
+}
+.actions li {
+  padding: 0 0 0 calc(2rem * 0.5);
+  vertical-align: middle;
+}
+.actions.special {
+  justify-content: center;
+  width: 100%;
+  margin-left: 0;
+}
+.actions.special li:first-child {
+  padding-left: 0;
+}
+.actions.stacked {
+  flex-direction: column;
+  margin-left: 0;
+}
+.actions.stacked li {
+  padding: calc(2rem * 0.65) 0 0 0;
+}
+.actions.stacked li:first-child {
+  padding-top: 0;
+}
+.actions.fit {
+  width: calc(100% + calc(2rem * 0.5));
+}
+.actions.fit li {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.actions.fit li > * {
+  width: 100%;
+}
+.actions.fit.stacked {
+  width: 100%;
+}
 
-1: /* Actions
-2: /* ---------------------------------------------------------- *\/
-3: @import 'variables';
-4: 
-5: .actions {
-6:   display: flex;
-7:   cursor: default;
-8:   list-style: none;
+@media (max-width: 480px) {
+  .actions:not(.fixed) {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100% !important;
+  }
+  .actions:not(.fixed) li {
+    flex: 1 1 auto;
+    padding: calc(2rem * 0.5) 0 0 0;
+    text-align: center;
+    width: 100%;
+  }
+  .actions:not(.fixed) li > * {
+    width: 100%;
+  }
+  .actions:not(.fixed) li:first-child {
+    padding-top: 0;
+  }
+  .actions:not(.fixed) li input[type=submit], .actions:not(.fixed) li input[type=reset], .actions:not(.fixed) li input[type=button] {
+    width: 100%;
+  }
+  .actions:not(.fixed) li button,
+.actions:not(.fixed) li .button {
+    width: 100%;
+  }
+  .actions:not(.fixed) li input[type=submit].icon:before, .actions:not(.fixed) li input[type=reset].icon:before, .actions:not(.fixed) li input[type=button].icon:before {
+    margin-left: -0.5rem;
+  }
+  .actions:not(.fixed) li button.icon:before,
+.actions:not(.fixed) li .button.icon:before {
+    margin-left: -0.5rem;
+  }
+}
 
-Backtrace:
-C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\actions.scss:3
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:45:in `import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: variables.\A        Load path: C:/Users/jonat/Documents/github/portfolio/src/utils/sass/components\A         on line 3 of C:\Users\jonat\Documents\github\portfolio\src\utils\sass\components\actions.scss\A \A 1: /* Actions\A 2: /* ---------------------------------------------------------- */\A 3: @import 'variables';\A 4: \A 5: .actions {\A 6:   display: flex;\A 7:   cursor: default;\A 8:   list-style: none;"; }
+/*# sourceMappingURL=actions.css.map */

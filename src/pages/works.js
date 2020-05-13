@@ -6,14 +6,13 @@ import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 
 // import "../utils/global.scss"
-import "../utils/normalize.css"
+import "../utils/css/normalize.css"
 import "../utils/css/screen.css"
 
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   let postCounter = 0
-
 
   return (
     <Layout title={siteTitle}>

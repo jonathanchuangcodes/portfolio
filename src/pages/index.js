@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import FeaturedWork from "../components/featuredWork";
 
-import "../utils/normalize.css";
+import "../utils/css/normalize.css";
 import "../utils/sass/screen.scss";
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template

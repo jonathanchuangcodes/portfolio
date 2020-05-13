@@ -2,12 +2,13 @@ const urljoin = require("url-join")
 
 module.exports = {
   siteMetadata: {
-    title: 'JYC Designs',
-    author: 'Jonathan Chuang',
-    description: 'Hi there, My name is Jonathan, welcome to my portfolio',
-    siteUrl: urljoin('https://jycdesigns.com', '/'),
+    title: "JYC Designs",
+    author: "Jonathan Chuang",
+    description: "Hi there, My name is Jonathan, welcome to my portfolio",
+    siteUrl: urljoin("https://jycdesigns.com", "/"),
     social: {
-      linkedin: 'https://www.linkedin.com/in/jchuang02/',
+      linkedin: "https://www.linkedin.com/in/jchuang02/",
+      dribbble: "https://dribbble.com/jchuang02",
     },
   },
   plugins: [
@@ -88,21 +89,8 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed-mdx`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'JYC Designs',
-        short_name: 'JYC',
-        start_url: '/',
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
-      },
-    },
+
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-
   ],
 }
