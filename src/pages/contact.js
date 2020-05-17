@@ -1,15 +1,12 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
-
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 import "../utils/css/normalize.css"
 import "../utils/css/screen.css"
 
 const ContactPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title;
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout title={siteTitle}>
@@ -19,8 +16,8 @@ const ContactPage = ({ data }, location) => {
             {/* Break */}
             <div className="col-12">
               <p>
-                Feel free to contact me about any opportunities, questions, feedback,
-                anything really. I am always up for a chat!
+                Feel free to contact me about any opportunities, questions,
+                feedback, anything really. I am always up for a chat!
               </p>
             </div>
             {/* Break */}

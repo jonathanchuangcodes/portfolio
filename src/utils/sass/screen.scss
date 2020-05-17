@@ -839,6 +839,31 @@ body {
 
 /* Post Content
 /* ---------------------------------------------------------- */
+.feedback {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0 3rem 0;
+  p {
+    font-size: 24pt;
+    text-align: center;
+  }
+}
+
+.scores {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  p {
+    font-size: 24pt;
+    margin: 3rem 0 0 0;
+  }
+
+  h3 {
+    font-size: 32pt;
+    color: teal;
+    margin: 0 0 3rem 0;
+  }
+}
 
 .post-content {
   max-width: 840px;
