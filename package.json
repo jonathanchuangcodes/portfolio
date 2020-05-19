@@ -1,12 +1,8 @@
 {
-  "name": "gatsby-london",
-  "private": true,
-  "description": "A custom, image-centric theme for Gatsby",
+  "name": "jyc-designs",
+  "private": false,
   "version": "1.0.0",
-  "author": "Imed Adel <aadelimed@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/ImedAdel/gatsby-london/issues"
-  },
+  "author": "Jonathan Chuang <jchuangsa@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
@@ -53,19 +49,11 @@
     "pretty-quick": "^1.10.0",
     "sass": "^1.26.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby",
-    "gallery",
     "blog",
     "portfolio"
   ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ImedAdel/gatsby-london.git"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
