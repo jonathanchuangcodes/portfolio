@@ -1,10 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
+import Lightbox from "../components/lightbox"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const shortcodes = { Lightbox }
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -37,7 +41,6 @@ class BlogPostTemplate extends React.Component {
               />
             </div>
           )}
-
 
           <div className="row">
             {post.frontmatter.project_timeline && (
@@ -77,8 +80,9 @@ class BlogPostTemplate extends React.Component {
               </div>
             )}
           </div>
-          <MDXRenderer className="post-content-body">{post.body}</MDXRenderer>
-
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer className="post-content-body">{post.body}</MDXRenderer>
+          </MDXProvider>
           <footer className="post-content-footer">
             {/* There are two options for how we display the byline/author-info.
         If the post has more than one author, we load a specific template

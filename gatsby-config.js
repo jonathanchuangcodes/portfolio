@@ -35,6 +35,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        defaultLayouts: {
+          blog: require.resolve("./src/components/work-layout.js"),
+        },
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import "../utils/css/components/lightbox.css"
@@ -8,8 +8,8 @@ class Lightbox extends Component {
     showLightbox: false,
   }
 
-  handleClick = (e, index) => {
-    e.preventDefault()
+  handleClick = () => {
+    console.log("you clicked me")
     this.setState({
       showLightbox: !this.state.showLightbox,
     })
@@ -20,37 +20,16 @@ class Lightbox extends Component {
   }
 
   render() {
-    const { images } = this.props
     const { showLightbox } = this.state
     return (
-      <Fragment>
-        <div className="gallery">
-          {images.map((img, i) => (
-            <div className="gallery-item" key={img.node.sizes.src}>
-              <a
-                href={img.node.sizes.src}
-                alt="Car Image"
-                onClick={e => this.handleClick(e, i)}
-              >
-                <Img className="lightbox-image" sizes={img.node.sizes} />
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <div
-          className="lightbox-modal"
-          visible={showLightbox}
-          onKeyUp={e => this.handleKeyDown(e)}
-        >
-          <div className="lightbox-content">
-            <Img />
-            <div className="controls">
-              <Button onClick={this.closeModal}>Close</Button>
-            </div>
+      <div className="lightbox-modal" visible={showLightbox}>
+        <div className="lightbox-content">
+          {this.props.children}
+          <div className="controls">
+            <button onClick={this.closeModal}>Close</button>
           </div>
         </div>
-      </Fragment>
+      </div>
     )
   }
 }

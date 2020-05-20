@@ -51,25 +51,6 @@ const Layout = props => {
                 <Link to={`/about`}>About</Link>
               </li>
             </ul>
-            {/*          <div className="social-links">
-              <a
-                href="https://www.facebook.com"
-                title="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-              <a
-                href="https://twitter.com"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </div>
-            */}
           </div>
         </div>
       </header>
