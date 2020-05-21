@@ -4,11 +4,11 @@ import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Lightbox from "../components/lightbox"
+import LightboxImage from "../components/LightboxImage"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const shortcodes = { Lightbox }
+const shortcodes = { LightboxImage }
 
 class BlogPostTemplate extends React.Component {
   render() {

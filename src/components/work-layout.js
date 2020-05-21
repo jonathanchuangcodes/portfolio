@@ -1,8 +1,8 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { Lightbox } from "./Lightbox"
+import { LightboxImage } from "./LightboxImage"
 
-const shortcodes = { Lightbox }
+const shortcodes = { LightboxImage }
 
 export default function Layout({ children }) {
   return <MDXProvider components={shortcodes}>{children}</MDXProvider>

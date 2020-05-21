@@ -8,7 +8,7 @@ deliverable: Strategy Document
 my_role: Wireframing, Research, User Testing, User Flows
 type: Course Project
 color: '#FF8138'
-featured: false
+featured: true
 ---
 
 
@@ -32,13 +32,28 @@ Fundamentally, a bottom up architecture strives for "every page to be page one".
 
 Each track page has a unique waveform display, allowing users to comment on timestamps. There is also a unique description provided under this waveform and comment system.
 
-![assets/Untitled.png](assets/Untitled.png)
+<LightboxImage
+  images={[
+    {
+      title: "songpage.png",
+      caption: "Song/Track Page"
+    }
+  ]}
+/>
 
 ### 2. Album/Playlist Page
 
 Each playlist or album page includes information like the number of tracks, the total time, and a unique tracklist.
 
-![assets/Untitled-1.png](assets/Untitled-1.png)
+<LightboxImage
+  images={[
+    {
+      title: "albumpage.png",
+      caption: "Album/Playlist Page"
+    },
+  ]}
+/>
+
 
 For both these pages, you can see bits of information like the album art, the genre tag, and the recommendations section that remain identical on the page, only changing depending on content being displayed. These pages share the same type of information, and SoundCloud ensures that this information shows up exactly the same way, even if the content on the page is different.
 
@@ -52,15 +67,36 @@ Top down architecture starts at a website's primary navigation, and SoundCloud's
 
 1. A Home page gives users instant access to all of the trending content on SoundCloud, as well as other discovery focused, personalized content like "Artists you should know", "Future Sounds", "New Arrivals", and many more.
 
-![assets/Untitled-2.png](assets/Untitled-2.png)
+<LightboxImage
+  images={[
+    {
+      title: "homepage.png",
+      caption: "Home Page"
+    },
+  ]}
+/>
 
 2. A Stream page gives users access to all of the content that they are following, allowing them to keep track of any new releases from their favorite artists on SoundCloud.
 
-![assets/Untitled-3.png](assets/Untitled-3.png)
+<LightboxImage
+  images={[
+    {
+      title: "streampage.png",
+      caption: "Stream Page"
+    },
+  ]}
+/>
 
 3. A Library page gives users instant access to any content that they have saved/liked, including tracks, albums, and playlists among many others.
 
-![assets/Untitled-4.png](assets/Untitled-4.png)
+<LightboxImage
+  images={[
+    {
+      title: "librarypage.png",
+      caption: "Library Page"
+    },
+  ]}
+/>
 
 These 3 pages all exemplify SoundCloud's understanding of their user's needs. Using a music discovery page as their homepage puts the unique value of SoundCloud's platform at the forefront of their user experience. In contrast, the Stream and Library pages put the focus on content users are already familiar with, with each enabling the user to explore this content in a different way. These pages compliment one another, putting focus on two critical needs for music listeners; the ability to discover new music and the ability to listen to music they already enjoy in a personalized setting.
 
@@ -68,7 +104,14 @@ These 3 pages all exemplify SoundCloud's understanding of their user's needs. Us
 
 There is only one instance of local navigation on the SoundCloud website, and this instance is naturally found in the Library page. The content that users can choose to save to their library like tracks, playlists and albums require distinctions that allow users to quickly find what they are looking for, and the local navigation on the page performs this exact function. SoundCloud even provides an Overview page in a user's library, consisting of carousels of content that was most recently played or liked by the user.
 
-![assets/Untitled-4.png](assets/Untitled-4.png)
+<LightboxImage
+  images={[
+    {
+      title: "library.png",
+      caption: "Local Navigation"
+    },
+  ]}
+/>
 
 ---
 
@@ -80,7 +123,14 @@ SoundCloud makes good choices in terms of the pages they choose to show in their
 
 One example of this poor labeling is on their website's global navigation; the Stream tab.
 
-![assets/Untitled-5.png](assets/Untitled-5.png)
+<LightboxImage
+  images={[
+    {
+      title: "globalnav.png",
+      caption: "Global Navigation"
+    },
+  ]}
+/>
 
 This label choice seems poor as it is too vague, and gives little indication as to what kind of content a user should be expecting on that page; the Stream page actually consists of musical content from a user's followed artists. The label "Stream" might be helpful if that was the only place on their website to listen to music and consume content, but that is not the case. Regardless, one should be able to assume that they can stream ****music anywhere on a music **streaming** platform.
 
@@ -88,7 +138,14 @@ Instead, some more suitable choices could be "My Artists" or "My Follows", anyth
 
 Another example of poor labeling is shown here at the local navigation of the Library page.
 
-![assets/Untitled-6.png](assets/Untitled-6.png)
+<LightboxImage
+  images={[
+    {
+      title: "localnav.png",
+      caption: "Local Navigation",
+    },
+  ]}
+/>
 
 Specifically, SoundCloud chose to label the second tab as "Likes". This label is not inaccurate, but it is too broad. This page only contains **tracks** that a user may have liked, but other content such as albums and playlists can also be liked by a user.
 
@@ -102,21 +159,19 @@ of the improvements we made into a short prototype that can be found
 [here](https://xd.adobe.com/view/e31902e5-d73f-4ba2-4f43-ade2e29e27f9-9528/?fullscreen).
 You can also click on the images below to view them in more detail.
 
-<div className="row">
-  <div className="col">
-
-  ![New Discover Tab](assets/Discover_cropped.png)
-
-  </div>
-  <div className="col">
-
-  ![New Library](assets/Library2x.png)
-
-  </div>
-
-  <div className="col">
-
-  ![New Homepage](assets/Home2x.png)
-
-  </div>
-</div>
+<LightboxImage
+  images={[
+    {
+      title: "newdiscover.png",
+      caption: "New Discover Tab"
+    },
+    {
+      title: "newlibrary.png",
+      caption: "New Library"
+    },
+    {
+      title: "newhome.png",
+      caption: "New Homepage"
+    }
+  ]}
+/>
