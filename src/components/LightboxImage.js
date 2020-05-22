@@ -9,7 +9,7 @@ const LightboxImage = (props) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback(({index}) => {
+  const openLightbox = useCallback((event, {photo, index}) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -72,12 +72,12 @@ const LightboxImage = (props) => {
   return (
     <div>
       <Gallery direction={direction} columns={columns} className="lightbox-gallery" photos={filteredPhotos}  onClick = {openLightbox} />
-      <ModalGateway ModalGateway >
+      <ModalGateway>
         {viewerIsOpen ? (
-          <Modal onClose = {closeLightbox} >
+          <Modal allowFullscreen={false} preventScroll={false} onClose ={closeLightbox}>
             <Carousel
               currentIndex = {currentImage}
-              views = {filteredPhotos.map((x) => ({
+              views = {filteredPhotos.map(x => ({
                 ...x,
                 srcset: x.srcSet,
                 caption: x.caption,
