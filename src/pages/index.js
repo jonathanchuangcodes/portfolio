@@ -11,7 +11,7 @@ import "../utils/sass/screen.scss";
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured);
+  const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured).sort();
   let postCounter = 0;
   return (
     <Layout title={siteTitle}>

@@ -67,12 +67,13 @@ const LightboxImage = (props) => {
         edges {
           node {
             childImageSharp {
-              fluid {
+              fluid(webpQuality: 10) {
                 src
                 srcSet
                 presentationHeight
                 presentationWidth
                 originalName
+                originalImg
               }
             }
           }
@@ -88,9 +89,10 @@ const LightboxImage = (props) => {
       presentationHeight,
       presentationWidth,
       originalName,
+      originalImg,
     } = photo.node.childImageSharp.fluid;
     return {
-      src,
+      src: originalImg,
       srcSet,
       width: presentationWidth,
       height: presentationHeight,
@@ -104,6 +106,8 @@ const LightboxImage = (props) => {
       caption: image.caption ? image.caption : photo.title,
     };
   });
+  console.log(filteredPhotos);
+
 
   return (
     <div>
@@ -117,10 +121,21 @@ const LightboxImage = (props) => {
                 navigationPrev: navButtonStyles,
                 navigationNext: navButtonStyles,
                 headerClose: closeButtonStyles,
-                container: base => ({
+                view: base => ({
                   ...base,
-                  overflowY: 'auto',
-                })
+                  alignItems: 'center',
+                  display: 'flex ',
+                  height: 'calc(100vh - 54px)',
+                  justifyContent: 'center',
+
+                  '@media(min - width: 770 px)': {
+                    padding: 20,
+                  },
+
+                  '& > img': {
+                    maxHeight: 'calc(100vh - 94px)',
+                  },
+                }),
               }}
               views = {filteredPhotos.map(x => ({
                 ...x,
