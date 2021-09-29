@@ -50,7 +50,7 @@ const ContactPage = ({ data }, location) => {
 }
 
 const indexQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -60,9 +60,7 @@ const indexQuery = graphql`
       relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1360) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

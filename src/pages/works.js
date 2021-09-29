@@ -25,7 +25,7 @@ const BlogIndex = ({ data }, location) => {
           postCounter++
           return (
             <PostCard
-              key={node.fields.slug}
+              key={node.slug}
               count={postCounter}
               node={node}
               postClass={`post`}
@@ -38,7 +38,7 @@ const BlogIndex = ({ data }, location) => {
 }
 
 const indexQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -49,9 +49,6 @@ const indexQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
             title
             description
@@ -59,12 +56,11 @@ const indexQuery = graphql`
             color
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 1360) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
               }
             }
           }
+          slug
         }
       }
     }

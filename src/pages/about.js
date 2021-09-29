@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,11 +22,12 @@ const AboutPage = ({ data }, location) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h1 id="name">Jonathan Chuang</h1>
-          <h2 id="titles">Designer, Programmer, Curious Creative.</h2>
+          <h2 id="titles">Designer, Developer</h2>
           <div id="bio-container">
             <div id="profile-container">
-              <Img
-                fluid={data.myFace.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.myFace.childImageSharp.gatsbyImageData}
+                alt="profile picture"
                 className="kg-image profile-pic"
               />
             </div>
@@ -35,19 +36,19 @@ const AboutPage = ({ data }, location) => {
                 href={data.site.siteMetadata.social.linkedin}
                 className="icon-link"
               >
-                <Img
-                  fixed={data.linkedinIcon.childImageSharp.fixed}
+                <GatsbyImage
+                  image={data.linkedinIcon.childImageSharp.gatsbyImageData}
                   alt="linkedin icon link"
-                ></Img>
+                />
               </a>
               <a
                 href={data.site.siteMetadata.social.dribbble}
                 className="icon-link"
               >
-                <Img
-                  fixed={data.dribbbleIcon.childImageSharp.fixed}
+                <GatsbyImage
+                  image={data.dribbbleIcon.childImageSharp.gatsbyImageData}
                   alt="dribbble icon link"
-                ></Img>
+                />
               </a>
             </div>
             <p id="bio">
@@ -100,7 +101,7 @@ const AboutPage = ({ data }, location) => {
 }
 
 const indexQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -112,23 +113,32 @@ const indexQuery = graphql`
     }
     myFace: file(relativePath: { eq: "mahface.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320, maxHeight: 480) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          placeholder: BLURRED
+          width: 320
+          height: 480
+          layout: FULL_WIDTH
+        )
       }
     }
     linkedinIcon: file(relativePath: { eq: "linkedin-icon.png" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          placeholder: BLURRED
+          width: 50
+          height: 50
+          layout: FIXED
+        )
       }
     }
     dribbbleIcon: file(relativePath: { eq: "dribbble-ball-icon.png" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          placeholder: BLURRED
+          width: 50
+          height: 50
+          layout: FIXED
+        )
       }
     }
   }

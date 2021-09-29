@@ -30,11 +30,6 @@ const Layout = props => {
               <li className="nav-home" role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
-              {/*{" "}
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
-              </li>{" "}
-              */}
             </ul>
           </nav>
           <div className="site-head-center">

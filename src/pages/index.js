@@ -1,31 +1,29 @@
-import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import FeaturedWork from "../components/featuredWork";
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import FeaturedWork from "../components/featuredWork"
 
-import "../utils/css/normalize.css";
-import "../utils/sass/screen.scss";
+import "../utils/css/normalize.css"
+import "../utils/sass/screen.scss"
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured);
-  let postCounter = 0;
+  const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured)
+  let postCounter = 0
   return (
     <Layout title={siteTitle}>
       <SEO
         title="Featured works"
         keywords={[`portfolio`, `gatsby`, `javascript`, `react`]}
       />
-      {/* <Bio /> */}
       {data.site.siteMetadata.description && (
         <header className="page-head">
           <h2 className="page-head-title">
             {data.site.siteMetadata.description}
           </h2>
-
         </header>
       )}
       <div className="featured-works">
@@ -33,7 +31,7 @@ const BlogIndex = ({ data }, location) => {
           postCounter++
           return (
             <FeaturedWork
-              key={node.fields.slug}
+              key={node.slug}
               count={postCounter}
               node={node}
               postClass={`work`}
@@ -46,7 +44,7 @@ const BlogIndex = ({ data }, location) => {
 }
 
 const indexQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -57,9 +55,7 @@ const indexQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
+          slug
           frontmatter {
             title
             description
@@ -69,9 +65,7 @@ const indexQuery = graphql`
             featured
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 1360) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
           }

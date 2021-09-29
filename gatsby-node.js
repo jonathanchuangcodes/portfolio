@@ -8,14 +8,11 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMdx(
-          limit: 1000
-        ) {
+        allMdx(limit: 1000) {
           edges {
             node {
-              fields {
-                slug
-              }
+              slug
+
               frontmatter {
                 title
               }
@@ -37,10 +34,10 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node
 
       createPage({
-        path: post.node.fields.slug,
+        path: post.node.slug,
         component: blogPost,
         context: {
-          slug: post.node.fields.slug,
+          slug: post.node.slug,
           previous,
           next,
         },
