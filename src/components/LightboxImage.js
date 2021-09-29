@@ -19,6 +19,7 @@ const LightboxImage = props => {
   // }
 
   const { images } = props
+
   // TODO: find a better way to query for both the large and small image
   const data = useStaticQuery(graphql`
     query LightboxImageQuery {
