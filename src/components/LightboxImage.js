@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import { useStaticQuery, graphql } from "gatsby"
 import "../utils/css/components/lightbox.css"
