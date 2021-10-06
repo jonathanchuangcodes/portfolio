@@ -4,22 +4,7 @@ import Gallery from "@browniebroke/gatsby-image-gallery"
 import { useStaticQuery, graphql } from "gatsby"
 import "../utils/css/components/lightbox.css"
 
-const LightboxImage = props => {
-  // const [currentImage, setCurrentImage] = useState(0)
-  // const [viewerIsOpen, setViewerIsOpen] = useState(false)
-
-  // const openLightbox = useCallback((event, { photo, index }) => {
-  //   setCurrentImage(index)
-  //   setViewerIsOpen(true)
-  // }, [])
-
-  // const closeLightbox = () => {
-  //   setCurrentImage(0)
-  //   setViewerIsOpen(false)
-  // }
-
-  const { images } = props
-
+export default function LightboxImage({ images }) {
   // TODO: find a better way to query for both the large and small image
   const data = useStaticQuery(graphql`
     query LightboxImageQuery {
@@ -65,13 +50,3 @@ const LightboxImage = props => {
     />
   )
 }
-
-LightboxImage.defaultProps = {
-  images: {},
-}
-
-LightboxImage.propTypes = {
-  images: PropTypes.array,
-}
-
-export default LightboxImage
