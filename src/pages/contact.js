@@ -1,11 +1,10 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-import "../utils/css/normalize.css"
-import "../utils/css/screen.css"
+import "../styles/sass/screen.scss"
 
-const ContactPage = ({ data }, location) => {
+export default function ContactPage({ data }, location)  {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -49,7 +48,7 @@ const ContactPage = ({ data }, location) => {
   )
 }
 
-const indexQuery = graphql`
+export const contactQuery = graphql`
   {
     site {
       siteMetadata {
@@ -65,12 +64,3 @@ const indexQuery = graphql`
     }
   }
 `
-
-export default props => (
-  <StaticQuery
-    query={indexQuery}
-    render={data => (
-      <ContactPage location={props.location} data={data} {...props} />
-    )}
-  />
-)

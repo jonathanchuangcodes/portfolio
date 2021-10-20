@@ -1,10 +1,9 @@
 import React from "react"
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import { useStaticQuery, graphql } from "gatsby"
-import "../utils/css/components/lightbox.css"
+import "../styles/sass/components/lightbox.scss"
 
 export default function LightboxImage({ images }) {
-  // TODO: find a better way to query for both the large and small image
   const data = useStaticQuery(graphql`
     query LightboxImageQuery {
       allFile(filter: { extension: { regex: "/jpeg|jpg|png/" } }) {
@@ -12,7 +11,7 @@ export default function LightboxImage({ images }) {
           node {
             childImageSharp {
               thumb: gatsbyImageData(placeholder: BLURRED)
-              full: gatsbyImageData(layout: FULL_WIDTH)
+              full: gatsbyImageData(layout: CONSTRAINED)
             }
             base
           }
@@ -44,8 +43,9 @@ export default function LightboxImage({ images }) {
   return (
     <Gallery
       images={filteredPhotos}
-      colWidth={(1 / images.length) * 100}
-      mdColWidth={(1 / images.length) * 100}
+      colWidth={(1 / (images.length === 4 ? 2 : images.length)) * 100}
+      mdColWidth={(1 / (images.length === 4 ? 2: images.length)) * 100}
+      className="gallery-modal"
     />
   )
 }

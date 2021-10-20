@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import "../styles/sass/featuredWork.scss"
 
-const featuredWork = props => {
+export default function featuredWork(props) {
   return (
     <div
       className={`featured-work ${props.postClass} ${
@@ -25,18 +26,18 @@ const featuredWork = props => {
               {props.node.frontmatter.description}
             </p>
           </div>
-          <div className="featured-work-image">
-            <GatsbyImage
-              image={
-                props.node.frontmatter.thumbnail.childImageSharp.gatsbyImageData
-              }
-              alt=""
-            ></GatsbyImage>
-          </div>
+          <GatsbyImage
+            image={
+              props.node.frontmatter.thumbnail.childImageSharp.gatsbyImageData
+            }
+            alt=""
+            className="featured-work-image-container"
+            imgClassName="featured-work-image"
+            objectFit="contain"
+            objectPosition="50% 50%"
+          ></GatsbyImage>
         </div>
       </Link>
     </div>
   )
 }
-
-export default featuredWork

@@ -1575,8 +1575,13 @@ body {
   margin: 3rem 0 3rem 0;
 }
 .feedback p {
-  font-size: 24pt;
+  font-size: 18pt;
+  line-height: 24pt;
   text-align: center;
+}
+
+.source {
+  color: #3eb0ef;
 }
 
 .scores {

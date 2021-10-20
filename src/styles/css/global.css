@@ -1,40 +1,26 @@
+@charset "UTF-8";
 /* Reset
 /* ---------------------------------------------------------- */
-@import 'variables';
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
+/* Variables
+/* ---------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap");
+/* Colours */
+/* Fonts */
+/* Breakpoints */
+/* Sizes */
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote {
-  &:before, &:after {
-    content: "";
-    content: none;
-  }
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
 }
 
-q {
-  &:before, &:after {
-    content: "";
-    content: none;
-  }
+q:before, q:after {
+  content: "";
+  content: none;
 }
 
 table {
@@ -55,31 +41,27 @@ html {
 
 * {
   box-sizing: inherit;
-
-  &:before, &:after {
-    box-sizing: inherit;
-  }
+}
+*:before, *:after {
+  box-sizing: inherit;
 }
 
 a {
   background-color: transparent;
-
-  &:active, &:hover {
-    outline: 0;
-  }
+}
+a:active, a:hover {
+  outline: 0;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
-i, em, dfn {
+i,
+em,
+dfn {
   font-style: italic;
-}
-
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
 }
 
 small {
@@ -117,12 +99,19 @@ mark {
   background-color: #fdffb6;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   margin: 0;
   color: inherit;
   font: inherit;
@@ -138,19 +127,19 @@ select {
   text-transform: none;
 }
 
-button, html input[type="button"] {
+button,
+html input[type=button] {
   cursor: pointer;
   -webkit-appearance: button;
 }
 
-input {
-  &[type="reset"], &[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: button;
-  }
+input[type=reset], input[type=submit] {
+  cursor: pointer;
+  -webkit-appearance: button;
 }
 
-button[disabled], html input[disabled] {
+button[disabled],
+html input[disabled] {
   cursor: default;
 }
 
@@ -160,36 +149,28 @@ button::-moz-focus-inner {
 }
 
 input {
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-
   line-height: normal;
-
-  &:focus {
-    outline: none;
-  }
-
-  &[type="checkbox"], &[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-  }
-
-  &[type="number"] {
-    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
-      height: auto;
-    }
-  }
-
-  &[type="search"] {
-    box-sizing: content-box;
-    -webkit-appearance: textfield;
-
-    &::-webkit-search-cancel-button, &::-webkit-search-decoration {
-      -webkit-appearance: none;
-    }
-  }
+}
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input:focus {
+  outline: none;
+}
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type=search] {
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 legend {
@@ -206,14 +187,14 @@ table {
   border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
   padding: 0;
 }
 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -223,7 +204,7 @@ html {
 
 body {
   overflow-x: hidden;
-  color: color($color-base l(+20%));
+  color: color(#131313 l(20%));
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
   line-height: 1.6em;
@@ -242,6 +223,13 @@ body {
   background: #cbeafb;
 }
 
+caption {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
 hr {
   position: relative;
   display: block;
@@ -250,63 +238,69 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid color($color-border l(+10%));
+  border-top: 1px solid #131313;
 }
 
-audio, canvas, iframe, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
   vertical-align: middle;
 }
 
+p, li, ol, ul {
+  font-size: 16pt;
+}
+
 p {
-  margin: 0 0 1.5em 0;
+  padding: 1rem;
 }
 
 blockquote {
   margin: 0 0 1.5em 0;
   margin: 1.5em 0;
   padding: 0 1.6em 0 1.6em;
-  border-left: $color-bg 0.5em solid;
-
-  p {
-    margin: 0.8em 0;
-    font-size: 1.2em;
-    font-weight: 300;
-  }
-
-  small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;
-    font-size: 0.9em;
-    opacity: 0.8;
-
-    &:before {
-      content: "\2014 \00A0";
-    }
-  }
-
-  cite {
-    font-weight: bold;
-
-    a {
-      font-weight: normal;
-    }
-  }
+  border-left: #f8f8f8 0.5em solid;
+}
+blockquote p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+blockquote small:before {
+  content: "— ";
+}
+blockquote cite {
+  font-weight: bold;
+}
+blockquote cite a {
+  font-weight: normal;
 }
 
 /* Quotation marks */
-
 a {
-  color: color($color-primary l(-5%));
+  color: color(#3eb0ef l(-5%));
   text-decoration: none;
   transition: 0.4s ease;
-
-  &:hover {
-    text-decoration: underline;
-    transition: 0.2s ease;
-  }
+}
+a:hover {
+  text-decoration: underline;
+  transition: 0.2s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   line-height: 1.4;
   font-weight: 700;
@@ -315,8 +309,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin: 0 0 0.5em 0;
-  font-size: 5.7rem;
+  font-size: 4.5rem;
   font-weight: 800;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
@@ -324,10 +319,10 @@ h1 {
     font-size: 2.7rem;
   }
 }
-
 h2 {
   margin: 1em 0 0.5em 0;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 @media (max-width: 500px) {
@@ -335,10 +330,9 @@ h2 {
     font-size: 2rem;
   }
 }
-
 h3 {
-  margin: 1.5em 0 1em 0;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 @media (max-width: 500px) {
@@ -346,18 +340,19 @@ h3 {
     font-size: 1.8rem;
   }
 }
-
 h4 {
   margin: 1.5em 0 1em 0;
-  font-size: 2.6rem;
+  font-size: 2.5rem;
 }
 
 h5 {
   margin: 1.5em 0 1em 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 h6 {
   margin: 1.5em 0 1em 0;
-  font-size: 2.2rem;
+  font-size: 1rem;
 }
+
+/*# sourceMappingURL=global.css.map */

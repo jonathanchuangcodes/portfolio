@@ -32,13 +32,12 @@ export default function blogPostTemplate({ data }) {
         )}
 
         {post.frontmatter.thumbnail && (
-          <div className="post-content-image">
-            <GatsbyImage
-              image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
-              className="kg-image"
-              alt={post.frontmatter.title}
-            />
-          </div>
+          <GatsbyImage
+            className="post-content-image"
+            image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
+            alt={post.frontmatter.title}
+            objectFit="contain"
+          />
         )}
 
         <div className="row">
@@ -110,7 +109,7 @@ export const pageQuery = graphql`
         description
         thumbnail {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
         project_timeline

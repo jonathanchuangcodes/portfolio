@@ -1,18 +1,15 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FeaturedWork from "../components/featuredWork"
 
-import "../utils/css/normalize.css"
-import "../utils/sass/screen.scss"
+import "../styles/sass/screen.scss"
 
-//TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
-const BlogIndex = ({ data }, location) => {
+export default function HomePage({ data })   {
   const siteTitle = data.site.siteMetadata.title
   const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured)
-  let postCounter = 0
 
   return (
     <Layout title={siteTitle}>
@@ -29,11 +26,9 @@ const BlogIndex = ({ data }, location) => {
       )}
       <div className="featured-works">
         {works.map(({ node }) => {
-          postCounter++
           return (
             <FeaturedWork
               key={node.slug}
-              count={postCounter}
               node={node}
               postClass={`work`}
             />
@@ -44,7 +39,7 @@ const BlogIndex = ({ data }, location) => {
   )
 }
 
-const indexQuery = graphql`
+export const HomePageQuery = graphql`
   {
     site {
       siteMetadata {
@@ -75,12 +70,3 @@ const indexQuery = graphql`
     }
   }
 `
-
-export default props => (
-  <StaticQuery
-    query={indexQuery}
-    render={data => (
-      <BlogIndex location={props.location} props data={data} {...props} />
-    )}
-  />
-)

@@ -1,15 +1,13 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql  } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 
-// import "../utils/global.scss"
-import "../utils/css/normalize.css"
-import "../utils/css/screen.css"
+import "../styles/sass/screen.scss"
 
-const BlogIndex = ({ data }, location) => {
+export default function Works({ data }) {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   let postCounter = 0
@@ -20,7 +18,7 @@ const BlogIndex = ({ data }, location) => {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <div className="post-feed">
+      <div className="works-feed">
         {posts.map(({ node }) => {
           postCounter++
           return (
@@ -37,7 +35,7 @@ const BlogIndex = ({ data }, location) => {
   )
 }
 
-const indexQuery = graphql`
+export const WorksQuery = graphql`
   {
     site {
       siteMetadata {
@@ -66,12 +64,3 @@ const indexQuery = graphql`
     }
   }
 `
-
-export default props => (
-  <StaticQuery
-    query={indexQuery}
-    render={data => (
-      <BlogIndex location={props.location} props data={data} {...props} />
-    )}
-  />
-)

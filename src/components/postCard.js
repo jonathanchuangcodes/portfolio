@@ -22,9 +22,9 @@ const postCard = props => {
             className="post-card-text"
             style={{ backgroundColor: props.node.frontmatter.color }}
           >
-            <h2 className="post-card-title">
+            <h1 className="post-card-title">
               {props.node.frontmatter.title || props.node.slug}
-            </h2>
+            </h1>
             <p className="post-card-type">
               {props.node.frontmatter.type || ""}
             </p>
