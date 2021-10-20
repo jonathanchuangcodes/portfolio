@@ -51,8 +51,8 @@ export default function AboutPage({ data }) {
               </a>
             </div>
             <p id="bio">
-              Hi, I'm Jonathan, A Developer and Designer creating user centered
-              applications and products.
+              Hi, I'm Jonathan, a front-end developer with UX design training. I can help 
+              bridge the gap between developer and design teams.
             </p>
           </div>
         </div>
