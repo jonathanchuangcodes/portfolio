@@ -3,7 +3,17 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap');
 
     /* Colours */
-    $color-primary: #3eb0ef;
+    $color-primary--100: #E5A7A9;
+    $color-primary--200: #E0898D;
+    $color-primary--300: #DA6A71;
+    $color-primary--400: #D24958;
+    $color-primary--500: #C92040;
+    $color-primary--600: #A92137;
+    $color-primary--700: #882531;
+    $color-primary--800: #6B232A;
+    $color-primary--900: #411B1D;
+    $color-primary: #C8143C;
+    
     $color-base: #131313;
     $color-border: #ddd;
     $color-bg: #f8f8f8;

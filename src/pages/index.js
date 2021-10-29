@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import FeaturedWork from "../components/featuredWork"
 
 import "../styles/sass/screen.scss"
+import Loading from "../components/loading"
 
 export default function HomePage({ data })   {
   const siteTitle = data.site.siteMetadata.title
@@ -24,6 +25,7 @@ export default function HomePage({ data })   {
           </h2>
         </header>
       )}
+      {/* <Loading /> */}
       <div className="featured-works">
         {works.map(({ node }) => {
           return (
