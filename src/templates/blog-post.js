@@ -16,10 +16,6 @@ export default function blogPostTemplate({ data }) {
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
       <article
         className={`post-content ${post.frontmatter.thumbnail || `no-image`}`}
       >

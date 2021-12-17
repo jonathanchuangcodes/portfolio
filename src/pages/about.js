@@ -12,11 +12,6 @@ export default function AboutPage({ data }) {
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="About"
-        keywords={[`portfolio`, `gatsby`, `javascript`, `react`]}
-      />
-
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h1 id="name">Jonathan Chuang</h1>

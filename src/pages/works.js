@@ -13,10 +13,6 @@ export default function Works({ data }) {
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
       <div className="works-feed">
         {posts.map(({ node }) => {
           postCounter++
