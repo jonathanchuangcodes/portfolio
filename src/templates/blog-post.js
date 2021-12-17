@@ -6,7 +6,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import LightboxImage from "../components/LightboxImage"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import "../styles/sass/screen.scss"
 
 const shortcodes = { LightboxImage, GatsbyImage }

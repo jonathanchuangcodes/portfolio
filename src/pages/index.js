@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import FeaturedWork from "../components/featuredWork"
 
 import "../styles/sass/screen.scss"
@@ -14,10 +13,6 @@ export default function HomePage({ data })   {
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="Featured works"
-        keywords={[`portfolio`, `gatsby`, `javascript`, `react`]}
-      />
       {data.site.siteMetadata.description && (
         <header className="page-head">
           <h2 className="page-head-title">
