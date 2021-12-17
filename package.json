@@ -16,7 +16,7 @@
     "gatsby-remark-images": "^5.11.0",
     "gatsby-remark-responsive-iframe": "^4.11.0",
     "gatsby-source-filesystem": "^3.14.0",
-    "gatsby-transformer-remark": "^4.11.0",
+    "gatsby-transformer-remark": "^5.5.0-next.1",
     "gatsby-transformer-sharp": "^4.4.0",
     "joi": "^17.5.0",
     "lmdb-store": "^1.6.14",
@@ -37,15 +37,15 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0",
-    "sass": "^1.42.1",
     "immer": ">=9.0.6",
     "nth-check": ">=2.0.1",
     "object-path": ">=0.11.8",
-    "ws": ">=7.4.6",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
+    "sanitize-html": ">=2.3.2",
+    "sass": "^1.42.1",
     "trim": ">=0.0.3",
-    "sanitize-html": ">=2.3.2"
+    "ws": ">=7.4.6"
   },
   "keywords": [
     "gatsby",
