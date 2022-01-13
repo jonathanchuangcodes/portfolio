@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import PostCard from "../components/postCard"
 
 import "../styles/sass/screen.scss"
+import "../styles/sass/pages/works.scss"
 
 export default function Works({ data }) {
   const siteTitle = data.site.siteMetadata.title

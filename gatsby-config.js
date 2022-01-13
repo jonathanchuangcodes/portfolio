@@ -1,8 +1,8 @@
 const urljoin = require("url-join")
 
 module.exports = {
-  flags:  {
-    PARALLEL_QUERY_RUNNING: true
+  flags: {
+    PARALLEL_QUERY_RUNNING: true,
   },
   siteMetadata: {
     title: "JYC Designs",
@@ -56,6 +56,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-slug`
         ],
       },
     },
