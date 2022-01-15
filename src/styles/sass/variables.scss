@@ -1,40 +1,62 @@
 /* Variables
 /* ---------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,600,700,700i,800&display=swap");
 
-    /* Colours */
-    $color-primary--100: #E5A7A9;
-    $color-primary--200: #E0898D;
-    $color-primary--300: #DA6A71;
-    $color-primary--400: #D24958;
-    $color-primary--500: #C92040;
-    $color-primary--600: #A92137;
-    $color-primary--700: #882531;
-    $color-primary--800: #6B232A;
-    $color-primary--900: #411B1D;
-    $color-primary: #C8143C;
-    
-    $color-base: #131313;
-    $color-border: #ddd;
-    $color-bg: #f8f8f8;
+/* Colours */
+$color-primary--100: #e5a7a9;
+$color-primary--200: #e0898d;
+$color-primary--300: #da6a71;
+$color-primary--400: #d24958;
+$color-primary--500: #c92040;
+$color-primary--600: #a92137;
+$color-primary--700: #882531;
+$color-primary--800: #6b232a;
+$color-primary--900: #411b1d;
+$color-primary: #c8143c;
 
-    /* Fonts */
-    $font-sans-serif: 'Muli', sans-serif;
-    $font-serif: Georgia, Times, serif;
-    $font-mono: Menlo, Courier, monospace;
-    $font-light: 100;
-    $font-normal: 400;
-    $font-bold: 700;
-    $font-heavy: 800;
+$color-secondary--100: #a3b8dd;
+$color-secondary--200: #779adb;
+$color-secondary--300: #5181e2;
+$color-secondary--400: #2266f5;
+$color-secondary--500: #2057cc;
+$color-secondary--600: #244b9d;
+$color-secondary--700: #243f78;
+$color-secondary--800: #1f3257;
+$color-secondary--900: #172136;
+$color-secondary: #1560fb;
 
-    /* Breakpoints */
-    $xlarge: 1680px;
-    $large: 1280px;
-    $medium: 980px;
-    $small: 740px;
-    $xsmall: 480px;
+$color-neutral--100: #FEFEFE;
+$color-neutral--200: #D9D9D9;
+$color-neutral--300: #B9B9B9;
+$color-neutral--400: #999999;
+$color-neutral--500: #7B7B7B;
+$color-neutral--600: #626262;
+$color-neutral--700: #4C4C4C;
+$color-neutral--800: #383737;
+$color-neutral--900: #222121;
+$color-neutral: #404040;
 
-    /* Sizes */
-    $height: 4rem;
-    $margin: 2rem;
-    $radius: 0.5rem;
+$color-base: #131313;
+$color-border: $color-neutral--900;
+$color-bg: $color-neutral--100;
+
+/* Fonts */
+$font-sans-serif: "Muli", sans-serif;
+$font-serif: Georgia, Times, serif;
+$font-mono: Menlo, Courier, monospace;
+$font-light: 100;
+$font-normal: 400;
+$font-bold: 700;
+$font-heavy: 800;
+
+/* Breakpoints */
+$xlarge: 1680px;
+$large: 1280px;
+$medium: 980px;
+$small: 740px;
+$xsmall: 480px;
+
+/* Sizes */
+$height: 4rem;
+$margin: 2rem;
+$radius: 0.5rem;

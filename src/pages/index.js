@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import FeaturedWork from "../components/featuredWork"
 
-import "../styles/sass/screen.scss"
+import "../styles/sass/global.scss"
 import Loading from "../components/loading"
 
 export default function HomePage({ data })   {

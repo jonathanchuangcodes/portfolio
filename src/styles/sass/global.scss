@@ -2,10 +2,10 @@
 
 
 /* ==========================================================================
-   Base Styles: Opinionated Defaults
+   Base Styles
    ========================================================================== */
 
-   
+
 ::selection {
   text-shadow: none;
   background: #cbeafb;
@@ -58,10 +58,6 @@ blockquote {
     margin: 0.8em 0 0.8em 1.5em;
     font-size: 0.9em;
     opacity: 0.8;
-
-    &:before {
-      content: "\2014 \00A0";
-    }
   }
 
   cite {
@@ -92,20 +88,15 @@ body {
   -moz-font-feature-settings: "liga" on;
 }
 
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-legend {
-  padding: 0;
-  border: 0;
-}
-
 button {
   overflow: visible;
   border: none;
   text-transform: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
 
 caption {
@@ -233,6 +224,11 @@ input {
       -webkit-appearance: none;
     }
   }
+}
+
+legend {
+  padding: 0;
+  border: 0;
 }
 
 p {
