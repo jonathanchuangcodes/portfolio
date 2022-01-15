@@ -2,8 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-import "../styles/sass/screen.scss"
-
 export default function ContactPage({ data }, location)  {
   const siteTitle = data.site.siteMetadata.title
 
@@ -15,10 +13,10 @@ export default function ContactPage({ data }, location)  {
             {/* Break */}
             <div className="col-12">
               <p>
-                Feel free to contact me about any opportunities, questions,
-                feedback, anything really. I am always up for a chat!
+                Feel free to contact me about any job opportunities, questions,
+                feedback, anything really.
               </p>
-            </div>
+            </div>x
             {/* Break */}
             <div className="col-12">
               <textarea

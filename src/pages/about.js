@@ -4,7 +4,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 
-import "../styles/sass/screen.scss"
 import "../styles/sass/pages/about.scss"
 
 export default function AboutPage({ data }) {
@@ -45,7 +44,7 @@ export default function AboutPage({ data }) {
               </a>
             </div>
             <p id="bio">
-              Hi, I'm Jonathan, a front-end developer with UX design training. I can help 
+              Hi, I'm Jonathan, a front-end developer with UX design training. I can help
               bridge the gap between developer and design teams.
             </p>
           </div>

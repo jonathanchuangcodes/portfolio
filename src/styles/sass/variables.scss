@@ -25,19 +25,19 @@ $color-secondary--800: #1f3257;
 $color-secondary--900: #172136;
 $color-secondary: #1560fb;
 
-$color-neutral--100: #FEFEFE;
-$color-neutral--200: #D9D9D9;
-$color-neutral--300: #B9B9B9;
+$color-neutral--100: #fefefe;
+$color-neutral--200: #d9d9d9;
+$color-neutral--300: #b9b9b9;
 $color-neutral--400: #999999;
-$color-neutral--500: #7B7B7B;
+$color-neutral--500: #7b7b7b;
 $color-neutral--600: #626262;
-$color-neutral--700: #4C4C4C;
+$color-neutral--700: #4c4c4c;
 $color-neutral--800: #383737;
 $color-neutral--900: #222121;
 $color-neutral: #404040;
 
-$color-base: #131313;
-$color-border: $color-neutral--900;
+$color-base: $color-neutral--900;
+$color-border: $color-neutral--800;
 $color-bg: $color-neutral--100;
 
 /* Fonts */
@@ -48,6 +48,48 @@ $font-light: 100;
 $font-normal: 400;
 $font-bold: 700;
 $font-heavy: 800;
+
+/* Font Sizes */
+
+/* Display Text */
+$fontsize-display-1: 80pt;
+$lineheight-display-1: 100pt;
+$fontsize-display-2: 72pt;
+$lineheight-display-2: 76pt;
+$fontsize-display-3: 64pt;
+$lineheight-display-3: 68pt;
+$fontsize-display-4: 48pt;
+$lineheight-display-4: 60pt;
+
+/* Heading Text */
+$fontsize-heading-1: 56pt;
+$lineheight-heading-1: 60pt;
+$fontsize-heading-2: 36pt;
+$lineheight-heading-2: 40pt;
+$fontsize-heading-3: 24pt;
+$lineheight-heading-3: 28pt;
+$fontsize-heading-4: 20pt;
+$lineheight-heading-4: 24pt;
+
+/* Body Text */
+$fontsize-body--large: 21pt;
+$lineheight-body--large: 28pt;
+$fontsize-body--medium: 18pt;
+$lineheight-body--medium: 26pt;
+$fontsize-body--small: 16pt;
+$lineheight-body--small: 24pt;
+
+/* Button Text */
+$fontsize-button-text: 24pt;
+$lineheight-button-text: 28pt;
+
+/* Footnote Text */
+$fontsize-footnote-text: 14pt;
+$lineheight-footnote-text: 28pt;
+
+/* Caption Text */
+$fontsize-caption-text: 20pt;
+$lineheight-caption-text: 28pt;
 
 /* Breakpoints */
 $xlarge: 1680px;
