@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import "../styles/sass/layout.scss"
 
 const Layout = props => {
   const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+  const [toggleNav, setToggleNav] = useState(false);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -26,7 +28,7 @@ const Layout = props => {
             </div>
           </a>
 
-          <nav id="swup" className="site-head-left">
+          <nav className="site-head-left">
             <ul className="nav" role="menu">
               <li className="nav-home" role="menuitem">
                 <Link to={`/`}>Home</Link>
@@ -38,7 +40,7 @@ const Layout = props => {
               {title}
             </Link>
           </div>
-          <div className="site-head-right">
+          <nav className="site-head-right">
             <ul className="nav" role="menu">
               <li className="nav-work" role="menuitem">
                 <Link to={`/works`}>Works</Link>
@@ -47,13 +49,11 @@ const Layout = props => {
                 <Link to={`/about`}>About</Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </header>
       <main id="site-main" className="site-main">
-        <div id="swup" className="transition-fade">
-          {children}
-        </div>
+        <div className="transition-fade">{children}</div>
       </main>
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;

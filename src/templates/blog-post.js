@@ -14,12 +14,10 @@ const shortcodes = { LightboxImage, GatsbyImage }
 export default function blogPostTemplate({ data }) {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
-  console.log(post.frontmatter.thumbnail)
   return (
     <>
-
       <Layout title={siteTitle}>
-      <TableOfContents headings={post.headings} />
+        <TableOfContents headings={post.headings} />
 
         <article
           className={`post-content ${

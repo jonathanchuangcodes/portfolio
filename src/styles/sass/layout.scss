@@ -77,10 +77,13 @@
 /* ---------------------------------------------------------- */
 
 .site-head {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 300;
   margin-top: -10px;
   font-size: 1.35rem;
+  width: 100%;
+  background-color: $color-bg;
 }
 
 .site-head-container {
@@ -244,8 +247,8 @@
     line-height: 1.15em;
     font-weight: 200;
     opacity: 0;
-    transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
-      opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    // transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+    //   opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     // transform: scale(1.1) translateY(-25px);
   }
   .site-head-right a {
@@ -305,8 +308,8 @@
   .site-head-open .site-head-left a,
   .site-head-open .site-head-right a {
     opacity: 1;
-    transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
-      opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    // transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+    //   opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     // transform: scale(1) translateY(0px);
   }
   .site-head-open .nav-current a {
@@ -320,7 +323,7 @@
     position: fixed;
     z-index: 9999;
     bottom: 0;
-    transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    // transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     // transform: translateY(-4vw);
   }
 }
