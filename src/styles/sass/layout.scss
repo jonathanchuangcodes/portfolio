@@ -2,6 +2,8 @@
 
 .site-wrapper {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .error-head {
@@ -77,13 +79,20 @@
 /* ---------------------------------------------------------- */
 
 .site-head {
-  position: sticky;
+  position: absolute;
   top: 0;
-  z-index: 300;
-  margin-top: -10px;
-  font-size: 1.35rem;
+  left: 0;
+  z-index: 10;
+  font-size: $fontsize-display-3;
+  line-height: $lineheight-display-3;
   width: 100%;
-  background-color: $color-bg;
+}
+
+.site-head-sticky {
+  background: $color-bg;
+  position: fixed;
+  padding: 2vw 3vw !important;
+  transition: padding 0.3s ease-in;
 }
 
 .site-head-container {
@@ -91,6 +100,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  transition: padding 0.3s ease-out;
 }
 
 .site-head-left {

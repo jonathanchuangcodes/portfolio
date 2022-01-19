@@ -9,7 +9,10 @@ export default function TableOfContents({ headings }) {
       <ul>
         {headings.map(heading => {
           return (
-            <li key={heading.value}>
+            <li
+              key={heading.value}
+              className={`table-of-contents-heading-${heading.depth}`}
+            >
               <Link to={"#" + Slugger.slug(heading.value)}>
                 {heading.value}
               </Link>
