@@ -11,7 +11,7 @@ export default function AboutPage({ data }) {
 
   return (
     <Layout title={siteTitle}>
-      <article className="post-content page-template no-image">
+      <article className="page-template no-image">
         <div className="post-content-body">
           <h1 id="name">Jonathan Chuang</h1>
           <h2 id="titles">Designer, Developer</h2>

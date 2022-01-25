@@ -5,205 +5,176 @@
  ---------------------------------------------------------- */
 .works-feed {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 10rem;
+  padding: 8rem;
+
+  @include for-desktop-only {
+    padding: 4rem;
+  }
 }
 
-.post-card {
-  position: relative;
+.work-card {
   display: flex;
-  flex: 1 1 50%;
-  height: 50vh;
-  width: 100%;
-  counter-increment: posts;
 
   a:hover {
     text-decoration: none;
   }
 
   @include for-smartphone-only {
-    flex: 1 1 100%;
-    height: 30vh;
+    flex-direction: column;
   }
 
   @include for-phone-only {
-    flex: 1 1 100%;
-    height: 40vh;
+    flex-direction: column;
   }
-
-  @include for-tablet-portrait-up {
-    flex: 1 1 100%;
-    height: 75vh;
-  }
-
-  @include for-tablet-landscape-up {
-    flex: 1 1 50%;
+  @include for-tablet-portrait-only {
+    flex-direction: column;
     height: 50vh;
   }
 
-  @include for-desktop-up {
-    flex: 1 1 50%;
-    height: 60vh;
-  }
-
-  @include for-big-desktop-up {
-    flex: 1 1 50%;
-    height: 80vh;
-  }
-}
-
-.post-card-link {
-  flex: 1 1 auto;
-  display: block;
-}
-
-.post-card-content {
-  height: 100%;
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.1);
-  transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
-
-  @include for-phone-only {
-    flex: 1 1 100%;
-  }
-
-  @include for-tablet-portrait-up {
-    flex: 1 1 100%;
+  @include for-tablet-landscape-only {
+    flex-direction: column;
+    height: 50vh;
+    margin: 2rem;
   }
 
   @include for-tablet-landscape-up {
-    flex: 1 1 50%;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 4rem;
+    margin: 2rem;
+  }
+}
+
+.work-card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+  width: 50vw;
+  color: $color-neutral--100;
+  background: rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
+  border-radius: 16px;
+  border: 1px solid $color-border;
+  margin: 1rem;
+
+  @include for-desktop-up {
+    border-radius: 16px;
+  }
+
+  @include for-desktop-only {
+    margin: 0;
+    border-radius: 0 16px 16px 0;
+  }
+
+  @include for-tablet-landscape-only {
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    height: 15vh;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.work-card-image {
+  height: 40vh;
+  width: 30vw;
+  align-items: center;
+  display: flex;
+  border-radius: 16px;
+  border: 1px solid $color-border;
+  margin: 1rem;
+
+  @include for-desktop-up {
+    border-radius: 16px;
+  }
+
+  @include for-desktop-only {
+    margin: 0;
+    border-radius: 16px 0 0 16px;
+  }
+
+  @include for-tablet-landscape-only {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    height: 35vh;
+    margin: 0;
+  }
+}
+
+.work-card-description {
+  @include for-tablet-landscape-only {
+    display: hidden;
+  }
+}
+
+.work-card,
+.work-card-image,
+.work-card-content {
+  @include for-tablet-landscape-up {
+    height: 40vh;
   }
 
   @include for-desktop-up {
-    flex: 1 1 50%;
-  }
-
-  @include for-big-desktop-up {
-    flex: 1 1 50%;
+    height: 45vh;
   }
 }
 
-.post-card-image {
-  flex-grow: 5;
+.work-card-type {
+  margin: 2rem;
+  padding: 0;
+  text-align: left;
+  font-weight: normal;
+
+  @include for-tablet-landscape-only {
+    text-align: center;
+  }
 }
 
-.post-card-text {
+.work-card-text {
   width: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: center;
   padding: 1rem;
-  text-align: center;
-  flex-shrink: 1;
-}
-
-.post-card-link:hover .post-card-content {
-  opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0.33, 0, 0.2, 1);
-}
-
-.post-card-title {
-  margin: 0;
-  font-family: "Muli", sans-serif;
-  font-size: 16pt;
-  font-weight: bold;
-  text-align: center;
-  transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
-
-  @include for-phone-only {
-    font-size: 16px;
-  }
-
-  @include for-tablet-portrait-up {
-    font-size: 32px;
-  }
-
-  @include for-tablet-landscape-up {
-    font-size: 16pt;
-  }
-
-  @include for-desktop-up {
-    font-size: 16pt;
-  }
-
-  @include for-big-desktop-up {
-    font-size: 16pt;
-  }
-}
-
-.post-card-type {
-  margin: 0;
-  font-size: 24px;
-
-  @include for-phone-only {
-    font-size: 10px;
-  }
-
-  @include for-tablet-portrait-up {
-    font-size: 16px;
-  }
-
-  @include for-tablet-landscape-up {
-    font-size: 16px;
-  }
-
-  @include for-desktop-up {
-    font-size: 20px;
-  }
-
-  @include for-big-desktop-up {
-    font-size: 24px;
-  }
-}
-
-/* Posts without images */
-.post-card.no-image:before {
-  display: block;
-  content: counter(posts);
-  position: absolute;
-  bottom: -0.15em;
-  right: 5vw;
-  font-size: 28vw;
-  line-height: 1em;
-  font-weight: $font-heavy;
-  letter-spacing: -0.1em;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.post-card.no-image .post-card-content {
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 4vw;
-}
-
-.post-card.no-image .post-card-title {
-  font-size: 5rem;
-  line-height: 1.15em;
   text-align: left;
 }
 
-.post-card.no-image:hover .post-card-title {
-  text-decoration: underline;
+.work-card-title {
+  margin: 2rem;
+  font-family: "Muli", sans-serif;
+  font-size: $fontsize-heading-3;
+  line-height: $lineheight-heading-3;
+  font-weight: bold;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
+
+  @include for-phone-only {
+    font-size: 0.7rem;
+  }
+
+  @include for-tablet-portrait-only {
+    font-size: $fontsize-heading-4;
+    line-height: $lineheight-heading-4;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: $fontsize-heading-3;
+    line-height: $lineheight-heading-3;
+  }
+
+  @include for-tablet-landscape-only {
+    margin: 0;
+    text-align: center;
+  }
 }
 
-@media (max-width: 1200px) {
-  .post-card.no-image .post-card-title {
-    font-size: 3.4rem;
-  }
-}
-@media (max-width: 700px) {
-  .post-card.no-image:before {
-    font-size: 50vw;
-  }
+.work-card-description {
+  margin: 2rem;
+  padding: 0;
 }

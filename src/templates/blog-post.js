@@ -5,11 +5,12 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import LightboxImage from "../components/LightboxImage"
+import StickyHeader from "../components/StickyHeader"
 import Layout from "../components/layout"
 import TableOfContents from "../components/TableOfContents"
 import "../styles/sass/pages/work.scss"
 
-const shortcodes = { LightboxImage, GatsbyImage }
+const shortcodes = { LightboxImage }
 
 export default function blogPostTemplate({ data }) {
   const post = data.mdx

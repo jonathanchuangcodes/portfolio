@@ -1,8 +1,8 @@
 import React from "react"
-import { graphql  } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import PostCard from "../components/postCard"
+import WorkCard from "../components/WorkCard"
 
 import "../styles/sass/pages/works.scss"
 
@@ -16,14 +16,7 @@ export default function Works({ data }) {
       <div className="works-feed">
         {posts.map(({ node }) => {
           postCounter++
-          return (
-            <PostCard
-              key={node.slug}
-              count={postCounter}
-              node={node}
-              postClass={`post`}
-            />
-          )
+          return <WorkCard key={node.slug} count={postCounter} node={node} />
         })}
       </div>
     </Layout>
@@ -49,7 +42,7 @@ export const WorksQuery = graphql`
             color
             thumbnail {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+                gatsbyImageData(placeholder: BLURRED)
               }
             }
           }

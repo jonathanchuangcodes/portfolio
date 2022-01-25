@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import "../styles/sass/layout.scss"
 import useSticky from "../hooks/useSticky"
+import NavLink from "./nav-link"
 
 const Layout = props => {
   const { title, children } = props
@@ -40,7 +41,7 @@ const Layout = props => {
           <div className="site-head-left">
             <ul className="nav" role="menu">
               <li className="nav-home" role="menuitem">
-                <Link to={`/`}>Home</Link>
+                <NavLink to={`/`}>Home</NavLink>
               </li>
             </ul>
           </div>
@@ -52,10 +53,10 @@ const Layout = props => {
           <div className="site-head-right">
             <ul className="nav" role="menu">
               <li className="nav-work" role="menuitem">
-                <Link to={`/works`}>Works</Link>
+                <NavLink to={`/works`}>Works</NavLink>
               </li>
               <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
+                <NavLink to={`/about`}>About</NavLink>
               </li>
             </ul>
           </div>
@@ -65,8 +66,8 @@ const Layout = props => {
         <div className="transition-fade">{children}</div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
+        &copy; {new Date().getFullYear()} <NavLink to={`/`}>{title}</NavLink>{" "}
+        &mdash; Built with{" "}
         <a
           href="https://gatsbyjs.org"
           target="_blank"

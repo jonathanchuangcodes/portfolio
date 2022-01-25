@@ -18,7 +18,7 @@
   overflow-y: scroll;
   width: 30vw;
   margin: auto;
-  padding: 1em;
+  padding: 1rem;
   ul {
     list-style: none;
   }
@@ -33,18 +33,21 @@
   }
 }
 
-.table-of-contents-heading-1  {
+.table-of-contents-heading-1 {
   font-size: 24pt;
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: 900;
   border-bottom: 1px solid black;
 }
-.table-of-contents-heading-2  {
-  font-size: 22pt;
-}
-.table-of-contents-heading-3  {
+.table-of-contents-heading-2 {
   font-size: 20pt;
 }
-.table-of-contents-heading-4  {
-  font-size: 18pt;
+.table-of-contents-heading-3 {
+  font-size: 16pt;
+}
+.table-of-contents-heading-4 {
+  font-size: 12pt;
 }
 
 .scores {
@@ -76,11 +79,25 @@
   }
 }
 
+caption {
+  font-size: $fontsize-caption-text;
+  line-height: $lineheight-caption-text;
+}
+
 .post-content {
   max-width: 100%;
   margin-top: 10rem;
-  margin-left: 30vw;
   padding: 8vw;
+}
+
+.header {
+  font-size: 24pt;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 10vh;
+  left: 0;
 }
 
 .post-content-header {
@@ -131,11 +148,52 @@
   color: $color-primary;
 }
 
-.post-content-body h1,
-.post-content-body h2,
-.post-content-body h3,
-.post-content-body h4,
-.post-content-body h5,
-.post-content-body h6 {
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
   color: $color-base;
+  padding: 12rem 0 0 0;
+}
+
+@include for-phone-only {
+  .table-of-contents {
+    display: none;
+  }
+
+  .post-content {
+    margin-left: 0vw;
+  }
+}
+
+@include for-smartphone-only {
+  .table-of-contents {
+    display: none;
+  }
+
+  .post-content {
+    margin-left: 0vw;
+  }
+}
+
+@include for-tablet-portrait-only {
+  .table-of-contents {
+    display: none;
+  }
+
+  .post-content {
+    margin-left: 0vw;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .table-of-contents {
+    display: initial;
+  }
+
+  .post-content {
+    margin-left: 30vw;
+  }
 }

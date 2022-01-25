@@ -16,7 +16,10 @@ export default function Sticky() {
     }
     setScrollPosition(currentScrolledPosition)
     if (element && element.current && element.current.getBoundingClientRect()) {
-      setSticky(currentScrolledPosition)
+      setSticky(
+        currentScrolledPosition >
+          element.current.getBoundingClientRect().bottom && !scrollingDown
+      )
     }
   }, [previousScrollPosition])
 

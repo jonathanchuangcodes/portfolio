@@ -5,7 +5,7 @@ module.exports = {
     PARALLEL_QUERY_RUNNING: true,
   },
   siteMetadata: {
-    title: "JYC Designs",
+    title: "Jonathan Chuang",
     author: "Jonathan Chuang",
     description: "Hi there, My name is Jonathan, welcome to my portfolio",
     siteUrl: urljoin("https://jycdesigns.com", "/"),

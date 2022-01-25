@@ -44,7 +44,7 @@ export default function LightboxImage({ images }) {
     <Gallery
       images={filteredPhotos}
       colWidth={(1 / (images.length === 4 ? 2 : images.length)) * 100}
-      mdColWidth={(1 / (images.length === 4 ? 2: images.length)) * 100}
+      mdColWidth={(1 / (images.length === 4 ? 2 : images.length)) * 100}
       className="gallery-modal"
     />
   )
