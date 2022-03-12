@@ -12,6 +12,7 @@ module.exports = {
     social: {
       linkedin: "https://www.linkedin.com/in/jchuang02/",
       dribbble: "https://dribbble.com/jchuang02",
+      github: "https://github.com/jchuang02/",
     },
   },
   plugins: [
@@ -56,10 +57,21 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          `gatsby-remark-slug`
+          `gatsby-remark-slug`,
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-mdx-frontmatter",
+    },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
   ],
 }

@@ -10,8 +10,8 @@ export default function LightboxImage({ images }) {
         edges {
           node {
             childImageSharp {
-              thumb: gatsbyImageData(placeholder: BLURRED)
               full: gatsbyImageData(layout: CONSTRAINED)
+              thumb: gatsbyImageData(placeholder: BLURRED)
             }
             base
           }

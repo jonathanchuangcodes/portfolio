@@ -1,0 +1,36 @@
+@import "../variables";
+@import "../components/lists";
+@import "../components/buttons";
+@import "../components/actions";
+@import "../components/hamburger";
+@import "../components/grid";
+@import "../components/animations";
+@import "../components/responsiveness";
+
+#banner {
+  max-width: 100%;
+  margin-top: 10rem;
+  padding: 8vw;
+}
+
+#introduction {
+  display: flex;
+}
+
+#titles {
+  display: flex;
+  flex-flow: column;
+}
+
+#title {
+  margin-bottom: 5vh;
+  text-align: left;
+  font-size: $fontsize-display-3;
+}
+
+#sub-title {
+  line-height: $lineheight-heading-1;
+  u {
+    text-decoration-style: wavy;
+  }
+}

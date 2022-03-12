@@ -71,6 +71,7 @@
   @include for-desktop-only {
     margin: 0;
     border-radius: 0 16px 16px 0;
+    border-left: none;
   }
 
   @include for-tablet-landscape-only {
@@ -79,10 +80,12 @@
     height: 15vh;
     text-align: center;
     margin: 0;
+    border-top: none;
   }
 }
 
 .work-card-image {
+  display: none;
   height: 40vh;
   width: 30vw;
   align-items: center;
@@ -108,6 +111,10 @@
   }
 }
 
+.work-card-image:hover {
+  box-shadow: 0px 0px 8px black;
+}
+
 .work-card-description {
   @include for-tablet-landscape-only {
     display: hidden;
@@ -127,13 +134,21 @@
 }
 
 .work-card-type {
-  margin: 2rem;
+  margin: 0 2rem 0 2rem;
   padding: 0;
   text-align: left;
   font-weight: normal;
 
   @include for-tablet-landscape-only {
     text-align: center;
+  }
+}
+
+.work-card-tools {
+  display: flex;
+  div {
+    flex: 1 1 100%;
+    padding: 1rem;
   }
 }
 
@@ -155,7 +170,8 @@
   transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
 
   @include for-phone-only {
-    font-size: 0.7rem;
+    font-size: $fontsize-heading-4;
+    line-height: $lineheight-heading-4;
   }
 
   @include for-tablet-portrait-only {

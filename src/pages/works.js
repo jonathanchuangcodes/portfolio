@@ -40,6 +40,12 @@ export const WorksQuery = graphql`
             description
             type
             color
+            design {
+              value
+            }
+            development {
+              value
+            }
             thumbnail {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED)

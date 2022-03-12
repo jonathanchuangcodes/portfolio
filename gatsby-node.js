@@ -60,3 +60,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  createTypes(`
+    type MdxFrontmatter {
+      design: [ItemValues]
+      development: [ItemValues]
+    }
+
+    type ItemValues {
+      value: String @mdx
+    }
+  `);
+};

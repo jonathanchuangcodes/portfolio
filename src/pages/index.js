@@ -1,35 +1,55 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { useSpring, animated, config } from "react-spring"
 
 import Layout from "../components/layout"
 import FeaturedWork from "../components/featuredWork"
 
 import "../styles/sass/global.scss"
-import Loading from "../components/loading"
+import "../styles/sass/pages/home.scss"
 
-export default function HomePage({ data })   {
+function HeaderText({ text }) {
+  const [flip, setFlip] = useState(false)
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    reset: true,
+    reverse: flip,
+    delay: 200,
+    config: config.molasses,
+    onRest: () => setFlip(!flip),
+  })
+
+  return <animated.h1 style={props}>{text}</animated.h1>
+}
+
+export default function HomePage({ data }) {
   const siteTitle = data.site.siteMetadata.title
   const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured)
 
   return (
     <Layout title={siteTitle}>
-      {data.site.siteMetadata.description && (
-        <header className="page-head">
-          <h2 className="page-head-title">
-            {data.site.siteMetadata.description}
-          </h2>
-        </header>
-      )}
-      {/* <Loading /> */}
+      <header id="banner">
+        <div id="introduction">
+          <div id="titles">
+            <HeaderText id="title" text={"Designer. Developer."} />
+            <p id="sub-title">
+              Creating <u>flow</u> through user centered design and robust code.
+            </p>
+          </div>
+          <div id="profile-container">
+            <GatsbyImage
+              image={data.myFace.childImageSharp.gatsbyImageData}
+              alt="profile picture"
+              className="kg-image profile-pic"
+            />
+          </div>
+        </div>
+      </header>
       <div className="featured-works">
         {works.map(({ node }) => {
-          return (
-            <FeaturedWork
-              key={node.slug}
-              node={node}
-              postClass={`work`}
-            />
-          )
+          return <FeaturedWork key={node.slug} node={node} postClass={`work`} />
         })}
       </div>
     </Layout>
@@ -42,6 +62,16 @@ export const HomePageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    myFace: file(relativePath: { eq: "mahface.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          width: 320
+          height: 480
+          layout: CONSTRAINED
+        )
       }
     }
     allMdx {

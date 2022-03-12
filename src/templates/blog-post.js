@@ -9,8 +9,9 @@ import StickyHeader from "../components/StickyHeader"
 import Layout from "../components/layout"
 import TableOfContents from "../components/TableOfContents"
 import "../styles/sass/pages/work.scss"
-
-const shortcodes = { LightboxImage }
+const shortcodes = {
+  LightboxImage,
+}
 
 export default function blogPostTemplate({ data }) {
   const post = data.mdx
