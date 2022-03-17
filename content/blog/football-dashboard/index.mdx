@@ -2,8 +2,8 @@
 title: "Creating the Football Dashboard: The ⚽ Fan's One Stop Dashboard"
 thumbnail: assets/thumbnail.png
 description: A web dashboard app for following ⚽ competitions
-project_timeline: August 2021 - Ongoing
-link: https://gifted-thompson-b218f4.netlify.app/
+project_timeline: November 2021 - Ongoing
+link: https://football.gatsbyjs.io/
 deliverable: React Web Application
 my_role: Developer, Designer
 type: Code Project
@@ -20,10 +20,25 @@ development:
       <JavascriptFill strokeWidth={2} size={32} />
 ---
 
-[Dashboard.football](https://gifted-thompson-b218f4.netlify.app/) is a dashboard web application that will allows users to keep track of
+[Dashboard.football](https://football.gatsbyjs.io/) is a dashboard web application that will allows users to keep track of
 multiple soccer competitions that they follow in one place.
 
-**This is an ongoing project. Check back for future updates!**
+You can view the original source code for this project on my github [here](https://github.com/jchuang02/football).
+
+# Inspiration
+
+This project was an opportunity for me to learn how to create a standalone modern React web application. I wanted to showcase
+my knowledge of a number of web development concepts while creating a product that I'm passionate about that I had a lot of background
+knowledge for.
+
+### What I am learning from this project
+
+- React Functional components
+- React Hooks
+- Writing Custom Hooks
+- Redux State Management
+- User authentication with Firebase
+- CSS in JSS with Material UI's Emotion
 
 ## An Avid Football ⚽ Fan's Testimony
 
@@ -156,9 +171,11 @@ Other websites like WhoScored and Soccer24 offer a wealth of impressive informat
   ]}
 />
 
+---
+
 # A Vision of a one stop Dashboard
 
-Unsatisfied with the current existing solutions, I set out ambitiously to build my own. To avoid the pitfuls of these solutions, I started writing down some guidelines
+Unsatisfied with the current existing solutions, I set out ambitiously to build my own. To avoid the pitfuls of these solutions, I started writing down some guiding principles
 to aid me along the process. They will help me maintain focus and ensure I actually solve for the issues I encountered previously.
 
 ## 1. Uncompromising Personalization
@@ -171,53 +188,163 @@ to aid me along the process. They will help me maintain focus and ensure I actua
 - A true home page should include content from a user's favorites and **only** their favorites.
 - If I'm on a page for a specific league, I should only see news content for that league.
 
-> **I will know that my solution is successful when these guidelines are met. These guidelines will also continue to evolve and mature as I interate through designs and production builds.**
+> **I will know that my solution is successful when these guiding principles are met. They will also continue to evolve and mature as I interate through designs and production builds.**
 
 ---
 
-# Iteration 1
+# Milestone 1
+
+The research and competitive analysis I performed indicated that football fans follow the sport from 3 key perspectives; they follow their favorite teams,
+competitions, and players, not necessarily in that order.
+
+## Creating an initial Design
+
+My initial design therefore categorized information that a user follows based on these 3 types. Users would be able to expand and minimize each section
+based on what they wanted to see. Upcoming and Live match information would be shown at the top as cards, if available.
 
 ![Home Page Version 1](assets/homepagev1.png)
 
-My initial design categorized information that a user follows based on 3 types: players, leagues, and teams. Users would expand and minimize the columns
-based on what they wanted to see. Upcoming and Live match information would be shown at the top as cards, if available.
+## Exploring the API
+
+I then created an initial version of the competitions page for leagues and cups. This would be one of the most popular pages of my application, so I decided to start production
+of this page as an initial MVP where users can see match and standings information. This allowed me to test out the data API I'm working with, [API-Football](https://www.api-football.com/)
+and acertain any development limitations.
+
+To see the initial build of this web application, click [here](https://gifted-thompson-b218f4.netlify.app/).
 
 <LightboxImage
   images={[
     {
       title: "competitionspage_league.png",
-      caption: "Competitions Page for League",
+      caption: "Milestone  1 Competitions Page for League",
     },
     {
       title: "competitionspage_groupstage.png",
-      caption: "Competitions Page for Cup",
+      caption: "Milestone  1 Competitions Page for Cup",
     },
   ]}
 />
 
-I then created an initial version of the competitions page for leagues and cups. This would be one of the most popular pages of my application, so I decided to start production
-of this page as an initial MVP where users can see match and standings information. This would allow me to test out the data API I'm working with, [API-Football](https://www.api-football.com/)
-and acertain any development limitations.
+# Milestone 2
 
-To see the initial alpha build of this web application, click [here](https://gifted-thompson-b218f4.netlify.app/).
+After familiarizing myself a bit with the API and what I could achieve, I decided to write down some goals I wanted to achieve for
+the next version of dashboard.football:
 
-# Currently Under Development
+1. Categorize the application based on teams and competitions.
 
-- Individual match page
-- Onboarding experience
-- Personalized homepage
-- Cup competition bracket page
+Because of data limitations of the API, I decided that focusing on teams and competitions as the primary categories
+in the application made more sense. The API simply did not have enough individual player information that would make a dedicated
+players page a useful source.
 
-For a sneak peek of what's next, here are the most recent designs for the individual match page that is yet to be developed.
+2. Make it easy for users to search and add teams and competitions to the dashboard.
+
+Milestone 1's implementation was hardcoded, with only a select few competitions being shown out of the +900 leagues & cup competitions available.
+A search and add functionality would achieve the basic personalization the application's philosophy calls for.
+
+3. Create an onboarding experience.
+
+A basic onboarding experience would guide users through the sign up and personalization process so that the users can understand how the application
+works and start using the dashboard quickly.
+
+4. Allow users to sign up for an account so that personalization settings like their followed teams and competitions could be saved.
+
+Having unique user accounts early is key to the philosophy of dashboard.football as more personalized features will be added. This ensures that
+any previous choices a user makes are saved as the application updates. They'll also be about to sign into dashboard.football on any device with
+their credentials and load in their personalized settings.
+
+## Sitemap
+
+Based on these goals and what I learned from the application, I created a simple sitemap to visualize and understand the basic flow of the application.
 
 <LightboxImage
   images={[
     {
-      title: "fixturepage_horizontal.png",
-      caption: "Match Page with horizontal timeline",
+      title: "footballdashboardsitemap.png",
+      caption: "Milstone 2 Sitemap",
+    },
+  ]}
+/>
+
+## Designs
+
+I made some new mockups in Figma following the sitemap, creating a custom header component with a home button for a page showing
+all teams and competitions the user follows, link buttons that navigate to individual team and competition pages, and a login/signup link.
+Next to the link buttons for teams and competitions are add buttons that will show a modal when clicked that allow users to quickly add
+a new team or competition to follow.
+
+<LightboxImage
+  images={[
+    {
+      title: "homepagev2.png",
+      caption: "Milestone 2 Home Page",
+    },
+  ]}
+/>
+
+The teams and competitions pages look very similar, but also include some competition and team specific information like a league leaderboard and
+a current squad component.
+
+<LightboxImage
+  images={[
+    {
+      title: "teampagev2.png",
+      caption: "Milestone 2 Team Page",
     },
     {
-      title: "fixturepage_vertical.png",
+      title: "competitionpagev2.png",
+      caption: "Milestone 2 Competition Page",
+    },
+  ]}
+/>
+
+The onboarding process I chose to design for was email authentication, a more modern, lightweight method of sign in that forces the user to verify their email to sign in,
+but doesn't require them to remember or make a password.
+
+<LightboxImage
+  images={[
+    {
+      title: "onboarding(SignInEmail).png",
+      caption: "Milestone 2 Onboarding Page: email not entered",
+    },
+    {
+      title: "onboarding(SignInEmailEntered).png",
+      caption: "Milestone 2 Onboarding Page: email entered",
+    },
+    {
+      title: "onboarding(VerificationLinkSent).png",
+      caption: "Milestone 2 Onboarding Page: verification link sent",
+    },
+  ]}
+/>
+
+Finally I create a simple 2-step personalization process that asks users to choose the teams and competitions they want to follow.
+
+<LightboxImage
+  images={[
+    {
+      title: "onboarding(ChooseTeams).png",
+      caption: "Milestone 2 Onboarding Page: choose teams",
+    },
+    {
+      title: "onboarding(ChooseCompetitions).png",
+      caption: "Milestone 2 Onboarding Page: choose competitions",
+    },
+  ]}
+/>
+
+---
+
+# Currently Under Development
+
+## Individual match page
+
+The individual match page is currently being developed into a modal that shows more detailed information like a match timeline,
+team statistics, and player statistics.
+
+<LightboxImage
+  images={[
+    {
+      title: "matchpage(VerticalTimeline).png",
       caption: "Match page with vertical timeline",
     },
   ]}
