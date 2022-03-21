@@ -8,6 +8,7 @@
     @content;
   }
 }
+
 @mixin for-tablet-portrait-only {
   @media (max-width: 600px) {
     @content;

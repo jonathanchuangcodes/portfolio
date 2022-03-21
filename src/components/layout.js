@@ -24,7 +24,10 @@ const Layout = props => {
           <a
             className="nav-burger"
             href={""}
-            onClick={() => setToggleNav(!toggleNav)}
+            onClick={e => {
+              e.preventDefault()
+              setToggleNav(!toggleNav)
+            }}
           >
             <div
               className="hamburger hamburger--collapse"

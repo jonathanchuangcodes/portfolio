@@ -8,9 +8,9 @@ module.exports = {
     title: "Jonathan Chuang",
     author: "Jonathan Chuang",
     description: "Hi there, My name is Jonathan, welcome to my portfolio",
-    siteUrl: urljoin("https://jycdesigns.com", "/"),
+    siteUrl: urljoin("https://www.jonathanchuang.codes", "/"),
     social: {
-      linkedin: "https://www.linkedin.com/in/jchuang02/",
+      linkedin: "https://www.linkedin.com/in/jonathanychuang",
       dribbble: "https://dribbble.com/jchuang02",
       github: "https://github.com/jchuang02/",
     },

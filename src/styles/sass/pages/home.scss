@@ -8,24 +8,97 @@
 @import "../components/responsiveness";
 
 #banner {
-  max-width: 100%;
-  margin-top: 10rem;
-  padding: 8vw;
+  @include for-phone-only {
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+
+  @include for-tablet-portrait-up {
+    margin-top: 8rem;
+    padding: 8vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
-#introduction {
-  display: flex;
+#banner-titles {
+  @include for-smartphone-only {
+  }
+
+  @include for-big-desktop-up {
+    display: flex;
+    flex-flow: column;
+    margin: 5vh;
+  }
+
+  @include for-tablet-portrait-up {
+    margin: 5vw;
+  }
 }
 
-#titles {
-  display: flex;
-  flex-flow: column;
+#profile-container {
+  @include for-phone-only {
+    box-shadow: 5px 10px 18px #888888;
+    border: 2px solid black;
+    border-radius: 16px;
+    margin: 4rem;
+    img {
+      border-radius: 14px;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    box-shadow: 5px 10px 18px #888888;
+    border: 2px solid black;
+    border-radius: 16px;
+    height: 45vh;
+    img {
+      border-radius: 14px;
+      height: 45vh;
+      width: 100%;
+    }
+  }
+
+  @include for-big-desktop-up {
+    box-shadow: 5px 10px 18px #888888;
+    border: 2px solid black;
+    border-radius: 16px;
+    img {
+      border-radius: 14px;
+      height: 40vh;
+    }
+    margin: 0 4rem 0 0;
+    height: 40vh;
+  }
 }
 
-#title {
-  margin-bottom: 5vh;
+#banner-title {
+  margin: 5vh;
   text-align: left;
-  font-size: $fontsize-display-3;
+  @include for-big-desktop-up {
+    font-size: $fontsize-display-1;
+  }
+
+  @include for-desktop-up {
+    font-size: $fontsize-display-3;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: $fontsize-heading-1;
+    margin: 2vh;
+  }
+
+  @include for-tablet-landscape-only {
+    font-size: $fontsize-heading-2;
+    line-height: $lineheight-heading-2;
+    margin: 2vh;
+  }
+
+  @include for-tablet-portrait-only {
+    font-size: $fontsize-heading-3;
+    line-height: $lineheight-heading-3;
+  }
 }
 
 #sub-title {

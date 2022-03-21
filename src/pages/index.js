@@ -6,8 +6,8 @@ import { useSpring, animated, config } from "react-spring"
 import Layout from "../components/layout"
 import FeaturedWork from "../components/featuredWork"
 
-import "../styles/sass/global.scss"
 import "../styles/sass/pages/home.scss"
+import "../styles/sass/global.scss"
 
 function HeaderText({ text }) {
   const [flip, setFlip] = useState(false)
@@ -21,7 +21,7 @@ function HeaderText({ text }) {
     onRest: () => setFlip(!flip),
   })
 
-  return <animated.h1 style={props}>{text}</animated.h1>
+  return <animated.h1 id="banner-title" style={props}>{text}</animated.h1>
 }
 
 export default function HomePage({ data }) {
@@ -31,20 +31,17 @@ export default function HomePage({ data }) {
   return (
     <Layout title={siteTitle}>
       <header id="banner">
-        <div id="introduction">
-          <div id="titles">
-            <HeaderText id="title" text={"Designer. Developer."} />
-            <p id="sub-title">
-              Creating <u>flow</u> through user centered design and robust code.
-            </p>
-          </div>
-          <div id="profile-container">
-            <GatsbyImage
-              image={data.myFace.childImageSharp.gatsbyImageData}
-              alt="profile picture"
-              className="kg-image profile-pic"
-            />
-          </div>
+        <div id="banner-titles">
+          <HeaderText  text={"Designer. Developer."} />
+          <p id="banner-sub-title">
+            Creating <u>flow</u> through user centered design and robust code.
+          </p>
+        </div>
+        <div id="profile-container">
+          <GatsbyImage
+            image={data.myFace.childImageSharp.gatsbyImageData}
+            alt="profile picture"
+          />
         </div>
       </header>
       <div className="featured-works">

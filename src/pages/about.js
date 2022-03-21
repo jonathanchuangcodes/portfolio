@@ -30,7 +30,7 @@ export default function AboutPage({ data }) {
         <div id="about-body">
           <div id="bio-container">
             <div id="bio">
-              <div id="profile-container">
+              <div id="bio-profile-container">
                 <GatsbyImage
                   image={data.myFace.childImageSharp.gatsbyImageData}
                   alt="profile picture"
