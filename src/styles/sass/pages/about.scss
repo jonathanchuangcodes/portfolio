@@ -9,44 +9,137 @@
 
 #about-body {
   max-width: 100%;
-  margin-top: 10rem;
-  padding: 8vw;
-}
+  margin-top: 8rem;
+  padding: 8vw 16vw 8vw 16vw;
 
-#about-introduction {
-  display: flex;
+  @include for-tablet-portrait-only {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
 }
 
 #bio-container {
   display: flex;
-  flex-wrap: wrap;
-  padding: 64px;
   border: 2px solid black;
   border-radius: 8px;
+
+  @include for-smartphone-only {
+    flex-direction: column;
+  }
+
+  @include for-tablet-portrait-only {
+    padding: 1rem;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 4rem;
+  }
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+  }
 }
 
 #bio-text {
-  display: block;
   h1 {
     text-align: left;
+    margin: 0;
+
+    @include for-smartphone-only {
+      font-size: $fontsize-heading-2;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: $fontsize-heading-1;
+    }
+  }
+
+  h2 {
+    margin-top: 8rem;
+  }
+
+  @include for-smartphone-only {
+    p {
+      font-size: $fontsize-body--small;
+      line-height: $lineheight-body--small;
+    }
+    flex: 1 1 100%;
+  }
+
+  @include for-tablet-landscape-only {
+    flex: 1 0 70%;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 0 0 75%;
+  }
+
+  @include for-desktop-up {
+    flex: 0 0 75%;
+  }
+}
+
+#bio-details {
+  display: flex;
+
+  @include for-tablet-portrait-only {
+    flex-direction: column;
+  }
+
+  @include for-tablet-landscape-up {
+    flex-direction: column;
+    margin: 0 2rem 0 0;
+    flex: 1 0 25%;
+  }
+
+  @include for-desktop-up {
+    flex: 1 1 25%;
+  }
+}
+
+#links {
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  @include for-tablet-portrait-only {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 100%;
+  }
+
+  @include for-tablet-landscape-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 30%;
   }
 }
 
 #bio-profile-container {
   box-shadow: 5px 10px 18px #888888;
-  border: 2px solid black;
   border-radius: 16px;
   img {
-    border-radius: 14px;
+    border: 2px solid black;
+    border-radius: 16px;
     height: 40vh;
+    width: 100%;
   }
-  margin: 0 4rem 0 0;
-  height: 60vh;
+  height: 40vh;
+  width: fit-content;
+
+  @include for-tablet-portrait-only {
+    flex: 1 0 100%;
+    margin: 2rem auto 2rem auto;
+  }
 }
 
 #social-links {
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 
 #titles {
@@ -70,30 +163,20 @@
   font-size: 64px;
 }
 
-#bio {
-  display: flex;
-}
-
-#bio-text {
-  h1 {
-    margin: 0;
-  }
-
-  h2 {
-    margin-top: 8rem;
-  }
-}
-
 #resume {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
   p {
     margin: 0;
     padding: 0;
     font-size: $fontsize-caption-text;
+  }
+
+  @include for-tablet-portrait-only {
+    margin: 1rem 0 1rem 0;
   }
 }
 

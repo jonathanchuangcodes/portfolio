@@ -34,38 +34,53 @@
 
   @include for-tablet-portrait-up {
     margin: 5vw;
+    flex: 1 1 60%;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 2 1 100%;
   }
 }
 
 #profile-container {
-  @include for-phone-only {
-    box-shadow: 5px 10px 18px #888888;
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  img {
     border: 2px solid black;
     border-radius: 16px;
+  }
+
+  @include for-phone-only {
     margin: 4rem;
+    height: 50vh;
     img {
-      border-radius: 14px;
+      height: 50vh;
     }
   }
 
   @include for-tablet-portrait-up {
-    box-shadow: 5px 10px 18px #888888;
-    border: 2px solid black;
-    border-radius: 16px;
-    height: 45vh;
+    height: 35vh;
+    flex: 1 1 40%;
     img {
-      border-radius: 14px;
-      height: 45vh;
+      height: 35vh;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 1 1 100%;
+  }
+
+  @include for-desktop-up {
+    height: 40vh;
+    img {
+      height: 40vh;
       width: 100%;
     }
   }
 
   @include for-big-desktop-up {
-    box-shadow: 5px 10px 18px #888888;
-    border: 2px solid black;
-    border-radius: 16px;
     img {
-      border-radius: 14px;
       height: 40vh;
     }
     margin: 0 4rem 0 0;

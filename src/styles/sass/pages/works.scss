@@ -185,6 +185,8 @@
   }
 
   @include for-tablet-landscape-only {
+    font-size: $fontsize-heading-4;
+    line-height: $lineheight-heading-4;
     margin: 0;
     text-align: center;
   }
@@ -193,4 +195,7 @@
 .work-card-description {
   margin: 2rem;
   padding: 0;
+  @include for-tablet-landscape-only  {
+    display: none;
+  }
 }
