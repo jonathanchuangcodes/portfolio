@@ -5,9 +5,11 @@ import { useSpring, animated, config } from "react-spring"
 
 import Layout from "../components/layout"
 import FeaturedWork from "../components/featuredWork"
+import BlueFlow from "../components/background/BlueFlow"
 
 import "../styles/sass/pages/home.scss"
 import "../styles/sass/global.scss"
+import RedFlow from "../components/background/RedFlow"
 
 function HeaderText({ text }) {
   const [flip, setFlip] = useState(false)
@@ -21,7 +23,11 @@ function HeaderText({ text }) {
     onRest: () => setFlip(!flip),
   })
 
-  return <animated.h1 id="banner-title" style={props}>{text}</animated.h1>
+  return (
+    <animated.h1 id="banner-title" style={props}>
+      {text}
+    </animated.h1>
+  )
 }
 
 export default function HomePage({ data }) {
@@ -30,9 +36,11 @@ export default function HomePage({ data }) {
 
   return (
     <Layout title={siteTitle}>
+      <BlueFlow />
+      <RedFlow />
       <header id="banner">
         <div id="banner-titles">
-          <HeaderText  text={"Designer. Developer."} />
+          <HeaderText text={"Designer. Developer."} />
           <p id="banner-sub-title">
             Creating <u>flow</u> through user centered design and robust code.
           </p>

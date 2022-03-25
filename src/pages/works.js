@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import WorkCard from "../components/WorkCard"
 
 import "../styles/sass/pages/works.scss"
+import RedFlowWorks from "../components/background/RedFlowWorks"
+import BlueFlowWorks from "../components/background/BlueFlowWorks"
 
 export default function Works({ data }) {
   const siteTitle = data.site.siteMetadata.title
@@ -13,6 +15,8 @@ export default function Works({ data }) {
 
   return (
     <Layout title={siteTitle}>
+      <RedFlowWorks />
+      <BlueFlowWorks />
       <div className="works-feed">
         {posts.map(({ node }) => {
           postCounter++

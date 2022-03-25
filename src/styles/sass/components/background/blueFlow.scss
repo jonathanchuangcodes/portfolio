@@ -1,0 +1,26 @@
+@import "../../variables";
+@import "../responsiveness";
+
+.blue-flow {
+  position: absolute;
+  margin-top: 24rem;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  @include for-tablet-landscape-only {
+    display: none;
+  }
+}
+
+.blue-flow-works {
+  position: absolute;
+  z-index: -1;
+  top: 80%;
+
+  @include for-tablet-landscape-only {
+    display: none;
+  }
+}

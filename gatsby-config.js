@@ -1,9 +1,6 @@
 const urljoin = require("url-join")
 
 module.exports = {
-  flags: {
-    PARALLEL_QUERY_RUNNING: true,
-  },
   siteMetadata: {
     title: "Jonathan Chuang",
     author: "Jonathan Chuang",
