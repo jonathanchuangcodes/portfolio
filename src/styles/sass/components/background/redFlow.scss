@@ -1,0 +1,25 @@
+@import "../../variables";
+@import "../responsiveness";
+
+.red-flow {
+  position: absolute;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 8rem;
+  top: 0;
+  left: 0;
+
+  @include for-tablet-landscape-only {
+    display: none;
+  }
+}
+
+.red-flow-2 {
+  position: absolute;
+  z-index: -2;
+
+  @include for-tablet-landscape-only {
+    display: none;
+  }
+}

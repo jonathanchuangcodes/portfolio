@@ -8,13 +8,29 @@
     @content;
   }
 }
+
+@mixin for-tablet-portrait-only {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) {
     @content;
   }
 }
+@mixin for-tablet-landscape-only {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-only {
+  @media (max-width: 1200px) {
     @content;
   }
 }

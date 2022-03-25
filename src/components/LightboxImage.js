@@ -10,8 +10,8 @@ export default function LightboxImage({ images }) {
         edges {
           node {
             childImageSharp {
-              thumb: gatsbyImageData(placeholder: BLURRED)
               full: gatsbyImageData(layout: CONSTRAINED)
+              thumb: gatsbyImageData(placeholder: BLURRED)
             }
             base
           }
@@ -44,7 +44,7 @@ export default function LightboxImage({ images }) {
     <Gallery
       images={filteredPhotos}
       colWidth={(1 / (images.length === 4 ? 2 : images.length)) * 100}
-      mdColWidth={(1 / (images.length === 4 ? 2: images.length)) * 100}
+      mdColWidth={(1 / (images.length === 4 ? 2 : images.length)) * 100}
       className="gallery-modal"
     />
   )

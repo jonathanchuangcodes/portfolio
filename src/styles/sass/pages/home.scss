@@ -1,0 +1,124 @@
+@import "../variables";
+@import "../components/lists";
+@import "../components/buttons";
+@import "../components/actions";
+@import "../components/hamburger";
+@import "../components/grid";
+@import "../components/animations";
+@import "../components/responsiveness";
+
+#banner {
+  @include for-phone-only {
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+
+  @include for-tablet-portrait-up {
+    margin-top: 8rem;
+    padding: 8vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+#banner-titles {
+  @include for-smartphone-only {
+  }
+
+  @include for-big-desktop-up {
+    display: flex;
+    flex-flow: column;
+    margin: 5vh;
+  }
+
+  @include for-tablet-portrait-up {
+    margin: 5vw;
+    flex: 1 1 60%;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 2 1 100%;
+  }
+}
+
+#profile-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  img {
+    border: 2px solid black;
+    border-radius: 16px;
+  }
+
+  @include for-phone-only {
+    margin: 4rem;
+    height: 50vh;
+    img {
+      height: 50vh;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    height: 35vh;
+    flex: 1 1 40%;
+    img {
+      height: 35vh;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 1 1 100%;
+  }
+
+  @include for-desktop-up {
+    height: 40vh;
+    img {
+      height: 40vh;
+      width: 100%;
+    }
+  }
+
+  @include for-big-desktop-up {
+    img {
+      height: 40vh;
+    }
+    margin: 0 4rem 0 0;
+    height: 40vh;
+  }
+}
+
+#banner-title {
+  margin: 5vh;
+  text-align: left;
+  @include for-big-desktop-up {
+    font-size: $fontsize-display-1;
+  }
+
+  @include for-desktop-up {
+    font-size: $fontsize-display-3;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: $fontsize-heading-1;
+    margin: 2vh;
+  }
+
+  @include for-tablet-landscape-only {
+    font-size: $fontsize-heading-2;
+    line-height: $lineheight-heading-2;
+    margin: 2vh;
+  }
+
+  @include for-tablet-portrait-only {
+    font-size: $fontsize-heading-3;
+    line-height: $lineheight-heading-3;
+  }
+}
+
+#sub-title {
+  line-height: $lineheight-heading-1;
+  u {
+    text-decoration-style: wavy;
+  }
+}

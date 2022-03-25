@@ -2,13 +2,14 @@ const urljoin = require("url-join")
 
 module.exports = {
   siteMetadata: {
-    title: "JYC Designs",
+    title: "Jonathan Chuang",
     author: "Jonathan Chuang",
     description: "Hi there, My name is Jonathan, welcome to my portfolio",
-    siteUrl: urljoin("https://jycdesigns.com", "/"),
+    siteUrl: urljoin("https://www.jonathanchuang.codes", "/"),
     social: {
-      linkedin: "https://www.linkedin.com/in/jchuang02/",
+      linkedin: "https://www.linkedin.com/in/jonathanychuang",
       dribbble: "https://dribbble.com/jchuang02",
+      github: "https://github.com/jchuang02/",
     },
   },
   plugins: [
@@ -53,9 +54,21 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-slug`,
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-mdx-frontmatter",
+    },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
   ],
 }
