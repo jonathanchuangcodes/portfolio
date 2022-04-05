@@ -11,14 +11,14 @@ import "../styles/sass/pages/home.scss"
 import "../styles/sass/global.scss"
 import RedFlow from "../components/background/RedFlow"
 
-function HeaderText({ text }) {
+function AnimatedHeader({ text, delay = 1000 }) {
   const [flip, setFlip] = useState(false)
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
     reset: true,
     reverse: flip,
-    delay: 200,
+    delay: delay,
     config: config.molasses,
     onRest: () => setFlip(!flip),
   })
@@ -27,6 +27,25 @@ function HeaderText({ text }) {
     <animated.h1 id="banner-title" style={props}>
       {text}
     </animated.h1>
+  )
+}
+
+function AnimatedSubtitle({ text, delay = 3000 }) {
+  const [flip, setFlip] = useState(false)
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    reset: true,
+    reverse: flip,
+    delay: delay,
+    config: config.molasses,
+    onRest: () => setFlip(!flip),
+  })
+
+  return (
+    <animated.p id="banner-sub-title" style={props}>
+      {text}
+    </animated.p>
   )
 }
 
@@ -40,10 +59,11 @@ export default function HomePage({ data }) {
       <RedFlow />
       <header id="banner">
         <div id="banner-titles">
-          <HeaderText text={"Designer. Developer."} />
-          <p id="banner-sub-title">
-            Creating <u>flow</u> through user centered design and robust code.
-          </p>
+          <AnimatedHeader text={"Designer."} />
+          <AnimatedHeader text={"Developer."} delay={2000} />
+          <AnimatedSubtitle
+            text={`Creating flow through user centered design and robust code.`}
+          />
         </div>
         <div id="profile-container">
           <GatsbyImage
