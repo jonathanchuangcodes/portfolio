@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 
 import "../styles/sass/pages/about.scss"
 import Linkedin from "../../content/assets/svg/linkedin.svg"
-// import Dribbble from "../../content/assets/svg/dribbble.svg"
 import Github from "../../content/assets/svg/github.svg"
 import {
   File,
@@ -51,12 +50,6 @@ export default function AboutPage({ data }) {
                   >
                     <Linkedin />
                   </a>
-                  {/* <a
-                href={data.site.siteMetadata.social.dribbble}
-                className="icon-link"
-              >
-                <Dribbble />
-              </a> */}
                   <a href={data.site.siteMetadata.social.dribbble}>
                     <Github />
                   </a>
