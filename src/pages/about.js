@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import { useSpring, animated, to } from "react-spring"
 import { useHover } from "@use-gesture/react"
 
@@ -29,7 +30,7 @@ function AnimatedLogo({ children }) {
   }))
 
   const bind = useHover(({ hovering }) => {
-    ;(hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
+    ; (hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
   })
 
   return (
@@ -47,6 +48,22 @@ export default function AboutPage({ data }) {
 
   return (
     <Layout title={siteTitle}>
+      <GatsbySeo
+        title="About Me"
+        description="About page of Jonathan Chuang's web developer portfolio."
+        canonical='https://www.jonathanchuang.codes/about'
+        openGraph={{
+          url: "https://www.jonathanchuang.codes/about",
+          title: "About Me",
+          description: "About page of Jonathan Chuang's web developer portfolio.",
+          site_name: "JonathanChuangCodes"
+        }}
+        twitter={{
+          handle: "@jchuang02",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
+      />
       <article className="page-template no-image">
         <div id="about-body">
           <div id="bio-container">

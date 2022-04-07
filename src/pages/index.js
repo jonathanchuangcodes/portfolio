@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useSpring, animated, config } from "react-spring"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 import Layout from "../components/layout"
 import FeaturedWork from "../components/featuredWork"
@@ -49,6 +50,22 @@ export default function HomePage({ data }) {
 
   return (
     <Layout title={siteTitle}>
+      <GatsbySeo
+        title="Jonathan Chuang's Portfolio"
+        description="Homepage of Jonathan Chuang's web developer portfolio."
+        canonical='https://www.jonathanchuang.codes/'
+        openGraph={{
+          url: "https://www.jonathanchuang.codes/",
+          title: "Jonathan Chuang",
+          description: "Jonathan Chuang's web developer portfolio.",
+          site_name: "JonathanChuangCodes"
+        }}
+        twitter={{
+          handle: "@jchuang02",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
+      />
       <BlueFlow />
       <RedFlow />
       <header id="banner">

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Layout from "../components/layout"
 import WorkCard from "../components/WorkCard"
 
@@ -15,6 +15,22 @@ export default function Works({ data }) {
 
   return (
     <Layout title={siteTitle}>
+      <GatsbySeo
+        title="Portfolio Works"
+        description="Page showing portfolio pieces of Jonathan Chuang's web developer portfolio."
+        canonical='https://www.jonathanchuang.codes/works'
+        openGraph={{
+          url: "https://www.jonathanchuang.codes/works",
+          title: "Portfolio Works",
+          description: "Page showing portfolio pieces of Jonathan Chuang's web developer portfolio.",
+          site_name: "JonathanChuangCodes"
+        }}
+        twitter={{
+          handle: "@jchuang02",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
+      />
       <RedFlowWorks />
       <BlueFlowWorks />
       <div className="works-feed">
