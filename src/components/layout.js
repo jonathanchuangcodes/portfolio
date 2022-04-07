@@ -14,16 +14,14 @@ const Layout = props => {
       <nav ref={element} className={`site-head`}>
         <div
           className={`
-          ${
-            isSticky
+          ${isSticky
               ? `site-head-sticky site-head-container `
               : `site-head-container`
-          }
+            }
           `}
         >
-          <a
+          <button
             className="nav-burger"
-            href={""}
             onClick={e => {
               e.preventDefault()
               setToggleNav(!toggleNav)
@@ -39,29 +37,19 @@ const Layout = props => {
                 <div className="hamburger-inner" />
               </div>
             </div>
-          </a>
+          </button>
 
-          <div className="site-head-left">
-            <ul className="nav" role="menu">
-              <li className="nav-home" role="menuitem">
-                <NavLink to={`/`}>Home</NavLink>
-              </li>
-            </ul>
+          <div className="nav site-head-left" role="menu">
+            <NavLink className="nav-home" role="menuitem" to={`/`}>Home</NavLink>
           </div>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>
               {title}
             </Link>
           </div>
-          <div className="site-head-right">
-            <ul className="nav" role="menu">
-              <li className="nav-work" role="menuitem">
-                <NavLink to={`/works`}>Works</NavLink>
-              </li>
-              <li className="nav-about" role="menuitem">
-                <NavLink to={`/about`}>About</NavLink>
-              </li>
-            </ul>
+          <div className="nav site-head-right" role="menu">
+            <NavLink className="nav-work" role="menuitem" to={`/works`}>Works</NavLink>
+            <NavLink className="nav-about" role="menuitem" to={`/about`}>About</NavLink>
           </div>
         </div>
       </nav>

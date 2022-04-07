@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
+import { useSpring, animated, to } from "react-spring"
+import { useHover } from "@use-gesture/react"
 
-import "../styles/sass/pages/about.scss"
+import Layout from "../components/layout"
 import Linkedin from "../../content/assets/svg/linkedin.svg"
 import Github from "../../content/assets/svg/github.svg"
 import {
@@ -19,6 +20,27 @@ import {
   VscodeFill,
 } from "akar-icons"
 import Resume from "../../content/assets/Resume.pdf"
+import "../styles/sass/pages/about.scss"
+
+function AnimatedLogo({ children }) {
+  const [{ scale, zoom }, api] = useSpring(() => ({
+    zoom: 0,
+    scale: 1,
+  }))
+
+  const bind = useHover(({ hovering }) => {
+    ;(hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
+  })
+
+  return (
+    <animated.div
+      {...bind()}
+      style={{ scale: to([scale, zoom], (s, z) => s + z) }}
+    >
+      {children}
+    </animated.div>
+  )
+}
 
 export default function AboutPage({ data }) {
   const siteTitle = data.site.siteMetadata.title
@@ -37,7 +59,7 @@ export default function AboutPage({ data }) {
               </div>
               <div id="links">
                 <div id="resume">
-                  <a href={Resume}>
+                  <a href={Resume} className="icon-link">
                     <File size={48} strokeWidth={2} />
                   </a>
                   <p>My Resume</p>
@@ -50,7 +72,10 @@ export default function AboutPage({ data }) {
                   >
                     <Linkedin />
                   </a>
-                  <a href={data.site.siteMetadata.social.dribbble}>
+                  <a
+                    href={data.site.siteMetadata.social.dribbble}
+                    className="icon-link"
+                  >
                     <Github />
                   </a>
                 </div>
@@ -75,15 +100,60 @@ export default function AboutPage({ data }) {
               </p>
               <h3>Technologies and Tools I Use</h3>
               <div id="technologies">
-                <VscodeFill size={40} strokeWidth={2} />
-                <JavascriptFill size={40} strokeWidth={2} />
-                <ReactFill size={40} strokeWidth={2} />
-                <GatsbyFill size={40} strokeWidth={2} />
-                <ReduxFill size={40} strokeWidth={2} />
-                <HtmlFill size={40} strokeWidth={2} />
-                <CssFill size={40} strokeWidth={2} />
-                <SassFill size={40} strokeWidth={2} />
-                <FigmaFill size={40} strokeWidth={2} />
+                <AnimatedLogo>
+                  <a href="https://www.javascript.com/" aria-label="javascript">
+                    <JavascriptFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a
+                    href="https://code.visualstudio.com/"
+                    aria-label="visual-studio-code"
+                  >
+                    <VscodeFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a href="https://reactjs.org/" aria-label="react">
+                    <ReactFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a href="https://www.gatsbyjs.com/" aria-label="gatsby">
+                    <GatsbyFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a href="https://redux.js.org/" aria-label="redux">
+                    <ReduxFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                    aria-label="html"
+                  >
+                    <HtmlFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                    aria-label="css"
+                  >
+                    <CssFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a href="https://sass-lang.com/" aria-label="sass">
+                    <SassFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a href="https://www.figma.com/" aria-label="figma">
+                    <FigmaFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
               </div>
               <h2>My Journey</h2>
               <p className="disclaimer">

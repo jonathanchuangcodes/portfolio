@@ -70,5 +70,24 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-next-seo',
+      options: {
+        title: 'Jonathan Chuang',
+        titleTemplate: 'Portfolio | %s',
+        language: "en",
+        description: "Jonathan Chuang's web developer portfolio",
+        openGraph: {
+          type: 'website',
+          locale: 'en_US',
+          url: 'https://jonathanchuang.codes/',
+        },
+        twitter: {
+          handle: '@jchuang02',
+          site: '@site',
+          cardType: 'summary_large_image',
+        },
+      },
+    },
   ],
 }

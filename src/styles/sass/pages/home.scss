@@ -10,11 +10,9 @@
 #banner {
   @include for-phone-only {
     flex-direction: column;
-    margin-top: 8rem;
   }
 
   @include for-tablet-portrait-up {
-    margin-top: 8rem;
     padding: 8vw;
     display: flex;
     justify-content: center;
@@ -29,11 +27,11 @@
   @include for-big-desktop-up {
     display: flex;
     flex-flow: column;
-    margin: 5vh;
+    margin: 4vh;
   }
 
   @include for-tablet-portrait-up {
-    margin: 5vw;
+    margin: 1vw;
     flex: 1 1 60%;
   }
 
@@ -88,9 +86,17 @@
   }
 }
 
-#banner-title {
+#sub-title {
+  line-height: $lineheight-heading-1;
+  u {
+    text-decoration-style: wavy;
+  }
+}
+
+.banner-title {
   margin: 5vh;
   text-align: left;
+  flex: 0 1 50%;
   @include for-big-desktop-up {
     font-size: $fontsize-display-1;
   }
@@ -116,9 +122,6 @@
   }
 }
 
-#sub-title {
-  line-height: $lineheight-heading-1;
-  u {
-    text-decoration-style: wavy;
-  }
+.banner-headers {
+  display: flex;
 }
