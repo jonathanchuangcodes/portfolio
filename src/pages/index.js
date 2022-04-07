@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useSpring, animated, config } from "react-spring"
@@ -12,34 +12,28 @@ import "../styles/sass/global.scss"
 import RedFlow from "../components/background/RedFlow"
 
 function AnimatedHeader({ text, delay = 1000 }) {
-  const [flip, setFlip] = useState(false)
   const props = useSpring({
-    to: { opacity: 1 },
     from: { opacity: 0 },
+    to: { opacity: 1 },
     reset: true,
-    reverse: flip,
     delay: delay,
     config: config.molasses,
-    onRest: () => setFlip(!flip),
   })
 
   return (
-    <animated.h1 id="banner-title" style={props}>
+    <animated.h1 className="banner-title" style={props}>
       {text}
     </animated.h1>
   )
 }
 
 function AnimatedSubtitle({ text, delay = 3000 }) {
-  const [flip, setFlip] = useState(false)
   const props = useSpring({
-    to: { opacity: 1 },
     from: { opacity: 0 },
+    to: { opacity: 1 },
     reset: true,
-    reverse: flip,
     delay: delay,
     config: config.molasses,
-    onRest: () => setFlip(!flip),
   })
 
   return (
@@ -59,8 +53,10 @@ export default function HomePage({ data }) {
       <RedFlow />
       <header id="banner">
         <div id="banner-titles">
-          <AnimatedHeader text={"Designer."} />
-          <AnimatedHeader text={"Developer."} delay={2000} />
+          <div className="banner-headers">
+            <AnimatedHeader text={"Developer."} />
+            <AnimatedHeader text={"Designer."} delay={2000} />
+          </div>
           <AnimatedSubtitle
             text={`Creating flow through user centered design and robust code.`}
           />
