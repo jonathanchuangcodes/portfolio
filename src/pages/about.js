@@ -24,19 +24,18 @@ import Resume from "../../content/assets/Resume.pdf"
 import "../styles/sass/pages/about.scss"
 
 function AnimatedLogo({ children }) {
-  const [{ scale, zoom }, api] = useSpring(() => ({
-    zoom: 0,
+  const [{ scale }, api] = useSpring(() => ({
     scale: 1,
   }))
 
   const bind = useHover(({ hovering }) => {
-    ; (hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
+    (hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
   })
 
   return (
     <animated.div
       {...bind()}
-      style={{ scale: to([scale, zoom], (s, z) => s + z) }}
+      style={{ scale: to([scale], s => s) }}
     >
       {children}
     </animated.div>

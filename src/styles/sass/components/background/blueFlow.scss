@@ -18,7 +18,7 @@
 .blue-flow-works {
   position: absolute;
   z-index: -1;
-  top: 80%;
+  top: 75%;
 
   @include for-tablet-landscape-only {
     display: none;

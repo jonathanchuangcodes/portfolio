@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Layout from "../components/layout"
 import WorkCard from "../components/WorkCard"
+import FadeIn from "../components/FadeIn"
 
 import "../styles/sass/pages/works.scss"
 import RedFlowWorks from "../components/background/RedFlowWorks"
@@ -31,8 +32,12 @@ export default function Works({ data }) {
           cardType: "summary_large_image"
         }}
       />
-      <RedFlowWorks />
-      <BlueFlowWorks />
+      <FadeIn>
+        <RedFlowWorks />
+      </FadeIn>
+      <FadeIn>
+        <BlueFlowWorks />
+      </FadeIn>
       <div className="works-feed">
         {posts.map(({ node }) => {
           postCounter++

@@ -17,6 +17,7 @@
 
 .red-flow-2 {
   position: absolute;
+  margin-top: 8rem;
   z-index: -2;
 
   @include for-tablet-landscape-only {

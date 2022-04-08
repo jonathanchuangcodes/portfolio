@@ -110,8 +110,37 @@
   }
 }
 
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.work-card-image {
+  animation: scaleDown 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
 .work-card-image:hover {
   box-shadow: 0px 0px 8px black;
+  animation: scaleUp 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .work-card-description {
@@ -194,7 +223,7 @@
 .work-card-description {
   margin: 2rem;
   padding: 0;
-  @include for-tablet-landscape-only  {
+  @include for-tablet-landscape-only {
     display: none;
   }
 }

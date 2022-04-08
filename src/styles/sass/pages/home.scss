@@ -21,6 +21,8 @@
 }
 
 #banner-titles {
+  flex: 1 0 60%;
+
   @include for-smartphone-only {
   }
 
@@ -44,6 +46,7 @@
   display: flex;
   justify-content: center;
   border-radius: 16px;
+  flex: 1 0 40%;
   img {
     border: 2px solid black;
     border-radius: 16px;
@@ -124,4 +127,8 @@
 
 .banner-headers {
   display: flex;
+}
+
+.featured-works {
+  width: 100%;
 }

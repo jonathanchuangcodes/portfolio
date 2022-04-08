@@ -15,7 +15,9 @@ import {
   GatsbyFill,
   JavascriptFill,
 } from "akar-icons"
+
 const WorkCard = props => {
+
   return (
     <MDXProvider
       components={{
@@ -30,11 +32,12 @@ const WorkCard = props => {
         GatsbyFill,
         JavascriptFill,
       }}
+
     >
       <div
-        className={`work-card ${
-          props.node.frontmatter.thumbnail ? `with-image` : `no-image`
-        }`}
+        className={`work-card ${props.node.frontmatter.thumbnail ? `with-image` : `no-image`
+          }`}
+        key={props.count}
       >
         <Link to={"/" + props.node.slug} className="work-card-link">
           <GatsbyImage
@@ -59,8 +62,8 @@ const WorkCard = props => {
             <div
               className={
                 props.node.frontmatter.design &&
-                props.node.frontmatter.development &&
-                props.node.frontmatter.design.length +
+                  props.node.frontmatter.development &&
+                  props.node.frontmatter.design.length +
                   props.node.frontmatter.development.length >
                   0
                   ? "work-card-tools"
@@ -70,15 +73,15 @@ const WorkCard = props => {
               <div>
                 {props.node.frontmatter.design
                   ? props.node.frontmatter.design.map(item => (
-                      <MDXRenderer>{item.value}</MDXRenderer>
-                    ))
+                    <MDXRenderer>{item.value}</MDXRenderer>
+                  ))
                   : ""}
               </div>
               <div>
                 {props.node.frontmatter.development
                   ? props.node.frontmatter.development.map(item => (
-                      <MDXRenderer>{item.value}</MDXRenderer>
-                    ))
+                    <MDXRenderer>{item.value}</MDXRenderer>
+                  ))
                   : ""}
               </div>
             </div>
@@ -88,7 +91,7 @@ const WorkCard = props => {
           </div>
         </div>
       </div>
-    </MDXProvider>
+    </MDXProvider >
   )
 }
 

@@ -7,6 +7,7 @@ import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Layout from "../components/layout"
 import FeaturedWork from "../components/featuredWork"
 import BlueFlow from "../components/background/BlueFlow"
+import FadeIn from "../components/FadeIn"
 
 import "../styles/sass/pages/home.scss"
 import "../styles/sass/global.scss"
@@ -48,6 +49,13 @@ export default function HomePage({ data }) {
   const siteTitle = data.site.siteMetadata.title
   const works = data.allMdx.edges.filter(work => work.node.frontmatter.featured)
 
+  const props = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 500,
+    config: config.molasses,
+  })
+
   return (
     <Layout title={siteTitle}>
       <GatsbySeo
@@ -66,8 +74,13 @@ export default function HomePage({ data }) {
           cardType: "summary_large_image"
         }}
       />
-      <BlueFlow />
-      <RedFlow />
+      <FadeIn>
+        <BlueFlow />
+      </FadeIn>
+      <FadeIn>
+        <RedFlow />
+      </FadeIn>
+
       <header id="banner">
         <div id="banner-titles">
           <div className="banner-headers">
@@ -78,12 +91,12 @@ export default function HomePage({ data }) {
             text={`Creating flow through user centered design and robust code.`}
           />
         </div>
-        <div id="profile-container">
+        <animated.div style={props} id="profile-container">
           <GatsbyImage
             image={data.myFace.childImageSharp.gatsbyImageData}
             alt="profile picture"
           />
-        </div>
+        </animated.div>
       </header>
       <div className="featured-works">
         {works.map(({ node }) => {

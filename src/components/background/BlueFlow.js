@@ -2,6 +2,7 @@ import React from "react"
 import "../../styles/sass/components/background/blueFlow.scss"
 
 export default function BlueFlow() {
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
