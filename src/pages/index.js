@@ -76,8 +76,6 @@ export default function HomePage({ data }) {
       />
       <FadeIn>
         <BlueFlow />
-      </FadeIn>
-      <FadeIn>
         <RedFlow />
       </FadeIn>
 
