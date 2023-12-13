@@ -1,0 +1,229 @@
+@import "../variables";
+@import "../components/responsiveness";
+
+/* Works Feed
+ ---------------------------------------------------------- */
+.works-feed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 8rem;
+
+  @include for-desktop-only {
+    padding: 4rem;
+  }
+}
+
+.work-card {
+  display: flex;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  @include for-smartphone-only {
+    flex-direction: column;
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+  }
+  @include for-tablet-portrait-only {
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  @include for-tablet-landscape-only {
+    flex-direction: column;
+    height: 50vh;
+    margin: 2rem;
+  }
+
+  @include for-tablet-landscape-up {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 4rem;
+    margin: 2rem;
+  }
+}
+
+.work-card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+  width: 50vw;
+  color: $color-neutral--100;
+  background: rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
+  border-radius: 16px;
+  border: 1px solid $color-border;
+  margin: 1rem;
+
+  @include for-desktop-up {
+    border-radius: 16px;
+  }
+
+  @include for-desktop-only {
+    margin: 0;
+    border-radius: 0 16px 16px 0;
+    border-left: none;
+  }
+
+  @include for-tablet-landscape-only {
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    height: 15vh;
+    text-align: center;
+    margin: 0;
+    border-top: none;
+  }
+}
+
+.work-card-image {
+  display: none;
+  height: 40vh;
+  width: 30vw;
+  align-items: center;
+  display: flex;
+  border-radius: 16px;
+  border: 1px solid $color-border;
+  margin: 1rem;
+
+  @include for-desktop-up {
+    border-radius: 16px;
+  }
+
+  @include for-desktop-only {
+    margin: 0;
+    border-radius: 16px 0 0 16px;
+  }
+
+  @include for-tablet-landscape-only {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    height: 35vh;
+    margin: 0;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.work-card-image {
+  animation: scaleDown 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.work-card-image:hover {
+  box-shadow: 0px 0px 8px black;
+  animation: scaleUp 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.work-card-description {
+  @include for-tablet-landscape-only {
+    display: hidden;
+  }
+}
+
+.work-card,
+.work-card-image,
+.work-card-content {
+  @include for-tablet-landscape-up {
+    height: 40vh;
+  }
+
+  @include for-desktop-up {
+    height: 45vh;
+  }
+}
+
+.work-card-type {
+  margin: 0 2rem 0 2rem;
+  padding: 0;
+  text-align: left;
+  font-weight: normal;
+
+  @include for-tablet-landscape-only {
+    text-align: center;
+  }
+}
+
+.work-card-tools {
+  display: flex;
+  div {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+}
+
+.work-card-text {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+  text-align: left;
+}
+
+.work-card-title {
+  margin: 2rem;
+  font-family: "Muli", sans-serif;
+  font-size: $fontsize-heading-3;
+  line-height: $lineheight-heading-3;
+  font-weight: bold;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
+
+  @include for-phone-only {
+    font-size: $fontsize-heading-4;
+    line-height: $lineheight-heading-4;
+  }
+
+  @include for-tablet-portrait-only {
+    font-size: $fontsize-heading-4;
+    line-height: $lineheight-heading-4;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: $fontsize-heading-3;
+    line-height: $lineheight-heading-3;
+  }
+
+  @include for-tablet-landscape-only {
+    font-size: $fontsize-heading-4;
+    line-height: $lineheight-heading-4;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.work-card-description {
+  margin: 2rem;
+  padding: 0;
+  @include for-tablet-landscape-only {
+    display: none;
+  }
+}
