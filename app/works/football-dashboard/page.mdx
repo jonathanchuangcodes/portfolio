@@ -1,0 +1,341 @@
+import {
+  FigmaFill,
+  ReactFill,
+  SassFill,
+  GatsbyFill,
+  JavascriptFill,
+} from "akar-icons"
+
+import MdxLayout from "@/components/mdx-layout"
+
+[Dashboard.football](https://www.dashboard.football/) is a dashboard web application that will allows users to keep track of
+multiple soccer competitions that they follow in one place.
+
+You can view the original source code for this project on my github [here](https://github.com/jonathanchuangcodes/football).
+
+# Inspiration
+
+This project was an opportunity for me to learn how to create a standalone modern React web application. I wanted to showcase
+my knowledge of a number of web development concepts while creating a product that I'm passionate about that I had a lot of background
+knowledge for.
+
+### What I am learning from this project
+
+- React Functional components
+- React Hooks
+- Writing Custom Hooks
+- Redux State Management
+- User authentication with Firebase
+- CSS in JSS with Material UI's Emotion
+
+## An Avid Football ⚽ Fan's Testimony
+
+I'm a self proclaimed football fan, following all of the top leagues in Europe with at
+minimum passing interest. Point to any player on the TV screen and I could probably give you an informed opinion of that player.
+
+But following the sport that I'm so passionate about has been a surprising struggle.
+
+## A World of Frustrating Solutions 🤦
+
+For all of the solutions that I tried and interacted with, not one ever seemed to stick.
+
+I signed up for countless sports score/sports content websites that were intended to fulfill this need, but would always leave dissatisfied. They
+had some sort of drawback that prevented me from fully adopting them.
+
+# Competitive Analysis
+
+To gather a more complete picture of why these solutions weren't working, I gathered screenshots and analyzed the top websites that would come up when
+someone searches "soccer scores" on Google, breaking down what each solution did well and why they might fall short of being adopted by a user like me.
+
+The Notion of my complete analysis notes can be found [here](https://draconia.notion.site/6aa100f974804544af28f9ab1400473f?v=f600cfb8bbd64ad7943315e77b6707e9).
+
+After synthesizing this analysis I found 3 key factors that were preventing adoption of their platform.
+
+---
+
+## 1. Lack of Personalization
+
+None of the solutions I tried had an onboarding experience that asked me what I was interested in following, which seemed odd considering how different
+each users interest could be when following sports.
+
+Platforms would simply show all the available information at once, with some having limited personalization features like
+a Favorites section.
+
+LiveScore.com for example has a dedicated Favorites section, but its limited to individual matches and competitions. But favoriting doesn't really increase
+usability. It simply provides quick links to the same content as if you had searched up the league or match in the search function.
+
+![LiveScore Favorites page](assets/livescore_favorites.png)
+
+Soccer24 has a Favorites feature too but only for Teams and Leagues.
+
+![Soccer24 Home page](assets/soccer24_home.png)
+
+All in all, personalization was lackluster at best.
+
+---
+
+## 2. Too much Content Pushing Leads to Cognitive Load
+
+The websites hoping to cater to all sports fans like Fox Sports and ESPN do this consistently more than the others, understandably so. They're hoping that
+since you might be a general sports fan, you might be interested in any and all sports content, so they show users flashy and big content cards like the ones on the
+Fox Sports home page, hoping to grab you're attention.
+
+![Fox Sports Home page](assets/fox_home.png)
+
+Even if you **explicitly** choose the Premier League ⚽ as your favorite competition, you might assume that only content relevant to this competition would be shown,
+but thats not the case. The website still show you content for sports you don't follow.
+
+This choice always puzzled me. The platform explicitly asks for the user's preference, but then chooses to ignore them the majority of the time.
+
+Websites dedicated to ⚽ scores and ⚽ content only are better with this for obvious reasons, but they also tend to shove too much information and content
+onto the page.
+
+Sites like LiveScore and Soccer24 do a decent job of prioritizing user favorited content, but still shows information for leagues the user may not be interested
+in, often times too much of it too.
+
+![Soccer24 Bottom off Home Page](assets/soccer24_bottom_home.png)
+
+Their home pages end up scrolling really far down as they show you every match for every league that day. It seems like a poor use of space on the page to put every
+score for every league possible into one long table on the page.
+
+{/*<LightboxImage
+images={[
+{
+title: "livescore_home.png",
+caption: "LiveScore Home page",
+},
+{
+title: "soccer24_home.png",
+caption: "Soccer24 Home page",
+},
+]}*/}
+
+### Where's the information I actually want?
+
+Some examples of what one might consistently expect to see might be the upcoming matches for your favorites and the latest results for your favorites,
+which you will find only appears sometimes depending on the website.
+
+ESPN's home shows you upcoming matches, but no recent match results.
+
+![ESPN Home page](assets/espn_home.png)
+
+Fox Sports home shows the exact opposite; recent match recents, but no upcoming match details.
+
+![Fox Sports Home page](assets/fox_home.png)
+
+---
+
+## 3. Clunky UI and UX
+
+Aesthetically the Fox Sports website and Livescore website seem the most up to date with current trends, emphasizing a minimal design language with ample padding
+and white space, but usability is hampered by lackluster personalization options.
+
+{/*<LightboxImage
+images={[
+{
+title: "fox_home.png",
+caption: "Fox Sports Home page",
+},
+{
+title: "livescore_home.png",
+caption: "LiveScore Home page",
+},
+]}
+/>*/}
+
+Other websites like WhoScored and Soccer24 offer a wealth of impressive information, but oudated, bloated UIs and a confusing content organization make the websites less approachable.
+
+{/*<LightboxImage
+images={[
+{
+title: "whoscored_home.png",
+caption: "WhoScored Home page",
+},
+{
+title: "soccer24_home.png",
+caption: "Soccer24 Home page",
+},
+]}
+/>*/}
+
+---
+
+# A Vision of a one stop Dashboard
+
+Unsatisfied with the current existing solutions, I set out ambitiously to build my own. To avoid the pitfuls of these solutions, I started writing down some guiding principles
+to aid me along the process. They will help me maintain focus and ensure I actually solve for the issues I encountered previously.
+
+## 1. Uncompromising Personalization
+
+- Whether its the 3rd tier of the Belgium football league or the ever popular British Premier League, users should be able to see information about these matches in one place.
+- Users should be able to follow and unfollow their favorite competitions and teams with ease.
+
+## 2. Content only when Appropriate
+
+- A true home page should include content from a user's favorites and **only** their favorites.
+- If I'm on a page for a specific league, I should only see news content for that league.
+
+> **I will know that my solution is successful when these guiding principles are met. They will also continue to evolve and mature as I interate through designs and production builds.**
+
+---
+
+# Milestone 1
+
+The research and competitive analysis I performed indicated that football fans follow the sport from 3 key perspectives; they follow their favorite teams,
+competitions, and players, not necessarily in that order.
+
+## Creating an initial Design
+
+My initial design therefore categorized information that a user follows based on these 3 types. Users would be able to expand and minimize each section
+based on what they wanted to see. Upcoming and Live match information would be shown at the top as cards, if available.
+
+![Home Page Version 1](assets/homepagev1.png)
+
+## Exploring the API
+
+I then created an initial version of the competitions page for leagues and cups. This would be one of the most popular pages of my application, so I decided to start production
+of this page as an initial MVP where users can see match and standings information. This allowed me to test out the data API I'm working with, [API-Football](https://www.api-football.com/)
+and acertain any development limitations.
+
+To see the initial build of this web application, click [here](https://gifted-thompson-b218f4.netlify.app/).
+
+{/*<LightboxImage
+images={[
+{
+title: "competitionspage_league.png",
+caption: "Milestone 1 Competitions Page for League",
+},
+{
+title: "competitionspage_groupstage.png",
+caption: "Milestone 1 Competitions Page for Cup",
+},
+]}
+/>*/}
+
+# Milestone 2
+
+After familiarizing myself a bit with the API and what I could achieve, I decided to write down some goals I wanted to achieve for
+the next version of dashboard.football:
+
+1. Categorize the application based on teams and competitions.
+
+Because of data limitations of the API, I decided that focusing on teams and competitions as the primary categories
+in the application made more sense. The API simply did not have enough individual player information that would make a dedicated
+players page a useful source.
+
+2. Make it easy for users to search and add teams and competitions to the dashboard.
+
+Milestone 1's implementation was hardcoded, with only a select few competitions being shown out of the +900 leagues & cup competitions available.
+A search and add functionality would achieve the basic personalization the application's philosophy calls for.
+
+3. Create an onboarding experience.
+
+A basic onboarding experience would guide users through the sign up and personalization process so that the users can understand how the application
+works and start using the dashboard quickly.
+
+4. Allow users to sign up for an account so that personalization settings like their followed teams and competitions could be saved.
+
+Having unique user accounts early is key to the philosophy of dashboard.football as more personalized features will be added. This ensures that
+any previous choices a user makes are saved as the application updates. They'll also be about to sign into dashboard.football on any device with
+their credentials and load in their personalized settings.
+
+## Sitemap
+
+Based on these goals and what I learned from the application, I created a simple sitemap to visualize and understand the basic flow of the application.
+
+{/*<LightboxImage
+images={[
+{
+title: "footballdashboardsitemap.png",
+caption: "Milstone 2 Sitemap",
+},
+]}
+/>*/}
+
+## Designs
+
+I made some new mockups in Figma following the sitemap, creating a custom header component with a home button for a page showing
+all teams and competitions the user follows, link buttons that navigate to individual team and competition pages, and a login/signup link.
+Next to the link buttons for teams and competitions are add buttons that will show a modal when clicked that allow users to quickly add
+a new team or competition to follow.
+
+{/*<LightboxImage
+images={[
+{
+title: "homepagev2.png",
+caption: "Milestone 2 Home Page",
+},
+]}
+/>*/}
+
+The teams and competitions pages look very similar, but also include some competition and team specific information like a league leaderboard and
+a current squad component.
+
+{/*<LightboxImage
+images={[
+{
+title: "teampagev2.png",
+caption: "Milestone 2 Team Page",
+},
+{
+title: "competitionpagev2.png",
+caption: "Milestone 2 Competition Page",
+},
+]}
+/>*/}
+
+The onboarding process I chose to design for was email authentication, a more modern, lightweight method of sign in that forces the user to verify their email to sign in,
+but doesn't require them to remember or make a password.
+
+{/*<LightboxImage
+images={[
+{
+title: "onboarding(SignInEmail).png",
+caption: "Milestone 2 Onboarding Page: email not entered",
+},
+{
+title: "onboarding(SignInEmailEntered).png",
+caption: "Milestone 2 Onboarding Page: email entered",
+},
+{
+title: "onboarding(VerificationLinkSent).png",
+caption: "Milestone 2 Onboarding Page: verification link sent",
+},
+]}
+/>*/}
+
+Finally I create a simple 2-step personalization process that asks users to choose the teams and competitions they want to follow.
+
+{/*<LightboxImage
+images={[
+{
+title: "onboarding(ChooseTeams).png",
+caption: "Milestone 2 Onboarding Page: choose teams",
+},
+{
+title: "onboarding(ChooseCompetitions).png",
+caption: "Milestone 2 Onboarding Page: choose competitions",
+},
+]}
+/>*/}
+
+---
+export const metadata = {
+  author: "John Doe",
+  title: "Football Dashboard: The ⚽ Fan's One Stop Dashboard",
+  thumbnail: "/football-dashboard/thumbnail.png",
+  description: "A web dashboard app for following ⚽ competitions",
+  project_timeline: "November 2021 - Ongoing",
+  link: "https://www.dashboard.football/",
+  deliverable: "React Web Application",
+  my_role: "Developer, Designer",
+  type: "Code Project",
+  color: "#2E3A59",
+  featured: true,
+}
+
+export default function FootballDashboard({ children }) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>
+}
+
+

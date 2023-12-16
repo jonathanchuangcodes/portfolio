@@ -1,0 +1,174 @@
+---
+title: Pear OS
+thumbnail: assets/thumbnail.png
+description: A minimalistic, clean mobile operating system built for foldable devices
+project_timeline: Fall Quarter 2018 - 10 Weeks
+link: https://projects.invisionapp.com/share/4TBW3F5RK#/screens
+deliverable: High Fidelity Mobile App Designs
+my_role: UX/UI Designer, Wireframing, User Flows
+type: Course Project
+color: "#17384B"
+featured: false
+design: 
+development: 
+---
+import MdxLayout from "@/components/mdx-layout"
+
+# Mobile Application Design - Objective
+
+Create a new design language and design system for a conceptual mobile OS for foldable device, and use them to create high fidelity wireframes for system apps like the Camera app, Messages app, Browser app and others.
+
+### Requirements
+
+1. Adhere to the created design language and system.
+2. Ensure pixel perfect designs, with every pixel aligned and accounted for.
+3. Justify design decisions in terms of usability or visual appeal.
+
+## Design System Development
+
+<LightboxImage
+  images={[
+    {
+      title: "IMG_20181017_190924.jpg",
+      caption: "Developing our Design System Photo",
+    },
+  ]}
+/>
+
+Foldable devices were just starting to come out when this project was underway, with the first ever foldable device, the Royale FlexPai released at the end of October 2018,
+as other high profile companies like Apple and Microsoft started filing patents for foldable device hinge components.
+
+We we wanted to explore the design opportunities that could be opened when a device was foldable, and how the OS would adapt and take advantage
+of the changing form factor.
+
+Our resulting design system is shown in the gallery below, exemplifying a clean and minimal ethos that we were aiming for.
+
+<LightboxImage
+  images={[
+    {
+      title: "Pear_OS_Test_Screens.png",
+      caption: "Design System Example Screens",
+    },
+    {
+      title: "Pear_OS.png",
+      caption: "Design System Colors and Fonts",
+    },
+  ]}
+/>
+
+# The Design Process
+
+We created high fidelity mock-up screens in Figma for **3 key system applications, News, Browser, and Mail** over the course of 3 2-week design sprints. Each sprint consisted of 3 crucial steps:
+
+1. **Competitive Analysis**: Performed research on existing conventions, popular applications similar to the one we were designing, whilst consulting our design system.
+   - E.g. for our Mail application we looked at mobile apps like Inbox, Gmail, Outlook, and Spark to draw inspiration from and to assess the features that we needed to include in our own mail application.
+2. **Wireframing**: Created low-fidelity wireframes and reviewed our designs with stakeholders to ensure that our user flow was information architecture was sound.
+3. **High Quality Mock Ups**: Made improvements to these mock-ups based on stakeholder feedback, creating high quality mock-ups for our designs and making adjustments down to the last pixel.
+
+## Scoring Results
+
+Our high quality wireframes were then scored by our professor and 2 of his peers in the mobile app design industry.
+
+**These scores were based on:**
+
+1. user experience design
+2. overall aesthetics
+3. professionalism (Points docked for unaligned pixels, grainy screenshots) and adherence to style guide and design system
+
+The 3 app designs that I helped create scored the highest 
+
+<div className="scores">
+  <div>
+    <h3> 4.5/5 </h3>
+    <p>For Mail, News and Browser</p>
+  </div>                                                
+</div>
+
+<LightboxImage
+  images={[
+    {
+      title: "Mail-App.png",
+      caption: "Mail App High Fidelity Mockup",
+    },
+    {
+      title: "News-App.png",
+      caption: "News App High Fidelity Mockup",
+    },
+    {
+      title: "Browser-App.png",
+      caption: "Browser App High Fidelity Mockup",
+    },
+  ]}
+/>
+
+## **My Responsibilities**
+
+I owned multiple aspects of the design process, performing competitive analysis and heavily contributing to the final High Quality Designs.
+
+I was a key motivator in ensuring that the app designs we came up with would adhere to our design system, assessing any interactions and design choices that
+might clash with the design system we created.
+
+_Unfortunately due to time constraints, we had to abandon the wireframes for the unfolded form factor and only creating high fidelity wireframes for 
+the mobile phone experience. _
+
+Here's a sneak peak of some of the mockups of our Mail application we envisioned in the devices' unfolded tablet form factor:
+
+<LightboxImage
+  images={[
+    {
+      title: "Tablet_view_-_EXPERIMENTAL.png",
+      caption: "Tablet View Experimental Mockup",
+    },
+    {
+      title: "Tablet_view_-_menu_expended.png",
+      caption: "Tablet View Menu Expanded Experimental Mockup",
+    },
+  ]}
+/>
+
+---
+
+## Reflection
+
+I had 2 key learnings from this project.
+
+1. How to create professional looking mobile designs
+
+  Every pixel was accounted for; anything off center or a few pixels off would mean points deducted. Design choices were put under scrutiny for all elements on the screen.
+
+2. Create, use, and adhere to style guides, and when it's' appropriate break these rules
+
+<LightboxImage
+  images={[
+    {
+      title: "composebuttoncropped.png",
+      caption: "Mail App Compose Button",
+    },
+  ]}
+/>
+
+An example of this is when we were designing the Compose Button for our Mail app. 
+
+This floating button pattern didn't exist in our design system, but we chose to keep this pattern as it saved
+screen real estate, and is also a conventional pattern that already exists in popular Mail apps. 
+
+We conferred with stakeholders about the convention and utility of this button pattern to ensure it was suitable in this scenario.
+
+export const metadata = {
+title: "Pear OS",
+thumbnail: "/pear-os/thumbnail.png",
+description: "A minimalistic, clean mobile operating system built for foldable devices",
+project_timeline: "Fall Quarter 2018 - 10 Weeks",
+link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
+deliverable: "High Fidelity Mobile App Designs",
+my_role: "UX/UI Designer, Wireframing, User Flows",
+type: 'Course Project",
+color: "#17384B",
+featured: false
+}
+
+export default function Frontier({ children}) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+}
+
+

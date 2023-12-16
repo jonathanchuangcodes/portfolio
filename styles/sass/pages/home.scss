@@ -1,0 +1,137 @@
+@import "../variables";
+@import "../components/lists";
+@import "../components/buttons";
+@import "../components/actions";
+@import "../components/hamburger";
+@import "../components/grid";
+@import "../components/animations";
+@import "../components/responsiveness";
+
+#banner {
+  @include for-phone-only {
+    flex-direction: column;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 8vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+#banner-titles {
+  flex: 1 0 60%;
+
+  @include for-smartphone-only {
+  }
+
+  @include for-big-desktop-up {
+    display: flex;
+    flex-flow: column;
+    margin: 4vh;
+  }
+
+  @include for-tablet-portrait-up {
+    margin: 1vw;
+    flex: 1 1 60%;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 2 1 100%;
+  }
+}
+
+#profile-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  flex: 1 0 40%;
+  img {
+    border: 2px solid black;
+    border-radius: 16px;
+    max-width: 350px;
+  }
+
+  @include for-phone-only {
+    margin: 4rem;
+    height: 50vh;
+    img {
+      height: 50vh;
+      max-width: 350px;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    height: 35vh;
+    flex: 1 1 40%;
+    img {
+      height: 35vh;
+      max-width: 350px;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 1 1 100%;
+  }
+
+  @include for-desktop-up {
+    height: 40vh;
+    img {
+      height: 40vh;
+      max-width: 400px;
+    }
+  }
+
+  @include for-big-desktop-up {
+    img {
+      height: 40vh;
+    }
+    margin: 0 4rem 0 0;
+    height: 40vh;
+  }
+}
+
+#sub-title {
+  line-height: $lineheight-heading-1;
+  u {
+    text-decoration-style: wavy;
+  }
+}
+
+.banner-title {
+  margin: 5vh;
+  text-align: left;
+  flex: 0 1 50%;
+  @include for-big-desktop-up {
+    font-size: $fontsize-display-1;
+  }
+
+  @include for-desktop-up {
+    font-size: $fontsize-display-3;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: $fontsize-heading-1;
+    margin: 2vh;
+  }
+
+  @include for-tablet-landscape-only {
+    font-size: $fontsize-heading-2;
+    line-height: $lineheight-heading-2;
+    margin: 2vh;
+  }
+
+  @include for-tablet-portrait-only {
+    font-size: $fontsize-heading-3;
+    line-height: $lineheight-heading-3;
+  }
+}
+
+.banner-headers {
+  display: flex;
+}
+
+.featured-works {
+  width: 100%;
+}

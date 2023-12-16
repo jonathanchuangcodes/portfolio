@@ -1,12 +1,6 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-
-import LightboxImage from "../components/LightboxImage"
+import LightboxImage from "../../components/LightboxImage"
 import Layout from "../components/layout"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents from "../../components/TableOfContents"
 import "../styles/sass/pages/work.scss"
 const shortcodes = {
   LightboxImage,
@@ -21,8 +15,9 @@ export default function blogPostTemplate({ data }) {
         <TableOfContents headings={post.headings} />
 
         <article
-          className={`post-content ${post.frontmatter.thumbnail ? "" : "no-image"
-            }`}
+          className={`post-content ${
+            post.frontmatter.thumbnail ? "" : "no-image"
+          }`}
         >
           <header className="post-content-header">
             <h1 className="post-content-title">{post.frontmatter.title}</h1>
@@ -97,35 +92,3 @@ export default function blogPostTemplate({ data }) {
     </>
   )
 }
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
-    mdx(slug: { eq: $slug }) {
-      id
-      excerpt(pruneLength: 160)
-      body
-      headings {
-        depth
-        value
-      }
-      frontmatter {
-        title
-        description
-        thumbnail {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-          }
-        }
-        project_timeline
-        deliverable
-        my_role
-      }
-    }
-  }
-`
