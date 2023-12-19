@@ -1,18 +1,22 @@
 "use client"
 
-import { useSpring, animated } from "@react-spring/web"
+import { useTrail, animated } from "@react-spring/web"
 
 export default function AnimatedHeader({ text, delay = 1000 }) {
-    const props = useSpring({
-      from: { opacity: 0 },
-      to: { opacity: 1 },
-      delay,
-    })
-  
-    return (
-      <animated.h1 className="banner-title" style={props}>
-        {text}
-      </animated.h1>
-    )
-  }
-  
+  const trail = useTrail(1, {
+    config: { mass: 5, tension: 2000, friction: 200 },
+    from: { opacity: 0, x: 20, height: 0 },
+    to: { opacity: 1, x: 0, height: 40 },
+    delay,
+  })
+
+  return (
+    <>
+      {trail.map(prop => (
+        <animated.h1 style={prop} className="banner-title">
+          {text}
+        </animated.h1>
+      ))}
+    </>
+  )
+}

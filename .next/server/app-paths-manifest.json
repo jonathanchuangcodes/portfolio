@@ -1,9 +1,0 @@
-{
-  "/not-found": "app/not-found.js",
-  "/works/football-dashboard/page": "app/works/football-dashboard/page.js",
-  "/works/google-maps-case-study/page": "app/works/google-maps-case-study/page.js",
-  "/works/frontier/page": "app/works/frontier/page.js",
-  "/works/yet-another-covid-dashboard/page": "app/works/yet-another-covid-dashboard/page.js",
-  "/page": "app/page.js",
-  "/about/page": "app/about/page.js"
-}

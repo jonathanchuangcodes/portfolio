@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+"use client"
+
+import Link from "next/link"
+import Image from "next/image"
 import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import {
   FigmaFill,
   ReactFill,
@@ -16,8 +16,7 @@ import {
   JavascriptFill,
 } from "akar-icons"
 
-const WorkCard = props => {
-
+const WorkCard = ({ work, count }) => {
   return (
     <MDXProvider
       components={{
@@ -32,66 +31,58 @@ const WorkCard = props => {
         GatsbyFill,
         JavascriptFill,
       }}
-
     >
       <div
-        className={`work-card ${props.node.frontmatter.thumbnail ? `with-image` : `no-image`
-          }`}
-        key={props.count}
+        className={`work-card ${work.thumbnail ? `with-image` : `no-image`}`}
+        key={count}
       >
-        <Link to={"/" + props.node.slug} className="work-card-link">
-          <GatsbyImage
-            image={
-              props.node.frontmatter.thumbnail.childImageSharp.gatsbyImageData
-            }
-            alt={props.node.frontmatter.title + " thumbnail"}
-            className="work-card-image"
-          ></GatsbyImage>
-        </Link>
+        <div className="work-card-image-container">
+          <Link href={"/works/" + work.slug} className="work-card-link">
+            <Image
+              className="work-card-image"
+              src={work.thumbnail}
+              alt={work.title + " thumbnail"}
+              objectFit="cover"
+              fill
+            />
+          </Link>
+        </div>
         <div
           className="work-card-content"
-          style={{ backgroundColor: props.node.frontmatter.color }}
+          style={{ backgroundColor: work.color }}
         >
           <div className="work-card-text">
-            <h1 className="work-card-title">
-              {props.node.frontmatter.title || props.node.slug}
-            </h1>
-            <p className="work-card-type">
-              {props.node.frontmatter.type || ""}
-            </p>
+            <h1 className="work-card-title">{work.title || work.slug}</h1>
+            <p className="work-card-type">{work.type || ""}</p>
             <div
               className={
-                props.node.frontmatter.design &&
-                  props.node.frontmatter.development &&
-                  props.node.frontmatter.design.length +
-                  props.node.frontmatter.development.length >
-                  0
+                work.design &&
+                work.development &&
+                work.design.length + work.development.length > 0
                   ? "work-card-tools"
                   : "hidden"
               }
             >
-              <div>
-                {props.node.frontmatter.design
-                  ? props.node.frontmatter.design.map(item => (
-                    <MDXRenderer>{item.value}</MDXRenderer>
-                  ))
+              {/* <div>
+                {node.design
+                  ? node.design.map(item => (
+                      <MDXRenderer>{item.value}</MDXRenderer>
+                    ))
                   : ""}
               </div>
               <div>
-                {props.node.frontmatter.development
-                  ? props.node.frontmatter.development.map(item => (
-                    <MDXRenderer>{item.value}</MDXRenderer>
-                  ))
+                {node.development
+                  ? node.development.map(item => (
+                      <MDXRenderer>{item.value}</MDXRenderer>
+                    ))
                   : ""}
-              </div>
+              </div> */}
             </div>
-            <p className="work-card-description">
-              {props.node.frontmatter.description}
-            </p>
+            <p className="work-card-description">{work.description}</p>
           </div>
         </div>
       </div>
-    </MDXProvider >
+    </MDXProvider>
   )
 }
 

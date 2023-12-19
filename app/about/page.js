@@ -20,6 +20,7 @@ import {
   LinkedinFill,
 } from "akar-icons"
 // import Resume from "@/public/resume.pdf"
+import "@/styles/sass/global.scss"
 import "@/styles/sass/pages/about.scss"
 
 function AnimatedLogo({ children }) {
@@ -45,8 +46,13 @@ export default function AboutPage() {
         <div id="about-body">
           <div id="bio-container">
             <div id="bio-details">
-              <div id="bio-profile-container">
-                <Image src={ProfilePicture} alt="profile picture" />
+              <div id="bio-profile-image-container">
+                <Image
+                  src={ProfilePicture}
+                  className="about-image"
+                  alt="profile picture"
+                  fill
+                />
               </div>
               <div id="links">
                 <div id="resume">
@@ -81,7 +87,7 @@ export default function AboutPage() {
             <div id="bio-text">
               <h1>About Me</h1>
               <p>
-                Hi, I'm Jonathan, a self taught front-end developer. I like
+                Hi, I'm Jonathan, a self taught software developer. I like
                 creating free flowing user experiences with robust code.
               </p>
               <p>
@@ -91,9 +97,10 @@ export default function AboutPage() {
                 as possible!
               </p>
               <p>
-                Outside of design and development, I am a soccer/football fan
-                (just the game itself, not any particular team), gamer, amateur
-                photographer, and generally curious human.
+                Outside of design and development, I am a huge soccer fan/nerd
+                (I just love the game itself, not any particular team), avid
+                gamer, amateur photographer, and generally curious human who
+                likes to dabble in different things.
               </p>
               <h3>Technologies and Tools I Use</h3>
               <div id="technologies">
@@ -155,9 +162,9 @@ export default function AboutPage() {
               <p>
                 I have a bachelor's degree in Informatics from the University of
                 Washington, with a focus in human-computer interaction. My
-                degree exposed me to a multitude of disciplines like data
-                science, development, product management and more, but my main
-                focus was in UX and UI design.
+                degree exposed me to a multitude of disciplines including data
+                science, software development, product management and more, but
+                my main focus was in UX and UI design.
               </p>
             </div>
           </div>

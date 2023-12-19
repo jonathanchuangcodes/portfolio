@@ -1,18 +1,22 @@
----
-title: Pear OS
-thumbnail: assets/thumbnail.png
-description: A minimalistic, clean mobile operating system built for foldable devices
-project_timeline: Fall Quarter 2018 - 10 Weeks
-link: https://projects.invisionapp.com/share/4TBW3F5RK#/screens
-deliverable: High Fidelity Mobile App Designs
-my_role: UX/UI Designer, Wireframing, User Flows
-type: Course Project
-color: "#17384B"
-featured: false
-design: 
-development: 
----
 import MdxLayout from "@/components/mdx-layout"
+
+export const metadata = {
+  title: "Pear OS",
+  thumbnail: "/pear-os/thumbnail.png",
+  description: "A minimalistic, clean mobile operating system built for foldable devices",
+  project_timeline: "Fall Quarter 2018 - 10 Weeks",
+  link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
+  deliverable: "High Fidelity Mobile App Designs",
+  my_role: "UX/UI Designer, Wireframing, User Flows",
+  type: "Course Project",
+  color: "#17384B",
+  featured: false,
+  slug: "pear-os",
+}
+
+export default function PearOS({ children}) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+}
 
 # Mobile Application Design - Objective
 
@@ -26,14 +30,14 @@ Create a new design language and design system for a conceptual mobile OS for fo
 
 ## Design System Development
 
-<LightboxImage
+{/* <LightboxImage
   images={[
     {
       title: "IMG_20181017_190924.jpg",
       caption: "Developing our Design System Photo",
     },
   ]}
-/>
+/> */}
 
 Foldable devices were just starting to come out when this project was underway, with the first ever foldable device, the Royale FlexPai released at the end of October 2018,
 as other high profile companies like Apple and Microsoft started filing patents for foldable device hinge components.
@@ -43,7 +47,7 @@ of the changing form factor.
 
 Our resulting design system is shown in the gallery below, exemplifying a clean and minimal ethos that we were aiming for.
 
-<LightboxImage
+{/* <LightboxImage
   images={[
     {
       title: "Pear_OS_Test_Screens.png",
@@ -54,7 +58,7 @@ Our resulting design system is shown in the gallery below, exemplifying a clean 
       caption: "Design System Colors and Fonts",
     },
   ]}
-/>
+/> */}
 
 # The Design Process
 
@@ -84,7 +88,7 @@ The 3 app designs that I helped create scored the highest
   </div>                                                
 </div>
 
-<LightboxImage
+{/* <LightboxImage
   images={[
     {
       title: "Mail-App.png",
@@ -99,7 +103,7 @@ The 3 app designs that I helped create scored the highest
       caption: "Browser App High Fidelity Mockup",
     },
   ]}
-/>
+/> */}
 
 ## **My Responsibilities**
 
@@ -113,7 +117,7 @@ the mobile phone experience. _
 
 Here's a sneak peak of some of the mockups of our Mail application we envisioned in the devices' unfolded tablet form factor:
 
-<LightboxImage
+{/* <LightboxImage
   images={[
     {
       title: "Tablet_view_-_EXPERIMENTAL.png",
@@ -124,7 +128,7 @@ Here's a sneak peak of some of the mockups of our Mail application we envisioned
       caption: "Tablet View Menu Expanded Experimental Mockup",
     },
   ]}
-/>
+/> */}
 
 ---
 
@@ -138,14 +142,14 @@ I had 2 key learnings from this project.
 
 2. Create, use, and adhere to style guides, and when it's' appropriate break these rules
 
-<LightboxImage
+{/* <LightboxImage
   images={[
     {
       title: "composebuttoncropped.png",
       caption: "Mail App Compose Button",
     },
   ]}
-/>
+/> */}
 
 An example of this is when we were designing the Compose Button for our Mail app. 
 
@@ -154,21 +158,6 @@ screen real estate, and is also a conventional pattern that already exists in po
 
 We conferred with stakeholders about the convention and utility of this button pattern to ensure it was suitable in this scenario.
 
-export const metadata = {
-title: "Pear OS",
-thumbnail: "/pear-os/thumbnail.png",
-description: "A minimalistic, clean mobile operating system built for foldable devices",
-project_timeline: "Fall Quarter 2018 - 10 Weeks",
-link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
-deliverable: "High Fidelity Mobile App Designs",
-my_role: "UX/UI Designer, Wireframing, User Flows",
-type: 'Course Project",
-color: "#17384B",
-featured: false
-}
 
-export default function Frontier({ children}) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>;
-}
 
 

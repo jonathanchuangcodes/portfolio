@@ -1,6 +1,24 @@
 import MdxLayout from "@/components/mdx-layout"
 import FrontierScores from "@/components/FrontierScores"
 
+export const metadata = {
+title: "Frontier: Curated Portfolio Projects",
+thumbnail: "/frontier/thumbnail.png",
+description: "A web platform for aspiring designers, software developers, data scientists, and other entry-level tech professionals to complete company-curated portfolio projects and increase their chances of getting hired",
+project_timeline: "8 weeks",
+link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
+deliverable: "High Fidelity Prototype with user testing results via UserTesting.com",
+my_role: "UX/UI Designer, Wireframing/Prototyping, User Research",
+type: "Course Project",
+color: "#2F9CAA",
+featured: false,
+slug: "frontier",
+}
+
+export default function Frontier({ children}) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+}
+
 # Problem Statement
 
 1. Finding appropriate project works to showcase in your portfolio is difficult.
@@ -192,19 +210,3 @@ Some screenshots of the final prototype, if you missed it.
   ]}
 /> */}
 
-export const metadata = {
-title: "Frontier: Curated Portfolio Projects",
-thumbnail: "/frontier/thumbnail.png",
-description: "A web platform for aspiring designers, software developers, data scientists, and other entry-level tech professionals to complete company-curated portfolio projects and increase their chances of getting hired",
-project_timeline: "8 weeks",
-link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
-deliverable: "High Fidelity Prototype with user testing results via UserTesting.com",
-my_role: "UX/UI Designer, Wireframing/Prototyping, User Research",
-type: "Course Project",
-color: "#2F9CAA",
-featured: false
-}
-
-export default function Frontier({ children}) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>;
-}

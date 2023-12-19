@@ -1,5 +1,23 @@
 import MdxLayout from "@/components/mdx-layout"
 
+export const metadata = {
+title: "Google Maps: Addressing Alternative Use Cases",
+thumbnail: "/google-maps-case-study/thumbnailnav.png",
+description: "A case study investigating the user experience of Google Maps",
+project_timeline: "2 months",
+link: "https://xd.adobe.com/view/ed71df57-f258-4f17-63fd-6f050c921385-9b40/",
+deliverable: "Prototype",
+my_role: "UX/UI Designer, Wireframing/Prototyping, User Research",
+type: "Case Study",
+color: '#1FA463',
+featured: true,
+slug: "google-maps-case-study",
+}
+
+export default function GMapsCaseStudy({ children }) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+}
+
 # Introduction
 
 ---
@@ -333,20 +351,3 @@ This case study was exploratory. Many of the issues I bring to light in this cas
 express frustrations about.
 
 I wanted to investigate these issues and brainstorm solutions, both large and small scale, that would improve the overall user experience of the app.
-
-export const metadata = {
-title: "Google Maps: Addressing Alternative Use Cases",
-thumbnail: "/google-maps-case-study/thumbnailnav.png",
-description: "A case study investigating the user experience of Google Maps",
-project_timeline: "2 months",
-link: "https://xd.adobe.com/view/ed71df57-f258-4f17-63fd-6f050c921385-9b40/",
-deliverable: "Prototype",
-my_role: "UX/UI Designer, Wireframing/Prototyping, User Research",
-type: "Case Study",
-color: '#1FA463',
-featured: true
-}
-
-export default function Frontier({ children}) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>;
-}

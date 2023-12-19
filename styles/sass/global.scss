@@ -68,6 +68,8 @@ blockquote {
 }
 
 body {
+  display: flex;
+  justify-content: space-between;
   overflow-x: hidden;
   margin-top: 10%;
   margin-left: 0;
@@ -146,6 +148,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 62.5%;
@@ -164,7 +167,6 @@ hr {
 }
 
 img {
-  max-width: 100%;
   border: none;
 }
 

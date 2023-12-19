@@ -8,6 +8,27 @@ import {
 
 import MdxLayout from "@/components/mdx-layout"
 
+export const metadata = {
+  title: "Football Dashboard: The ⚽ Fan's One Stop Dashboard",
+  thumbnail: "/football-dashboard/thumbnail.png",
+  description: "A web dashboard app for following ⚽ competitions",
+  project_timeline: "November 2021 - Ongoing",
+  link: "https://www.dashboard.football/",
+  deliverable: "React Web Application",
+  my_role: "Developer, Designer",
+  type: "Code Project",
+  color: "#2E3A59",
+  featured: true,
+  slug: "football-dashboard",
+}
+
+export default function FootballDashboard({ children }) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>
+}
+
+
+# Football Dashboard: The ⚽ Fan's One Stop Dashboard
+
 [Dashboard.football](https://www.dashboard.football/) is a dashboard web application that will allows users to keep track of
 multiple soccer competitions that they follow in one place.
 
@@ -320,22 +341,3 @@ caption: "Milestone 2 Onboarding Page: choose competitions",
 />*/}
 
 ---
-export const metadata = {
-  author: "John Doe",
-  title: "Football Dashboard: The ⚽ Fan's One Stop Dashboard",
-  thumbnail: "/football-dashboard/thumbnail.png",
-  description: "A web dashboard app for following ⚽ competitions",
-  project_timeline: "November 2021 - Ongoing",
-  link: "https://www.dashboard.football/",
-  deliverable: "React Web Application",
-  my_role: "Developer, Designer",
-  type: "Code Project",
-  color: "#2E3A59",
-  featured: true,
-}
-
-export default function FootballDashboard({ children }) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>
-}
-
-

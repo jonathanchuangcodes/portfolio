@@ -1,13 +1,5 @@
 import MdxLayout from "@/components/mdx-layout"
 
-[Yet Another Covid Dashboard](https://yet-another-covid-dashboard.netlify.app/) is a simple web application that displays current covid-19 data including recent case
-numbers, deaths, and recoveries, as well as historical data showing the progression of the pandemic.
-
-### What I learned from this project
-
-- React Functional Components
-- D3 Visualization Library
-
 export const metadata = {
 title: "Yet Another Covid Dashboard",
 thumbnail: "/yet-another-covid-dashboard/historical_timeline.png",
@@ -18,9 +10,19 @@ deliverable: "Web Application",
 my_role: "Developer",
 type: "Code Project",
 color: "#039be5",
-featured: true
+featured: true,
+slug: "yet-another-covid-dashboard",
 }
 
-export default function Frontier({ children}) {
+export default function CovidDashboard({ children}) {
   return <MdxLayout data={metadata}>{children}</MdxLayout>;
 }
+
+[Yet Another Covid Dashboard](https://yet-another-covid-dashboard.netlify.app/) is a simple web application that displays current covid-19 data including recent case
+numbers, deaths, and recoveries, as well as historical data showing the progression of the pandemic.
+
+### What I learned from this project
+
+- React Functional Components
+- D3 Visualization Library
+

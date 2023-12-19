@@ -69,7 +69,7 @@ export default function RootLayout({ title, children }) {
           &copy; {new Date().getFullYear()}{" "}
           <NavLink href={`/`}>{title}</NavLink> &mdash; Built with{" "}
           <a
-            href="https://gatsbyjs.org"
+            href="https://nextjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >

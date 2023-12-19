@@ -1,3 +1,5 @@
+import "@/styles/sass/components/background/blueFlow.scss"
+
 export default function BlueFlowWorks() {
   return (
     <svg
