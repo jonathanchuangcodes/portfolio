@@ -16,7 +16,7 @@ export default function AnimatedProfilePic() {
         src={ProfilePicture}
         alt="profile picture"
         priority={true}
-        sizes="(max-width: 768px) 40vw, (max-width: 1200px) 45vw, 33vw"
+        sizes="(max-width: 768px) 35vw, (max-width: 1200px) 40vw, 30vw"
       />
     </animated.div>
   )
