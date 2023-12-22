@@ -1,22 +1,47 @@
 import MdxLayout from "@/components/mdx-layout"
 import FrontierScores from "@/components/FrontierScores"
+import LightboxImages from "@/components/LightboxImages"
+
+import landingPage from "@/public/frontier/landing-page.png"
+import customerJourneyMap from "@/public/frontier/CustomerJourneyMap.jpg"
+import customerJourneyMap2 from "@/public/frontier/CustomerJourneyMap2.jpg"
+import customerJourneyMap3 from "@/public/frontier/CustomerJourneyMap3.jpg"
+import storyboard from "@/public/frontier/storyboard.jpg"
+import Joe from "@/public/frontier/Joe.jpg"
+import Joe2 from "@/public/frontier/Joe2.jpg"
+import Sandy from "@/public/frontier/Sandy.jpg"
+import Sandy2 from "@/public/frontier/Sandy2.jpg"
+import usevsjobseeking from "@/public/frontier/usevsjobseeking.png"
+import jobsecurityconcernvsuse from "@/public/frontier/jobsecurityconcernvsuse.png"
+import usevstimeseekingjob from "@/public/frontier/usevstimeseekingjob.png"
+import unpaidvsneed from "@/public/frontier/unpaidvsneed.png"
+import lofi_Browse_projects from "@/public/frontier/lofi_Browse_projects.png"
+import lofi_Onboarding_Select_Companies from "@/public/frontier/lofi_Onboarding_-_Select_Companies.png"
+import lofi_Onboarding_Select_Professions from "@/public/frontier/lofi_Onboarding_-_Select_Professions.png"
+import lofi_Onboarding_Difficulty from "@/public/frontier/lofi_Onboarding_-_Difficulty.png"
+import hifi_browse_projects from "@/public/frontier/hifi_browse_projects.png"
+import hifi_select_companies from "@/public/frontier/hifi_select_companies.png"
+import hifi_submit_page from "@/public/frontier/hifi_submit_page.png"
+import hifi_projects_page from "@/public/frontier/hifi_projects_page.png"
 
 export const metadata = {
-title: "Frontier: Curated Portfolio Projects",
-thumbnail: "/frontier/thumbnail.png",
-description: "A web platform for aspiring designers, software developers, data scientists, and other entry-level tech professionals to complete company-curated portfolio projects and increase their chances of getting hired",
-project_timeline: "8 weeks",
-link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
-deliverable: "High Fidelity Prototype with user testing results via UserTesting.com",
-my_role: "UX/UI Designer, Wireframing/Prototyping, User Research",
-type: "Course Project",
-color: "#2F9CAA",
-featured: false,
-slug: "frontier",
+  title: "Frontier: Curated Portfolio Projects",
+  thumbnail: "/frontier/thumbnail.png",
+  description:
+    "A web platform for aspiring designers, software developers, data scientists, and other entry-level tech professionals to complete company-curated portfolio projects and increase their chances of getting hired",
+  project_timeline: "8 weeks",
+  link: "https://projects.invisionapp.com/share/4TBW3F5RK#/screens",
+  deliverable:
+    "High Fidelity Prototype with user testing results via UserTesting.com",
+  my_role: "UX/UI Designer, Wireframing/Prototyping, User Research",
+  type: "Course Project",
+  color: "#2F9CAA",
+  featured: false,
+  slug: "frontier",
 }
 
-export default function Frontier({ children}) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+export default function Frontier({ children }) {
+  return <MdxLayout data={metadata}>{children}</MdxLayout>
 }
 
 # Problem Statement
@@ -38,14 +63,7 @@ export default function Frontier({ children}) {
 
 Here's a look at our landing page design for a more detailed look:
 
-{/* <LightboxImage
-  images={[
-    {
-      title: "Landing-Page.png",
-      caption: "Frontier Landing Page Image",
-    },
-  ]}
-/> */}
+<LightboxImages images={[landingPage]} />
 
 # The Design Process
 
@@ -57,50 +75,19 @@ users would look like.
 We created the customer journey maps and storyboards you see below to showcase this
 understanding.
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "CustomerJourneyMap.jpg",
-      caption: "Customer Journey Map Part 1",
-    },
-    {
-      title: "CustomerJourneyMap2.jpg",
-      caption: "Customer Journey Map Part 2",
-    },
-    {
-      title: "CustomerJourneyMap3.jpg",
-      caption: "Customer Journey Map Part 3",
-    },
-    {
-      title: "storyboard.jpg",
-      caption: "Storyboard",
-    },
+    customerJourneyMap,
+    customerJourneyMap2,
+    customerJourneyMap3,
+    storyboard,
   ]}
-/> */}
+/>
 
 We then created user personas to build an understanding of potential users and their needs by
 identifying pain points our potential users were facing.
 
-{/* <LightboxImage
-  images={[
-    {
-      title: "Joe.jpg",
-      caption: "User Persona: Joe (Part 1)",
-    },
-    {
-      title: "Joe2.jpg",
-      caption: "User Persona: Joe (Part 2)",
-    },
-    {
-      title: "Sandy.jpg",
-      caption: "User Persona: Sandy (Part 2)",
-    },
-    {
-      title: "Sandy2.jpg",
-      caption: "User Persona: Sandy (Part 2)",
-    },
-  ]}
-/> */}
+<LightboxImages images={[Joe, Joe2, Sandy, Sandy2]} />
 
 To further confirm our audience definition, we created and distributed a customer
 survey and performed user interviews.
@@ -111,29 +98,14 @@ We asked users questions concerning:
 2. What kind of work they were willing to do to showcase these skills
 3. anxieties they had in regards to the job hunting process
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "usevsjobseeking.png",
-      caption: "Likeliness to Use vs. Currently Seeking a Job Bar Chart",
-    },
-    {
-      title: "jobsecurityconcernvsuse.png",
-      caption:
-        "Correlation Between Job Security Concern and Likelines to Use Bar Chart",
-    },
-    {
-      title: "usevstimeseekingjob.png",
-      caption:
-        "Likeliness to Use vs Amount of Time Looking for Jobs Line Graph",
-    },
-    {
-      title: "unpaidvsneed.png",
-      caption:
-        "Willingness to do Unpaid Portfolio Work vs. Need for Portfolio Work Chart",
-    },
+    usevsjobseeking,
+    jobsecurityconcernvsuse,
+    usevstimeseekingjob,
+    unpaidvsneed,
   ]}
-/> */}
+/>
 
 > **Our results indicated a promising viability and interest for our product**
 
@@ -144,26 +116,14 @@ if it meant it gave them a higher chance to be hired.
 
 low-fidelity wireframes were created to do some preliminary user testing to see how our user flow would perform in action.
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "lofi_Browse_projects.png",
-      caption: "Low-Fi Wireframe: Browse Projects Page",
-    },
-    {
-      title: "lofi_Onboarding_-_Select_Companies.png",
-      caption: "Low-Fi Wireframe: Select Companies Page",
-    },
-    {
-      title: "lofi_Onboarding_-_Select_Professions.png",
-      caption: "Low-Fi Wireframe: Select Professions Page",
-    },
-    {
-      title: "lofi_Onboarding_-_Difficulty.png",
-      caption: "Low-Fi Wireframe: Select Difficulty Page",
-    },
+    lofi_Browse_projects,
+    lofi_Onboarding_Select_Companies,
+    lofi_Onboarding_Select_Professions,
+    lofi_Onboarding_Difficulty,
   ]}
-/> */}
+/>
 
 ### Prototyping
 
@@ -189,24 +149,11 @@ the product, with few hiccups as users navigated through our primary use case.
 
 Some screenshots of the final prototype, if you missed it.
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "hifi_browse_projects.png",
-      caption: "High-Fi Wireframe: Browse Projects Page",
-    },
-    {
-      title: "hifi_select_companies.png",
-      caption: "High-Fi Wireframe: Select Companies Page",
-    },
-    {
-      title: "hifi_submit_page.png",
-      caption: "High-Fi Wireframe: Submit Project Page",
-    },
-    {
-      title: "hifi_projects_page.png",
-      caption: "High-Fi Wireframe: Projects Page",
-    },
+    hifi_browse_projects,
+    hifi_select_companies,
+    hifi_submit_page,
+    hifi_projects_page,
   ]}
-/> */}
-
+/>

@@ -1,4 +1,20 @@
 import MdxLayout from "@/components/mdx-layout"
+import LightboxImages from "@/components/LightboxImages"
+
+import googlemapsscreenshot1 from "@/public/google-maps-case-study/googlemapsscreenshot1.png"
+import googlemapsscreenshot2 from "@/public/google-maps-case-study/googlemapsscreenshot2.png"
+import googlemapsscreenshot3 from "@/public/google-maps-case-study/googlemapsscreenshot3.png"
+import speed from "@/public/google-maps-case-study/speed.jpg"
+import longDistance from "@/public/google-maps-case-study/longdistance.jpg"
+import easyDriving from "@/public/google-maps-case-study/easydriving.jpg"
+import unfamiliarRoads from "@/public/google-maps-case-study/unfamiliarroads.jpg"
+import preliminary_sketches_1 from "@/public/google-maps-case-study/preliminary_sketches_1.png"
+import preliminary_sketches_2 from "@/public/google-maps-case-study/preliminary_sketches_2.png"
+import preliminary_sketches_3 from "@/public/google-maps-case-study/preliminary_sketches_3.png"
+import Google_Maps_Mockup_Case_1 from "@/public/google-maps-case-study/Google-Maps-Mockup-Case-1.png"
+import Google_Maps_Mockup_Case_2 from "@/public/google-maps-case-study/Google-Maps-Mockup-Case-2.png"
+import Google_Maps_Mockup_Case_3 from "@/public/google-maps-case-study/Google-Maps-Mockup-Case-3.png"
+import thumbnailnav from "@/public/google-maps-case-study/thumbnailnav.png"
 
 export const metadata = {
 title: "Google Maps: Addressing Alternative Use Cases",
@@ -41,24 +57,13 @@ fastest route.
 
 It only takes 3 simple steps to get started on Google Maps.
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "googlemapsscreenshot1.png",
-      caption: "Step 1: Search for Destination"
-    },
-    {
-      title: "googlemapsscreenshot2.png",
-      caption: "Step 2: Confirm and Start Navigation"
-    },
-    {
-      title: "googlemapsscreenshot3.png",
-      caption: "Step 3: Follow and Drive"
-    }
+    googlemapsscreenshot1, googlemapsscreenshot2, googlemapsscreenshot3
   ]}
-/> */}
+/>
 
-{/* <div className="row">
+<div className="row">
   <div className="col">
 
   Step 1: Search for Destination
@@ -74,7 +79,7 @@ It only takes 3 simple steps to get started on Google Maps.
   Step 3: Follow and Drive
 
   </div>
-</div> */}
+</div>
 
 ## Time is Money...
 
@@ -87,7 +92,11 @@ users from missing that all-important interview or that career defining presenta
 
 Prioritizing speed is clearly useful, but it causes the application to mishandle other important use cases.
 
-![assets/christian-englmeier-J7EUjSlNQtg-unsplash.jpg](/google-maps-case-study/christian-englmeier-J7EUjSlNQtg-unsplash.jpg)
+<LightboxImages
+  images={[
+    speed
+  ]}
+/>
 
 Photo by Christian Englmeier on Unsplash
 
@@ -104,7 +113,11 @@ Here are some examples...
 
 ### 1. Driving Long Distances for Leisure
 
-![assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg](/google-maps-case-study/dino-reichmuth-A5rCN8626Ck-unsplash.jpg)
+<LightboxImages
+  images={[
+    longDistance
+  ]}
+/>
 
 Photo by Dino Reichmuth on Unsplash
 
@@ -130,7 +143,11 @@ could tell google maps to navigate to.
 
 ### 2. Drivers who Prefer Familiar and Easy Driving Routes
 
-![assets/thai-an-FDCuK-B_f3A-unsplash.jpg](/google-maps-case-study/thai-an-FDCuK-B_f3A-unsplash.jpg)
+<LightboxImages
+  images={[
+    easyDriving
+  ]}
+/>
 
 Photo by Thái An on Unsplash
 
@@ -163,7 +180,11 @@ Here are two examples:
 
 ### 3. Drivers on Unfamiliar Roads
 
-![assets/anthony-rosset-YLaLy6wlDiY-unsplash.jpg](/google-maps-case-study/anthony-rosset-YLaLy6wlDiY-unsplash.jpg)
+<LightboxImages
+  images={[
+    unfamiliarRoads
+  ]}
+/>
 
 Photo by Anthony Rosset on Unsplash
 
@@ -199,14 +220,11 @@ a safe navigation experience. I made a shortlist of suggested improvements durin
 
 For the best ideas that are bolded, I sketched user flows to see how they would fit in to the existing navigation experience.
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "preliminary_sketches_1.png",
-      caption: "Preliminary Sketch #1"
-    }
+    preliminary_sketches_1
   ]}
-/> */}
+/>
 
 **Use Case #1: Long Drives**
 
@@ -216,14 +234,11 @@ I give users basic options for their chosen route and small planning features th
 
 ---
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "preliminary_sketches_3.png",
-      caption: "Preliminary Sketch #2"
-    }
+    preliminary_sketches_3
   ]}
-/> */}
+/>
 
 **Use Case #2: Drivers who will prefer easier, less complicated driving routes**
 
@@ -239,14 +254,11 @@ This option is intended to help drivers avoid stressful situations, prioritizing
 
 ---
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "preliminary_sketches_2.png",
-      caption: "Preliminary Sketch #3"
-    }
+    preliminary_sketches_2
   ]}
-/> */}
+/>
 
 **Use Case #3: Drivers on Unfamiliar Roads**
 
@@ -261,14 +273,11 @@ taking into account the usability and user understanding of what each case is in
 
 > **For the full prototype experience, click the link [here](https://xd.adobe.com/view/ed71df57-f258-4f17-63fd-6f050c921385-9b40/).**
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "thumbnailnav.png",
-      caption: "High Fidelity Mockups",
-    }
+    thumbnailnav
   ]}
-/> */}
+/>
 
 I also provide a preview of the final prototype screens for each use case with a written walkthrough of the use cases, and their possible shortcomings.
 
@@ -276,14 +285,11 @@ I also provide a preview of the final prototype screens for each use case with a
 
 ## Case 1: Creating a Lightweight Road Trip Itinerary
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "Google-Maps-Mockup-Case-1.png",
-      caption: "Google Maps Mockup Case 1"
-    }
+    Google_Maps_Mockup_Case_1
   ]}
-/> */}
+/>
 
 ### User Flow
 
@@ -299,14 +305,11 @@ a trip planning experience within the app seems like a natural fit, but integrat
 
 ## Case 2: Assisted Driving Mode
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "Google-Maps-Mockup-Case-2.png",
-      caption: "Google Maps Mockup Case 2"
-    }
+    Google_Maps_Mockup_Case_2
   ]}
-/> */}
+/>
 
 ### User Flow
 
@@ -324,14 +327,11 @@ But it could confuse existing users when they use the app, and the name of the f
 
 ## Case 3: Drivers in Unfamiliar Surroundings
 
-{/* <LightboxImage
+<LightboxImages
   images={[
-    {
-      title: "Google-Maps-Mockup-Case-3.png",
-      caption: "Google Maps Mockup Case 3"
-    }
+    Google_Maps_Mockup_Case_3
   ]}
-/> */}
+/>
 
 ### User Flow
 
