@@ -1,9 +1,9 @@
-import LightboxImage from "../../components/LightboxImage"
+import LightboxImages from "../../components/LightboxImages"
 import Layout from "../components/layout"
 import TableOfContents from "../../components/TableOfContents"
 import "../styles/sass/pages/work.scss"
 const shortcodes = {
-  LightboxImage,
+  LightboxImage: LightboxImages,
 }
 
 export default function blogPostTemplate({ data }) {

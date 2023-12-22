@@ -1,12 +1,25 @@
-import {
-  FigmaFill,
-  ReactFill,
-  SassFill,
-  GatsbyFill,
-  JavascriptFill,
-} from "akar-icons"
-
 import MdxLayout from "@/components/mdx-layout"
+import LightboxImages from "@/components/LightboxImages"
+
+import livescoreHome from "@/public/football-dashboard/livescore_home.png"
+import livescoreFavorites from "@/public/football-dashboard/livescore_favorites.png"
+import soccer24Home from "@/public/football-dashboard/soccer24_home.png"
+import soccer24BottomHome from "@/public/football-dashboard/soccer24_bottom_home.png"
+import espnHome from "@/public/football-dashboard/espn_home.png"
+import foxHome from "@/public/football-dashboard/fox_home.png"
+import whoscoredHome from "@/public/football-dashboard/whoscored_home.png"
+import competitionspageLeague from "@/public/football-dashboard/competitionspage_league.png"
+import competitionspageGroupstage from "@/public/football-dashboard/competitionspage_groupstage.png"
+import footballdashboardSitemap from "@/public/football-dashboard/footballdashboardsitemap.png"
+import homepageV1 from "@/public/football-dashboard/homepagev1.png"
+import homepageV2 from "@/public/football-dashboard/homepagev2.png"
+import teampageV2 from "@/public/football-dashboard/teampagev2.png"
+import competitionpageV2 from "@/public/football-dashboard/competitionpagev2.png"
+import onboardingSignInEmail from "@/public/football-dashboard/onboarding(SignInEmail).png"
+import onboardingSignInEmailEntered from "@/public/football-dashboard/onboarding(SignInEmailEntered).png"
+import onboardingVerificationLinkSent from "@/public/football-dashboard/onboarding(VerificationLinkSent).png"
+import onboardingChooseTeams from "@/public/football-dashboard/onboarding(ChooseTeams).png"
+import onboardingChooseCompetitions from "@/public/football-dashboard/onboarding(ChooseCompetitions).png"
 
 export const metadata = {
   title: "Football Dashboard: The ⚽ Fan's One Stop Dashboard",
@@ -25,7 +38,6 @@ export const metadata = {
 export default function FootballDashboard({ children }) {
   return <MdxLayout data={metadata}>{children}</MdxLayout>
 }
-
 
 # Football Dashboard: The ⚽ Fan's One Stop Dashboard
 
@@ -85,11 +97,11 @@ a Favorites section.
 LiveScore.com for example has a dedicated Favorites section, but its limited to individual matches and competitions. But favoriting doesn't really increase
 usability. It simply provides quick links to the same content as if you had searched up the league or match in the search function.
 
-![LiveScore Favorites page](assets/livescore_favorites.png)
+<LightboxImages images={[livescoreFavorites]} />
 
 Soccer24 has a Favorites feature too but only for Teams and Leagues.
 
-![Soccer24 Home page](assets/soccer24_home.png)
+<LightboxImages images={[soccer24Home]} />
 
 All in all, personalization was lackluster at best.
 
@@ -101,7 +113,7 @@ The websites hoping to cater to all sports fans like Fox Sports and ESPN do this
 since you might be a general sports fan, you might be interested in any and all sports content, so they show users flashy and big content cards like the ones on the
 Fox Sports home page, hoping to grab you're attention.
 
-![Fox Sports Home page](assets/fox_home.png)
+<LightboxImages images={[foxHome]} />
 
 Even if you **explicitly** choose the Premier League ⚽ as your favorite competition, you might assume that only content relevant to this competition would be shown,
 but thats not the case. The website still show you content for sports you don't follow.
@@ -114,22 +126,12 @@ onto the page.
 Sites like LiveScore and Soccer24 do a decent job of prioritizing user favorited content, but still shows information for leagues the user may not be interested
 in, often times too much of it too.
 
-![Soccer24 Bottom off Home Page](assets/soccer24_bottom_home.png)
+<LightboxImages images={[soccer24BottomHome]} />
 
 Their home pages end up scrolling really far down as they show you every match for every league that day. It seems like a poor use of space on the page to put every
 score for every league possible into one long table on the page.
 
-{/*<LightboxImage
-images={[
-{
-title: "livescore_home.png",
-caption: "LiveScore Home page",
-},
-{
-title: "soccer24_home.png",
-caption: "Soccer24 Home page",
-},
-]}*/}
+<LightboxImages images={[livescoreHome, soccer24Home]} />
 
 ### Where's the information I actually want?
 
@@ -138,11 +140,11 @@ which you will find only appears sometimes depending on the website.
 
 ESPN's home shows you upcoming matches, but no recent match results.
 
-![ESPN Home page](assets/espn_home.png)
+<LightboxImages images={[espnHome]} />
 
 Fox Sports home shows the exact opposite; recent match recents, but no upcoming match details.
 
-![Fox Sports Home page](assets/fox_home.png)
+<LightboxImages images={[foxHome]} />
 
 ---
 
@@ -151,33 +153,11 @@ Fox Sports home shows the exact opposite; recent match recents, but no upcoming 
 Aesthetically the Fox Sports website and Livescore website seem the most up to date with current trends, emphasizing a minimal design language with ample padding
 and white space, but usability is hampered by lackluster personalization options.
 
-{/*<LightboxImage
-images={[
-{
-title: "fox_home.png",
-caption: "Fox Sports Home page",
-},
-{
-title: "livescore_home.png",
-caption: "LiveScore Home page",
-},
-]}
-/>*/}
+<LightboxImages images={[foxHome, livescoreHome]} />
 
 Other websites like WhoScored and Soccer24 offer a wealth of impressive information, but oudated, bloated UIs and a confusing content organization make the websites less approachable.
 
-{/*<LightboxImage
-images={[
-{
-title: "whoscored_home.png",
-caption: "WhoScored Home page",
-},
-{
-title: "soccer24_home.png",
-caption: "Soccer24 Home page",
-},
-]}
-/>*/}
+<LightboxImages images={[soccer24Home, whoscoredHome]} />
 
 ---
 
@@ -210,7 +190,7 @@ competitions, and players, not necessarily in that order.
 My initial design therefore categorized information that a user follows based on these 3 types. Users would be able to expand and minimize each section
 based on what they wanted to see. Upcoming and Live match information would be shown at the top as cards, if available.
 
-![Home Page Version 1](assets/homepagev1.png)
+<LightboxImages images={[homepageV1]} />
 
 ## Exploring the API
 
@@ -220,18 +200,7 @@ and acertain any development limitations.
 
 To see the initial build of this web application, click [here](https://gifted-thompson-b218f4.netlify.app/).
 
-{/*<LightboxImage
-images={[
-{
-title: "competitionspage_league.png",
-caption: "Milestone 1 Competitions Page for League",
-},
-{
-title: "competitionspage_groupstage.png",
-caption: "Milestone 1 Competitions Page for Cup",
-},
-]}
-/>*/}
+<LightboxImages images={[competitionspageLeague, competitionspageGroupstage]} />
 
 # Milestone 2
 
@@ -264,14 +233,7 @@ their credentials and load in their personalized settings.
 
 Based on these goals and what I learned from the application, I created a simple sitemap to visualize and understand the basic flow of the application.
 
-{/*<LightboxImage
-images={[
-{
-title: "footballdashboardsitemap.png",
-caption: "Milstone 2 Sitemap",
-},
-]}
-/>*/}
+<LightboxImages images={[footballdashboardSitemap]} />
 
 ## Designs
 
@@ -280,64 +242,28 @@ all teams and competitions the user follows, link buttons that navigate to indiv
 Next to the link buttons for teams and competitions are add buttons that will show a modal when clicked that allow users to quickly add
 a new team or competition to follow.
 
-{/*<LightboxImage
-images={[
-{
-title: "homepagev2.png",
-caption: "Milestone 2 Home Page",
-},
-]}
-/>*/}
+<LightboxImages images={[homepageV2]} />
 
 The teams and competitions pages look very similar, but also include some competition and team specific information like a league leaderboard and
 a current squad component.
 
-{/*<LightboxImage
-images={[
-{
-title: "teampagev2.png",
-caption: "Milestone 2 Team Page",
-},
-{
-title: "competitionpagev2.png",
-caption: "Milestone 2 Competition Page",
-},
-]}
-/>*/}
+<LightboxImages images={[teampageV2, competitionpageV2]} />
 
 The onboarding process I chose to design for was email authentication, a more modern, lightweight method of sign in that forces the user to verify their email to sign in,
 but doesn't require them to remember or make a password.
 
-{/*<LightboxImage
-images={[
-{
-title: "onboarding(SignInEmail).png",
-caption: "Milestone 2 Onboarding Page: email not entered",
-},
-{
-title: "onboarding(SignInEmailEntered).png",
-caption: "Milestone 2 Onboarding Page: email entered",
-},
-{
-title: "onboarding(VerificationLinkSent).png",
-caption: "Milestone 2 Onboarding Page: verification link sent",
-},
-]}
-/>*/}
+<LightboxImages
+  images={[
+    onboardingSignInEmail,
+    onboardingSignInEmailEntered,
+    onboardingVerificationLinkSent,
+  ]}
+/>
 
 Finally I create a simple 2-step personalization process that asks users to choose the teams and competitions they want to follow.
 
-{/*<LightboxImage
-images={[
-{
-title: "onboarding(ChooseTeams).png",
-caption: "Milestone 2 Onboarding Page: choose teams",
-},
-{
-title: "onboarding(ChooseCompetitions).png",
-caption: "Milestone 2 Onboarding Page: choose competitions",
-},
-]}
-/>*/}
+<LightboxImages
+  images={[onboardingChooseTeams, onboardingChooseCompetitions]}
+/>
 
 ---

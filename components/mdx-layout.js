@@ -25,8 +25,8 @@ export default function MdxLayout({ data, children }) {
             className="post-content-image"
             src={data.thumbnail}
             alt={data.title}
-            height={600}
-            width={1000}
+            height={500}
+            width={750}
           />
         )}
 

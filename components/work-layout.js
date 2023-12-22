@@ -1,6 +1,6 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { LightboxImage } from "./LightboxImage"
+import { LightboxImage } from "./LightboxImages"
 
 const shortcodes = { LightboxImage }
 
