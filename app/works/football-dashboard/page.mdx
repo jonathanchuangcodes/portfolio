@@ -20,6 +20,7 @@ import onboardingSignInEmailEntered from "@/public/football-dashboard/onboarding
 import onboardingVerificationLinkSent from "@/public/football-dashboard/onboarding(VerificationLinkSent).png"
 import onboardingChooseTeams from "@/public/football-dashboard/onboarding(ChooseTeams).png"
 import onboardingChooseCompetitions from "@/public/football-dashboard/onboarding(ChooseCompetitions).png"
+import getWork from "@/lib/works"
 
 export const metadata = {
   title: "Football Dashboard: The ⚽ Fan's One Stop Dashboard",
@@ -35,8 +36,10 @@ export const metadata = {
   slug: "football-dashboard",
 }
 
-export default function FootballDashboard({ children }) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>
+export default async function FootballDashboard({ children }) {
+  let data = await getWork(metadata.slug)
+
+  return <MdxLayout data={data}>{children}</MdxLayout>
 }
 
 # Football Dashboard: The ⚽ Fan's One Stop Dashboard

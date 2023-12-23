@@ -6,10 +6,9 @@ import "@/styles/sass/global.scss"
 import { MDXProvider } from "@mdx-js/react"
 
 export default function MdxLayout({ data, children }) {
-  // Create any shared layout or styles here
   return (
     <>
-      {/* <TableOfContents toc={data.toc} /> */}
+      <TableOfContents headings={data.headings} />
 
       <article className={`post-content ${data.thumbnail ? "" : "no-image"}`}>
         <header className="post-content-header">

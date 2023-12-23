@@ -26,7 +26,7 @@ export default function FeaturedWork({ work }) {
               src={work.thumbnail}
               alt=""
               className="featured-work-image"
-              objectFit="fit"
+              objectFit="cover"
               fill
             />
           </div>

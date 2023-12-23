@@ -15,6 +15,7 @@ import Google_Maps_Mockup_Case_1 from "@/public/google-maps-case-study/Google-Ma
 import Google_Maps_Mockup_Case_2 from "@/public/google-maps-case-study/Google-Maps-Mockup-Case-2.png"
 import Google_Maps_Mockup_Case_3 from "@/public/google-maps-case-study/Google-Maps-Mockup-Case-3.png"
 import thumbnailnav from "@/public/google-maps-case-study/thumbnailnav.png"
+import getWork from "@/lib/works"
 
 export const metadata = {
 title: "Google Maps: Addressing Alternative Use Cases",
@@ -30,8 +31,10 @@ featured: true,
 slug: "google-maps-case-study",
 }
 
-export default function GMapsCaseStudy({ children }) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+export default async function GMapsCaseStudy({ children }) {
+  let data = await getWork(metadata.slug)
+
+  return <MdxLayout data={data}>{children}</MdxLayout>;
 }
 
 # Introduction

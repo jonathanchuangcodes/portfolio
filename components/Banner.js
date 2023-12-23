@@ -10,7 +10,7 @@ export default function Banner()    {
         <div id="banner-titles">
           <div className="banner-headers">
             <AnimatedHeader text={"Design-Conscious Developer."} />
-            <AnimatedHeader text={"Curious Human."} delay={2000} />
+            <AnimatedHeader text={"Curious Human."} delay={2000} subheaderFlag />
           </div>
           <AnimatedSubtitle
             text={`Creating flow through user centered design and robust code.`}

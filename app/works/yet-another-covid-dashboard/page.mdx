@@ -1,4 +1,5 @@
 import MdxLayout from "@/components/mdx-layout"
+import getWork from "@/lib/works"
 
 export const metadata = {
 title: "Yet Another Covid Dashboard",
@@ -14,8 +15,10 @@ featured: true,
 slug: "yet-another-covid-dashboard",
 }
 
-export default function CovidDashboard({ children}) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>;
+export default async function CovidDashboard({ children}) {
+  let data = await getWork(metadata.slug)
+  
+  return <MdxLayout data={data}>{children}</MdxLayout>;
 }
 
 [Yet Another Covid Dashboard](https://yet-another-covid-dashboard.netlify.app/) is a simple web application that displays current covid-19 data including recent case

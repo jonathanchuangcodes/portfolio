@@ -10,6 +10,7 @@ import browserApp from "@/public/pear-os/Browser-App.png"
 import tabletViewExp from "@/public/pear-os/Tablet_view_-_EXPERIMENTAL.png"
 import tabletViewMenu from "@/public/pear-os/Tablet_view_-_menu_expended.png"
 import composeButtonCropped from "@/public/pear-os/composebuttoncropped.png"
+import getWork from "@/lib/works"
 
 export const metadata = {
   title: "Pear OS",
@@ -26,8 +27,10 @@ export const metadata = {
   slug: "pear-os",
 }
 
-export default function PearOS({ children }) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>
+export default async function PearOS({ children }) {
+  let data = await getWork(metadata.slug)
+
+  return <MdxLayout data={data}>{children}</MdxLayout>
 }
 
 # Mobile Application Design - Objective

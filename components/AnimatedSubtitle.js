@@ -10,7 +10,7 @@ export default function AnimatedSubtitle({ text, delay = 3000 }) {
     })
   
     return (
-      <animated.p style={props} className={"banner-subtitle"}>
+      <animated.p style={props} className="banner-subtitle">
         {text}
       </animated.p>
     )

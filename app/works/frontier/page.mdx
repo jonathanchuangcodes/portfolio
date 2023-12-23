@@ -23,6 +23,7 @@ import hifi_browse_projects from "@/public/frontier/hifi_browse_projects.png"
 import hifi_select_companies from "@/public/frontier/hifi_select_companies.png"
 import hifi_submit_page from "@/public/frontier/hifi_submit_page.png"
 import hifi_projects_page from "@/public/frontier/hifi_projects_page.png"
+import getWork from "@/lib/works"
 
 export const metadata = {
   title: "Frontier: Curated Portfolio Projects",
@@ -40,8 +41,10 @@ export const metadata = {
   slug: "frontier",
 }
 
-export default function Frontier({ children }) {
-  return <MdxLayout data={metadata}>{children}</MdxLayout>
+export default async function Frontier({ children }) {
+  let data = await getWork(metadata.slug)
+
+  return <MdxLayout data={data}>{children}</MdxLayout>
 }
 
 # Problem Statement
