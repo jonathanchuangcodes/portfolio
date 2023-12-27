@@ -13,9 +13,7 @@ const withMDX = nextMDX({
 
 const nextConfig = {
   reactStrictMode: false,
-  pageExtensions: ["js", "jsx", "mdx"],
+  pageExtensions: ["js", "jsx", "mdx"]
 }
-
-config.resolve.modules.push(path.resolve("./"))
 
 export default withMDX(nextConfig)
