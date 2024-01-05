@@ -3,6 +3,8 @@
 node_modules/
 jspm_packages/
 .next/
+.cache/
+public/
 
 # Optional eslint cache
 .eslintcache
