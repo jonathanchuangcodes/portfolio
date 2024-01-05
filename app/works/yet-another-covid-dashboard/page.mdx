@@ -1,0 +1,31 @@
+import MdxLayout from "@/components/mdx-layout"
+import getWork from "@/lib/works"
+
+export const metadata = {
+title: "Yet Another Covid Dashboard",
+thumbnail: "/yet-another-covid-dashboard/historical_timeline.png",
+description: "A simple dashboard web application for current and historical covid-19 data.",
+project_timeline: "2 weeks",
+link: "https://yet-another-covid-dashboard.netlify.app/",
+deliverable: "Web Application",
+my_role: "Developer",
+type: "Code Project",
+color: "#039be5",
+featured: true,
+slug: "yet-another-covid-dashboard",
+}
+
+export default async function CovidDashboard({ children}) {
+  let data = await getWork(metadata.slug)
+  
+  return <MdxLayout data={data}>{children}</MdxLayout>;
+}
+
+[Yet Another Covid Dashboard](https://yet-another-covid-dashboard.netlify.app/) is a simple web application that displays current covid-19 data including recent case
+numbers, deaths, and recoveries, as well as historical data showing the progression of the pandemic.
+
+### What I learned from this project
+
+- React Functional Components
+- D3 Visualization Library
+

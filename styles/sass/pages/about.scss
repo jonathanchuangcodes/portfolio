@@ -1,0 +1,218 @@
+@import "../variables";
+@import "../components/lists";
+@import "../components/buttons";
+@import "../components/actions";
+@import "../components/hamburger";
+@import "../components/grid";
+@import "../components/animations";
+@import "../components/responsiveness";
+
+#about-body {
+  max-width: 100%;
+  padding: 8vw 16vw 8vw 16vw;
+
+  @include for-tablet-portrait-only {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+}
+
+#bio-container {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 8px;
+  flex-direction: row;
+
+  @include for-smartphone-only {
+  }
+
+  @include for-tablet-portrait-only {
+    padding: 1rem;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 4rem;
+  }
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+  }
+}
+
+#bio-text {
+  flex: 2;
+  h1 {
+    text-align: left;
+    margin: 0;
+    font-size: $fontsize-heading-2;
+
+    @include for-smartphone-only {
+      font-size: $fontsize-heading-2;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: $fontsize-heading-1;
+    }
+  }
+
+  h2 {
+    margin-top: 8rem;
+  }
+
+  @include for-smartphone-only {
+    p {
+      font-size: $fontsize-body--small;
+      line-height: $lineheight-body--small;
+    }
+    flex: 2;
+  }
+
+  @include for-tablet-landscape-only {
+    flex: 2;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: 2;
+  }
+
+  @include for-desktop-up {
+    flex: 2;
+  }
+}
+
+#bio-details {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+
+  @include for-tablet-portrait-only {
+  }
+
+  @include for-tablet-landscape-up {
+    margin: 0 2rem 0 0;
+  }
+}
+
+#links {
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  @include for-tablet-portrait-only {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include for-tablet-landscape-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#bio-profile-image-container {
+  position: relative;
+  height: 40vh;
+  flex: 1 100%;
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 16px;
+  img {
+    border: 2px solid black;
+    border-radius: 16px;
+  }
+
+  @include for-tablet-portrait-only {
+    margin: 2rem auto 2rem auto;
+  }
+}
+
+#social-links {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+#titles {
+  display: flex;
+  flex-flow: column;
+}
+
+#title {
+  margin-bottom: 5vh;
+  text-align: left;
+  font-size: $fontsize-display-3;
+}
+
+#sub-title {
+  font-size: $fontsize-heading-2;
+}
+
+#name {
+  text-align: left;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+#resume {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: $fontsize-caption-text;
+  }
+
+  @include for-tablet-portrait-only {
+    margin: 1rem 0 1rem 0;
+  }
+}
+
+#technologies {
+  display: flex;
+  justify-content: space-around;
+  div {
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  a {
+    color: black;
+  }
+}
+
+.icon-link {
+  padding: 0 1rem 0 1rem;
+  color: black;
+}
+
+.disclaimer {
+  font-size: $fontsize-footnote-text;
+}
+
+.about-image  {
+  align-items: center;
+  display: flex;
+  border-radius: 16px;
+  border: 1px solid $color-border;
+  height: 35vh;
+
+  @include for-desktop-only {
+    margin: 0;
+    border-radius: 16px 0 0 16px;
+  }
+
+  @include for-tablet-landscape-only {
+    border-radius: 16px 16px 0 0;
+    height: 35vh;
+    margin: 0;
+  }
+}
