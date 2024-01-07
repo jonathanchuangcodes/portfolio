@@ -2,12 +2,13 @@
   "compilerOptions": {
     "module": "CommonJS",
     "baseUrl": "./",
+    
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/public/*": ["public/*"],
-      "@/styles/*": ["styles/*"],
-      "@/lib/*": ["lib/*"],
-      "@/hooks/*": ["hooks/*"],
+      "@/components/*": ["*", "components/*"],
+      "@/public/*": ["*", "public/*"],
+      "@/styles/*": ["*", "styles/*"],
+      "@/lib/*": ["*", "lib/*"],
+      "@/hooks/*": ["*", "hooks/*"],
     }
   },
   "exclude": ["node_modules"]
