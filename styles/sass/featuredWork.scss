@@ -1,6 +1,12 @@
 @import "./variables";
 @import "components/responsiveness";
 
+.featured-work-tech {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .featured-work {
   display: flex;
   position: relative;
@@ -14,10 +20,12 @@
 
 .featured-work-link {
   flex: 1 1 auto;
+  text-decoration: none; 
 }
 
-.featured-work-link:hover .featured-work-content {
+.featured-work-link:hover {
   opacity: 1;
+  text-decoration: none; 
   transition: opacity 0.3s cubic-bezier(0.33, 0, 0.2, 1);
 }
 

@@ -34,12 +34,14 @@ export const metadata = {
   color: "#2E3A59",
   featured: false,
   slug: "football-dashboard-alpha",
+  icons: [
+    "firebase", "react", "redux", "materialui"
+  ]
 }
 
 export default async function FootballDashboardAlpha({ children }) {
   let data = await getWork(metadata.slug)
-
-  return <MdxLayout data={data}>{children}</MdxLayout>
+return <MdxLayout data={data}>{children}</MdxLayout>
 }
 
 # Football Dashboard: Alpha Version
