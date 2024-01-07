@@ -1,0 +1,26 @@
+import MdxLayout from "@/components/mdx-layout"
+import getWork from "@/lib/works"
+
+export const metadata = {
+  title: "Forge Fitness: Gamifiying Fitness Goals (Ongoing)",
+  thumbnail: "/forge-fitness/thumbnail.png",
+  description:
+    "A gamified fitness app, built with React Native, MongoDB, and Node.js.",
+  project_timeline: "November 2021 - Ongoing",
+  link: "",
+  deliverable: "React Native Application",
+  my_role: "Developer, Designer",
+  type: "Code Project",
+  color: "#F76808",
+  featured: true,
+  slug: "forge-fitness",
+}
+
+export default async function FootballDashboard({ children }) {
+  let data = await getWork(metadata.slug)
+  return <MdxLayout data={data}>{children}</MdxLayout>
+}
+
+# Forge Fitness: Gamifiying Fitness Goals (Ongoing)
+
+This is an ongoing project and I will be updating this page as I make progress.
