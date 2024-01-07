@@ -1,7 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import "../styles/sass/featuredWork.scss"
-import { GatsbyFill, NextjsFill, ReactFill, ReduxFill } from "akar-icons"
+import {
+  GatsbyFill,
+  NextjsFill,
+  ReactFill,
+  ReduxFill,
+  NodeFill,
+} from "akar-icons"
 
 export default function FeaturedWork({ work }) {
   return (
@@ -32,6 +38,8 @@ export default function FeaturedWork({ work }) {
                       return <ReactFill key={index} />
                     case "redux":
                       return <ReduxFill key={index} />
+                    case "node":
+                      return <NodeFill key={index} />
                     default:
                       return <p key={index}>{tech}</p>
                   }
