@@ -4,7 +4,7 @@ node_modules/
 jspm_packages/
 .next/
 .cache/
-public/
+public/static
 
 # Optional eslint cache
 .eslintcache
