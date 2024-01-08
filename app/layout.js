@@ -62,7 +62,7 @@ export default function RootLayout({ title, children }) {
             </div>
           </div>
         </nav>
-        <main id="site-main" className="site-main">
+        <main>
           {children}
         </main>
         <footer className="site-foot">
