@@ -41,7 +41,21 @@ export default function FeaturedWork({ work }) {
                     case "node":
                       return <NodeFill key={index} />
                     default:
-                      return <p key={index}>{tech}</p>
+                      return (
+                        <p
+                          key={index}
+                          style={{
+                            margin: 0,
+                            padding: 0,
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            lineHeight: 0
+                          }}
+                        >
+                          {tech}
+                        </p>
+                      )
                   }
                 })}
               </div>

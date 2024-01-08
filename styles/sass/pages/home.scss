@@ -64,7 +64,8 @@
     flex: 1 1 40%;
     img {
       height: 40vh;
-      max-width: 300px;
+      min-width: 300px;
+      max-width: 320px;
     }
   }
 
