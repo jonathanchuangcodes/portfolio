@@ -12,9 +12,7 @@ export default function NavButton({ href, setToggleNav, toggleNav, title }) {
         setToggleNav(!toggleNav)
       }}
     >
-      <Link href={href}>
-        {title}
-      </Link>
+      <Link href={href}>{title}</Link>
     </button>
   )
 }

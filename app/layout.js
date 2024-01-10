@@ -2,55 +2,45 @@
 
 import React, { useState } from "react"
 import "@/styles/sass/layout.scss"
-import useSticky from "@/hooks/useSticky"
-import NavLink from "@/components/NavLink"
-import Link from "next/link"
+import useSticky from "@/hooks/useSticky" 
 import NavButton from "@/components/NavButton"
 import PropTypes from "prop-types"
-
-export default function RootLayout({ title, children }) {
+export default function RootLayout({ children }) {
   const [toggleNav, setToggleNav] = useState(false)
   const { isSticky, element } = useSticky()
-
   return (
     <html lang="en">
-      <body className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
-        <nav ref={element} className={`site-head`}>
-          <div
-            className={`
+      <body className={`site-wrapper `}>
+        <nav
+          ref={element}
+          className={`site-head    
+          ${toggleNav ? `site-head-open` : ``}       
           ${
             isSticky
-              ? `site-head-sticky site-head-container `
+              ? `site-head-sticky site-head-container`
               : `site-head-container`
-          }
-          `}
+          }`}
+        >
+          <button
+            className="nav-burger"
+            onClick={e => {
+              e.preventDefault()
+              setToggleNav(!toggleNav)
+            }}
           >
-            <button
-              className="nav-burger"
-              onClick={e => {
-                e.preventDefault()
-                setToggleNav(!toggleNav)
-              }}
+            <div
+              className="hamburger hamburger--collapse"
+              aria-label="Menu"
+              role="button"
+              aria-controls="navigation"
             >
-              <div
-                className="hamburger hamburger--collapse"
-                aria-label="Menu"
-                role="button"
-                aria-controls="navigation"
-              >
-                <div className="hamburger-box">
-                  <div className="hamburger-inner" />
-                </div>
+              <div className="hamburger-box">
+                <div className="hamburger-inner" />
               </div>
-            </button>
+            </div>
+          </button>
+          <div id="nav-links">
             <div className="nav site-head-left" role="menu">
-              <NavButton
-                className="site-head-logo"
-                setToggleNav={setToggleNav}
-                title={title}
-                toggleNav={toggleNav}
-                href={`/`}
-              />
               <NavButton
                 setToggleNav={setToggleNav}
                 title={"Home"}
@@ -58,54 +48,25 @@ export default function RootLayout({ title, children }) {
                 href={`/`}
               />
             </div>
-            <div className="site-head-center">
-              <button
-                onClick={e => {
-                  e.preventDefault()
-                  setToggleNav(!toggleNav)
-                }}
-              >
-                <Link className="site-head-logo" href={`/`}>
-                  {title}
-                </Link>
-              </button>
-            </div>
             <div className="nav site-head-right" role="menu">
-              <button
-                onClick={e => {
-                  e.preventDefault()
-                  setToggleNav(!toggleNav)
-                }}
-              >
-                <NavLink className="nav-work" role="menuitem" href={`/works`}>
-                  Works
-                </NavLink>
-              </button>
-              <button
-                onClick={e => {
-                  e.preventDefault()
-                  setToggleNav(!toggleNav)
-                }}
-              >
-                <NavLink
-                  onClick={e => {
-                    e.preventDefault()
-                    setToggleNav(!toggleNav)
-                  }}
-                  className="nav-about"
-                  role="menuitem"
-                  href={`/about`}
-                >
-                  About
-                </NavLink>
-              </button>
+              <NavButton
+                setToggleNav={setToggleNav}
+                title={"Works"}
+                toggleNav={toggleNav}
+                href={`/works`}
+              />
+              <NavButton
+                setToggleNav={setToggleNav}
+                title={"About"}
+                toggleNav={toggleNav}
+                href={`/about`}
+              />
             </div>
           </div>
         </nav>
         <main>{children}</main>
         <footer className="site-foot">
-          &copy; {new Date().getFullYear()}{" "}
-          <NavLink href={`/`}>{title}</NavLink> &mdash; Built with{" "}
+          &copy; {new Date().getFullYear()} &mdash; Built with{" "}
           <a
             href="https://nextjs.org"
             target="_blank"
