@@ -13,13 +13,13 @@ export default function AnimatedHeader({ text, delay = 1000, subheaderFlag }) {
   return (
     <>
       {subheaderFlag
-        ? trail.map(prop => (
-            <animated.h2 style={prop} className="banner-title-subheader">
+        ? trail.map((prop, index) => (
+            <animated.h2 key={index} style={prop} className="banner-title-subheader">
               {text}
             </animated.h2>
           ))
-        : trail.map(prop => (
-            <animated.h1 style={prop} className="banner-title">
+        : trail.map((prop, index) => (
+            <animated.h1 key={index} style={prop} className="banner-title">
               {text}
             </animated.h1>
           ))}

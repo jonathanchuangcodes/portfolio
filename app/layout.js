@@ -5,6 +5,8 @@ import "@/styles/sass/layout.scss"
 import useSticky from "@/hooks/useSticky"
 import NavLink from "@/components/NavLink"
 import Link from "next/link"
+import NavButton from "@/components/NavButton"
+import PropTypes from "prop-types"
 
 export default function RootLayout({ title, children }) {
   const [toggleNav, setToggleNav] = useState(false)
@@ -41,30 +43,66 @@ export default function RootLayout({ title, children }) {
                 </div>
               </div>
             </button>
-
             <div className="nav site-head-left" role="menu">
-              <NavLink className="nav-home" role="menuitem" href={`/`}>
-                Home
-              </NavLink>
+              <NavButton
+                className="site-head-logo"
+                setToggleNav={setToggleNav}
+                title={title}
+                toggleNav={toggleNav}
+                href={`/`}
+              />
+              <NavButton
+                setToggleNav={setToggleNav}
+                title={"Home"}
+                toggleNav={toggleNav}
+                href={`/`}
+              />
             </div>
             <div className="site-head-center">
-              <Link className="site-head-logo" href={`/`}>
-                {title}
-              </Link>
+              <button
+                onClick={e => {
+                  e.preventDefault()
+                  setToggleNav(!toggleNav)
+                }}
+              >
+                <Link className="site-head-logo" href={`/`}>
+                  {title}
+                </Link>
+              </button>
             </div>
             <div className="nav site-head-right" role="menu">
-              <NavLink className="nav-work" role="menuitem" href={`/works`}>
-                Works
-              </NavLink>
-              <NavLink className="nav-about" role="menuitem" href={`/about`}>
-                About
-              </NavLink>
+              <button
+                onClick={e => {
+                  e.preventDefault()
+                  setToggleNav(!toggleNav)
+                }}
+              >
+                <NavLink className="nav-work" role="menuitem" href={`/works`}>
+                  Works
+                </NavLink>
+              </button>
+              <button
+                onClick={e => {
+                  e.preventDefault()
+                  setToggleNav(!toggleNav)
+                }}
+              >
+                <NavLink
+                  onClick={e => {
+                    e.preventDefault()
+                    setToggleNav(!toggleNav)
+                  }}
+                  className="nav-about"
+                  role="menuitem"
+                  href={`/about`}
+                >
+                  About
+                </NavLink>
+              </button>
             </div>
           </div>
         </nav>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <footer className="site-foot">
           &copy; {new Date().getFullYear()}{" "}
           <NavLink href={`/`}>{title}</NavLink> &mdash; Built with{" "}
@@ -79,4 +117,9 @@ export default function RootLayout({ title, children }) {
       </body>
     </html>
   )
+}
+
+RootLayout.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
