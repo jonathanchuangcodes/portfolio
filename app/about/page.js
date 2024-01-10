@@ -18,8 +18,8 @@ import {
   VscodeFill,
   GithubFill,
   LinkedinFill,
+  NextjsFill,
 } from "akar-icons"
-// import Resume from "@/public/resume.pdf"
 import "@/styles/sass/global.scss"
 import "@/styles/sass/pages/about.scss"
 
@@ -123,7 +123,12 @@ export default function AboutPage() {
                   </a>
                 </AnimatedLogo>
                 <AnimatedLogo>
-                  <a href="https://www.gatsbyjs.com/" aria-label="gatsby">
+                  <a href="https://www.nextjs.org/" aria-label="nextjs">
+                    <NextjsFill size={40} strokeWidth={2} />
+                  </a>
+                </AnimatedLogo>
+                <AnimatedLogo>
+                  <a href="https://www.gatsbyjs.com/" aria-label="gatsbyjs">
                     <GatsbyFill size={40} strokeWidth={2} />
                   </a>
                 </AnimatedLogo>

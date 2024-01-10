@@ -55,28 +55,13 @@ const WorkCard = ({ work, count }) => {
             <h1 className="work-card-title">{work.title || work.slug}</h1>
             <p className="work-card-type">{work.type || ""}</p>
             <div
-              className={
-                work.design &&
-                work.development &&
-                work.design.length + work.development.length > 0
-                  ? "work-card-tools"
-                  : "hidden"
-              }
+              className={work.icons?.length > 0 ? "work-card-tools" : "hidden"}
             >
-              {/* <div>
-                {node.design
-                  ? node.design.map(item => (
-                      <MDXRenderer>{item.value}</MDXRenderer>
-                    ))
+              <div>
+                {work.icons
+                  ? work.icons.map(item => <div>{item.value}</div>)
                   : ""}
               </div>
-              <div>
-                {node.development
-                  ? node.development.map(item => (
-                      <MDXRenderer>{item.value}</MDXRenderer>
-                    ))
-                  : ""}
-              </div> */}
             </div>
             <p className="work-card-description">{work.description}</p>
           </div>
