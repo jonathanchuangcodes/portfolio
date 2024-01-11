@@ -1,10 +1,13 @@
 "use client"
+
+import React from "react"
 import "../styles/sass/components/lightbox.scss"
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
 import NextJsImage from "@/components/NextjsImage"
 import { useState } from "react"
 import Inline from "yet-another-react-lightbox/plugins/inline"
+import PropTypes from 'prop-types';
 
 export default function CustomLightbox({ slides }) {
   const [open, setOpen] = useState(false)
@@ -52,3 +55,7 @@ export default function CustomLightbox({ slides }) {
     </>
   )
 }
+
+CustomLightbox.propTypes = {
+  slides: PropTypes.array,
+};

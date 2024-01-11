@@ -1,3 +1,4 @@
+import React from "react"
 import WorkCard from "@/components/WorkCard"
 import FadeIn from "@/components/FadeIn"
 import RedFlowWorks from "@/components/background/RedFlowWorks"

@@ -1,3 +1,4 @@
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import "../styles/sass/featuredWork.scss"
@@ -8,6 +9,7 @@ import {
   ReduxFill,
   NodeFill,
 } from "akar-icons"
+import PropTypes from "prop-types"
 
 export default function FeaturedWork({ work }) {
   return (
@@ -50,7 +52,7 @@ export default function FeaturedWork({ work }) {
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "center",
-                            lineHeight: 0
+                            lineHeight: 0,
                           }}
                         >
                           {tech}
@@ -75,4 +77,8 @@ export default function FeaturedWork({ work }) {
       </div>
     </Link>
   )
+}
+
+FeaturedWork.propTypes = {
+  work: PropTypes.object,
 }

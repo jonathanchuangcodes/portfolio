@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MDXProvider } from "@mdx-js/react"
@@ -15,6 +16,7 @@ import {
   GatsbyFill,
   JavascriptFill,
 } from "akar-icons"
+import Proptypes from "prop-types"
 
 const WorkCard = ({ work, count }) => {
   return (
@@ -59,7 +61,9 @@ const WorkCard = ({ work, count }) => {
             >
               <div>
                 {work.icons
-                  ? work.icons.map(item => <div>{item.value}</div>)
+                  ? work.icons.map((item, index) => (
+                      <div key={index}>{item.value}</div>
+                    ))
                   : ""}
               </div>
             </div>
@@ -72,3 +76,8 @@ const WorkCard = ({ work, count }) => {
 }
 
 export default WorkCard
+
+WorkCard.propTypes = {
+  work: Proptypes.object.isRequired,
+  count: Proptypes.number.isRequired,
+}

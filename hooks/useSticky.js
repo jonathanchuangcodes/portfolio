@@ -7,7 +7,7 @@ export default function Sticky() {
   const element = useRef(null)
 
   const memoizedHandleScroll = useCallback(() => {
-    let currentScrolledPosition = window.scrollY || window.pageYOffset
+    let currentScrolledPosition = window.scrollY
     let scrollingDown
     if (currentScrolledPosition >= previousScrollPosition) {
       scrollingDown = true

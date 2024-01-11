@@ -34,9 +34,9 @@
   position: fixed;
   flex-direction: row;
   justify-content: space-between;
-  background-color: none;
+  background-color: unset;
   top: 0;
-  padding: 0 2rem 0 2rem;
+  padding: 16px;
   left: 0;
   z-index: 10;
   font-size: $fontsize-display-3;
@@ -46,7 +46,6 @@
 
 .site-head-sticky {
   background: $color-bg;
-  position: fixed;
   transition: padding 0.3s ease-in;
 }
 
@@ -170,7 +169,8 @@
 .nav-burger {
   display: none;
   position: fixed;
-  left: 0;
+  left: 16px;
+  top: 16px;
   z-index: 9999;
 }
 
@@ -181,12 +181,10 @@
 
   .site-head {
     background-color: white;
-    height: 40px;
+    height: 60px;
   }
 
   .site-head-open {
-    left: 0;
-    position: fixed;
     height: initial;
     z-index: 9999;
     background-color: white;
@@ -194,7 +192,10 @@
 
   .nav-burger {
     display: block;
-    position: absolute;
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    z-index: 9999;
   }
 
   .site-head-left,

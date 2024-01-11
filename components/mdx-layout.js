@@ -1,9 +1,11 @@
 "use client"
 
+import React from "react"
 import Image from "next/image"
 import TableOfContents from "@/components/TableOfContents"
 import "@/styles/sass/global.scss"
 import { MDXProvider } from "@mdx-js/react"
+import PropTypes from "prop-types"
 
 export default function MdxLayout({ data, children }) {
   return (
@@ -77,4 +79,9 @@ export default function MdxLayout({ data, children }) {
       </article>
     </>
   )
+}
+
+MdxLayout.propTypes = {
+  data: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 }

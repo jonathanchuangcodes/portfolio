@@ -1,3 +1,5 @@
+import React from "react"
+
 export default function FrontierScores() {
   return (
     <>
@@ -13,15 +15,16 @@ export default function FrontierScores() {
       </div>
       <div className="feedback">
         <p>
-          "Aesthetically pleasing design" <span className="source">-Kevin</span>
+          &quot;Aesthetically pleasing design&quot;{" "}
+          <span className="source">-Kevin</span>
         </p>
         <p>
-          "Quick and easy understanding of the product from the landing page
-          alone"
+          &quot;Quick and easy understanding of the product from the landing
+          page alone&quot;
           <span className="source">-Cynthia</span>
         </p>
         <p>
-          "Overall intrigue and excitement about the product idea"{" "}
+          &quot;Overall intrigue and excitement about the product idea&quot;{" "}
           <span className="source">-Jason</span>
         </p>
       </div>

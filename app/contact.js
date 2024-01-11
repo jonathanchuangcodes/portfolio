@@ -1,12 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "@/components/layout"
 
-export default function ContactPage({ data }, location)  {
-  const siteTitle = data.site.siteMetadata.title
+export default function ContactPage()  {
 
   return (
-    <Layout title={siteTitle}>
+    <Layout>
       <article className="post-content page-template no-image">
         <form method="post" action="#">
           <div className="row gtr-uniform">
@@ -45,20 +43,3 @@ export default function ContactPage({ data }, location)  {
     </Layout>
   )
 }
-
-export const contactQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`

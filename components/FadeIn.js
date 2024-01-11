@@ -1,5 +1,7 @@
 "use client"
 
+import React from "react"
+import PropTypes from "prop-types"
 import { useSpring, animated } from "@react-spring/web"
 
 export default function FadeIn({ children }) {
@@ -10,4 +12,8 @@ export default function FadeIn({ children }) {
   })
 
   return <animated.div style={props}>{children}</animated.div>
+}
+
+FadeIn.propTypes = {
+  children: PropTypes.node.isRequired,
 }

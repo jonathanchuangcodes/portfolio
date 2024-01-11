@@ -1,9 +1,11 @@
+import React from "react"
 import Image from "next/image"
 import {
   isImageFitCover,
   isImageSlide,
   useLightboxProps,
 } from "yet-another-react-lightbox"
+import PropTypes from "prop-types"
 
 function isNextJsImage(slide) {
   return (
@@ -45,4 +47,9 @@ export default function NextJsImage({ slide, rect }) {
       />
     </div>
   )
+}
+
+NextJsImage.propTypes = {
+  slide: PropTypes.object,
+  rect: PropTypes.object,
 }
