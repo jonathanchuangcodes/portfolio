@@ -64,7 +64,7 @@ export default function AboutPage() {
               <div id="links">
                 <div id="resume">
                   <a
-                    href="./public/resume.pdf"
+                    href="./resume.pdf"
                     alt="alt text"
                     target="_blank"
                     rel="noopener noreferrer"
