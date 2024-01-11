@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { useSpring, animated, to } from "@react-spring/web"
 import { useHover } from "@use-gesture/react"
 import Image from "next/image"
@@ -22,21 +23,27 @@ import {
 } from "akar-icons"
 import "@/styles/sass/global.scss"
 import "@/styles/sass/pages/about.scss"
+import PropTypes from "prop-types"
 
 function AnimatedLogo({ children }) {
   const [{ scale }, api] = useSpring(() => ({
     scale: 1,
   }))
 
-  const bind = useHover(({ hovering }) => {
-    ;(hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
-  })
+  const bind = useHover(
+    ({ hovering }) =>
+      (hovering && api({ scale: 2 })) || (!hovering && api({ scale: 1 }))
+  )
 
   return (
     <animated.div {...bind()} style={{ scale: to([scale], s => s) }}>
       {children}
     </animated.div>
   )
+}
+
+AnimatedLogo.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default function AboutPage() {
@@ -67,27 +74,29 @@ export default function AboutPage() {
                   </a>
                   <p>My Resume</p>
                 </div>
-                <p>Find me on: </p>
                 <div id="social-links">
-                  <a
-                    href="https://www.linkedin.com/in/jonathanychuang"
-                    className="icon-link"
-                  >
-                    <LinkedinFill />
-                  </a>
-                  <a
-                    href="https://www.github.com/jonathanchuangcodes"
-                    className="icon-link"
-                  >
-                    <GithubFill />
-                  </a>
+                  <p>Find me on: </p>
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/in/jonathanychuang"
+                      className="icon-link"
+                    >
+                      <LinkedinFill />
+                    </a>
+                    <a
+                      href="https://www.github.com/jonathanchuangcodes"
+                      className="icon-link"
+                    >
+                      <GithubFill />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
             <div id="bio-text">
               <h1>About Me</h1>
               <p>
-                Hi, I'm Jonathan, a self taught software developer. I like
+                Hi, I&apos;m Jonathan, a self taught software developer. I like
                 creating free flowing user experiences with robust code.
               </p>
               <p>
@@ -165,11 +174,11 @@ export default function AboutPage() {
                 </AnimatedLogo>
               </div>
               <p>
-                I have a bachelor's degree in Informatics from the University of
-                Washington, with a focus in human-computer interaction. My
-                degree exposed me to a multitude of disciplines including data
-                science, software development, product management and more, but
-                my main focus was in UX and UI design.
+                I have a bachelor&rsquo;s degree in Informatics from the
+                University of Washington, with a focus in human-computer
+                interaction. My degree exposed me to a multitude of disciplines
+                including data science, software development, product management
+                and more, but my main focus was in UX and UI design.
               </p>
             </div>
           </div>

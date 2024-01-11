@@ -8,6 +8,8 @@
 @import "../components/responsiveness";
 
 #about-body {
+  display: flex;
+  justify-content: center;
   max-width: 100%;
   padding: 8vw 16vw 8vw 16vw;
 
@@ -19,6 +21,7 @@
 
 #bio-container {
   display: flex;
+  max-width: 1200px;
   border: 2px solid black;
   border-radius: 8px;
   flex-direction: row;
@@ -84,11 +87,6 @@
 }
 
 #bio-details {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: center;
-  height: 100%;
   flex: 1;
   @include for-smartphone-only {
   }
@@ -122,15 +120,18 @@
 }
 
 #bio-profile-image-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   position: relative;
   height: 50vh;
   flex: 1 100%;
-  box-shadow: 5px 10px 18px #888888;
-  border-radius: 16px;
+
   margin: 4rem auto 4rem auto;
 
   img {
     border: 2px solid black;
+    box-shadow: 5px 10px 18px #888888;
     border-radius: 16px;
   }
 
@@ -155,7 +156,10 @@
   }
 
   @include for-desktop-up {
-    display: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
     margin: 4rem auto 4rem auto;
     height: 35vh;
   }
@@ -163,6 +167,8 @@
 
 #social-links {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
 }
@@ -226,23 +232,4 @@
 
 .disclaimer {
   font-size: $fontsize-footnote-text;
-}
-
-.about-image {
-  align-items: center;
-  display: flex;
-  border-radius: 16px;
-  border: 1px solid $color-border;
-  height: 40vh;
-
-  @include for-desktop-only {
-    margin: 0;
-    border-radius: 16px 0 0 16px;
-  }
-
-  @include for-tablet-landscape-only {
-    border-radius: 16px 16px 0 0;
-    height: 40vh;
-    margin: 0;
-  }
 }
