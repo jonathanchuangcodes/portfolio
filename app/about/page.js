@@ -112,7 +112,7 @@ export default function AboutPage() {
                 likes to dabble in different things.
               </p>
               <h3>Technologies and Tools I Use</h3>
-              <div id="technologies">
+              <div className="technologies">
                 <AnimatedLogo>
                   <a href="https://www.javascript.com/" aria-label="javascript">
                     <JavascriptFill size={40} strokeWidth={2} />
@@ -141,6 +141,8 @@ export default function AboutPage() {
                     <GatsbyFill size={40} strokeWidth={2} />
                   </a>
                 </AnimatedLogo>
+              </div>
+              <div className="technologies">
                 <AnimatedLogo>
                   <a href="https://redux.js.org/" aria-label="redux">
                     <ReduxFill size={40} strokeWidth={2} />
