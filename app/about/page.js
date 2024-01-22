@@ -56,9 +56,9 @@ export default function AboutPage() {
               <div id="bio-profile-image-container">
                 <Image
                   src={ProfilePicture}
-                  className="about-image"
                   alt="profile picture"
-                  fill
+                  width={300}
+                  height={450}
                 />
               </div>
               <div id="links">
