@@ -109,7 +109,7 @@ export default function AboutPage() {
                 Outside of design and development, I am a huge soccer fan/nerd
                 (I just love the game itself, not any particular team), avid
                 gamer, amateur photographer, and generally curious human who
-                likes to dabble in different things.
+                likes to dabble with different hobbies and interests.
               </p>
               <h3>Technologies and Tools I Use</h3>
               <div className="technologies">

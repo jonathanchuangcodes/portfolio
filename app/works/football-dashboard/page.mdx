@@ -1,12 +1,16 @@
 import MdxLayout from "@/components/mdx-layout"
 import getWork from "@/lib/works"
+import LightboxImages from "@/components/LightboxImages"
+import wireframe from "@/public/football-dashboard/wireframe.png"
+import sitemap from "@/public/football-dashboard/sitemap.png"
 
 export const metadata = {
   title: "Football Dashboard: Beta Version (Ongoing)",
   thumbnail: "/football-dashboard/thumbnail.png",
   description: "A web dashboard app for following ⚽ competitions",
   project_timeline: "November 2021 - Ongoing",
-  link: "",
+  repo_link: "https://github.com/jonathanchuangcodes/football-dashboard",
+  link: "https://www.figma.com/file/2b96t0DdwQPKBz9TTW6zOj/Football-Dashboard-v3?type=design&node-id=0%3A1&mode=design&t=zGRZyWq9CTCOVyQr-1",
   deliverable: "React Web Application",
   my_role: "Developer, Designer",
   type: "Code Project",
@@ -22,14 +26,32 @@ export default async function FootballDashboard({ children }) {
 }
 
 # Football Dashboard: Beta Version (Ongoing)
-
 After creating a first version of the [Football Dashboard](/works/football-dashboard-alpha) last year, I've been slowly working on a new and improved iteration.
-
 The main goals for this version are to:
 
 1. Streamline data fetching and bring it to to server side, with the help of [Next.js](https://nextjs.org/).
 2. Improve the UI and UX, with the help of [Tailwind CSS](https://tailwindcss.com/).
 3. Add more features, such as player stats and team stats.
 4. Utilize Typescript to improve code quality and developer experience.
+
+## Success Criteria
+
+1. A responsive, mobile first Next.js application that reliably provides up to date match scores, statistics, and highlights(from youtube) of football matches from the top 10 most popular leagues.
+2. Email authentication for account data management stored on Supabase that saves the user’s selected favorites
+3. live match updates with desktop notifications
+
+## Guiding Principles
+
+- **Verticality**: scrolling up and down should be the primary interaction the user initiates when navigating throughout the application, and we want to base our IA and signifiers around this principle.
+  - Any scales we want to show that can be signified vertically like time
+- **Simplicity:** Offering a basic search without an account and offering email authentication for account management means the user can start using the application in no time
+- **Cohesion:** Enforcing strict views with customization options only for density means a cohesive experience on all platforms
+
+## Wireframes
+
+I created some basic wireframes and a site map to help me visualize the layout of the application, and to help me plan out the components I would need to create. These designs are iterations of the [alpha version](/works/football-dashboard-alpha) I created last year that I wanted to improve upon.
+
+<LightboxImages images={[wireframe, sitemap]} />
+
 
 This is an ongoing project and I will be updating this page as I make progress.

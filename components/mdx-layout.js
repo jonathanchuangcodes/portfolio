@@ -6,6 +6,7 @@ import TableOfContents from "@/components/TableOfContents"
 import "@/styles/sass/global.scss"
 import { MDXProvider } from "@mdx-js/react"
 import PropTypes from "prop-types"
+import { LinkOn } from "akar-icons"
 
 export default function MdxLayout({ data, children }) {
   return (
@@ -34,11 +35,7 @@ export default function MdxLayout({ data, children }) {
         <div className="row">
           {data.project_timeline && (
             <div className="col">
-              <div
-                style={{
-                  textAlign: "center",
-                }}
-              >
+              <div>
                 <h3>Timeline</h3>
                 <p>{data.project_timeline}</p>
               </div>
@@ -46,11 +43,7 @@ export default function MdxLayout({ data, children }) {
           )}
           {data.deliverable && (
             <div className="col">
-              <div
-                style={{
-                  textAlign: "center",
-                }}
-              >
+              <div>
                 <h3>Deliverable</h3>
                 <p>{data.deliverable}</p>
               </div>
@@ -58,14 +51,32 @@ export default function MdxLayout({ data, children }) {
           )}
           {data.my_role && (
             <div className="col">
-              <div
-                style={{
-                  textAlign: "center",
-                }}
-              >
+              <div>
                 <h3>My Role</h3>
                 {data.my_role && <p>{data.my_role}</p>}
               </div>
+            </div>
+          )}
+        </div>
+        <div className="row">
+          {data.link && (
+            <div className="col">
+              <a href={data.link} title="Project Link">
+              <div className="row">      
+                <LinkOn />
+                <p>Project Link</p>
+              </div>
+              </a>
+            </div>
+          )}
+          {data.repo_link && (
+            <div className="col">
+              <a href={data.repo_link} title="Repo Link">
+              <div className="row">      
+                <LinkOn />
+                <p>Repo Link</p>
+              </div>
+              </a>
             </div>
           )}
         </div>
