@@ -4,8 +4,6 @@ import FadeIn from "@/components/FadeIn"
 import RedFlowWorks from "@/components/background/RedFlowWorks"
 import BlueFlowWorks from "@/components/background/BlueFlowWorks"
 import { getWorks } from "@/lib/works"
-import "@/styles/sass/pages/works.scss"
-import "@/styles/sass/global.scss"
 
 export default async function Works() {
   let postCounter = 0

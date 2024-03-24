@@ -6,6 +6,7 @@
   "author": "Jonathan Chuang <jchuangsa@gmail.com>",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "8.55.0",
     "eslint-config-next": "14.0.4",
     "eslint-plugin-react": "^7.33.2",
@@ -54,5 +55,8 @@
     "remark-mdx-frontmatter": "^4.0.0",
     "to-vfile": "^8.0.0",
     "yet-another-react-lightbox": "^3.15.6"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

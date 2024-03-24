@@ -4,7 +4,7 @@ import React from "react"
 import { useSpring, animated } from "@react-spring/web"
 import Proptypes from "prop-types"
 
-export default function AnimatedSubtitle({ text, delay = 3000 }) {
+export default function AnimatedSubtitle({ text, delay = 2000 }) {
   const props = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -12,7 +12,7 @@ export default function AnimatedSubtitle({ text, delay = 3000 }) {
   })
 
   return (
-    <animated.p style={props} className="banner-subtitle">
+    <animated.p style={props} id="banner-subtitle">
       {text}
     </animated.p>
   )

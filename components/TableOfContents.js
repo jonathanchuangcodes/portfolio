@@ -2,8 +2,6 @@
 
 import React from "react"
 import Link from "next/link"
-import "@/styles/sass/global.scss"
-import "@/styles/sass/pages/work.scss"
 import PropTypes from "prop-types"
 
 export default function TableOfContents({ headings }) {

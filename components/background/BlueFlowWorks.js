@@ -1,4 +1,3 @@
-import "@/styles/sass/components/background/blueFlow.scss"
 import React from "react"
 
 export default function BlueFlowWorks() {

@@ -1,37 +1,25 @@
 import React from "react"
 import FadeIn from "@/components/FadeIn"
-import FeaturedWork from "@/components/FeaturedWork"
 import BlueFlow from "@/components/background/BlueFlow"
 import RedFlow from "@/components/background/RedFlow"
-import "@/styles/sass/pages/home.scss"
-import "@/styles/sass/global.scss"
+import "@/styles/sass/main.scss"
 import Banner from "@/components/Banner"
-import { getWorks } from "@/lib/works"
-import Head from "next/head"
+import Resume from "@/components/resume/Resume"
 
 export const metadata = {
   title: "Jonathan Chuang's Portfolio",
 }
 
-export default async function HomePage() {
-  let works = await getWorks()
+export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>My page title</title>
-      </Head>
-      <FadeIn>
-        <BlueFlow />
-        <RedFlow />
-      </FadeIn>
-
-      <Banner />
-      <div className="featured-works">
-        {works
-          .filter(work => work.featured)
-          .map(work => {
-            return <FeaturedWork key={work.slug} work={work} />
-          })}
+      <div className="home-wrapper">
+        <FadeIn>
+          <BlueFlow />
+          <RedFlow />
+        </FadeIn>
+        <Banner />
+        <Resume />
       </div>
     </>
   )

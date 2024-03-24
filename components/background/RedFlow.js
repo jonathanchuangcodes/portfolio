@@ -1,4 +1,3 @@
-import "@/styles/sass/components/background/redFlow.scss"
 import React from "react"
 
 export default function RedFlow(props) {

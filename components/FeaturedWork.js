@@ -1,7 +1,6 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import "../styles/sass/featuredWork.scss"
 import {
   GatsbyFill,
   NextjsFill,
@@ -21,10 +20,13 @@ export default function FeaturedWork({ work }) {
       >
         <div className="featured-work-content">
           <div
-            className="featured-work-text"
+            className="featured-work-text-container"
             style={{ backgroundColor: work.color }}
           >
-            <h2>{work.title || work.slug}</h2>
+            <h2 className="featured-work-title">{`${work.title || work.slug}${
+              work.subtitle === undefined && work.subtitle !== "" ? ":" : ""
+            } `}</h2>
+            <h2 className="featured-work-subtitle">{work.subtitle}</h2>
             <p className="featured-work-role">
               {work.type + " | " + work.my_role}
             </p>
@@ -64,13 +66,16 @@ export default function FeaturedWork({ work }) {
             )}
             <p className="featured-work-description">{work.description}</p>
           </div>
-          <div className="featured-work-image-container">
+          <div
+            className="featured-work-image-container"
+            style={{ backgroundColor: work.color }}
+          >
             <Image
               src={work.thumbnail}
               alt=""
               className="featured-work-image"
-              objectFit="cover"
               fill
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>

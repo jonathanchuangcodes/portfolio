@@ -8,80 +8,47 @@
 @import "../components/responsiveness";
 
 #banner {
+  width: 100%;
   @include for-phone-only {
     flex-direction: column;
   }
 
   @include for-tablet-portrait-up {
-    padding: 8vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
   }
 }
 
-#banner-titles {
-  flex: 1 0 60%;
+#banner-title-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-  @include for-big-desktop-up {
-    display: flex;
-    flex-flow: column;
-    margin: 4vh;
+  @include for-phone-only {
+    margin: 4rem 0 4rem 0;
+  }
+
+  @include for-tablet-portrait-only {
+    margin: 4rem 0 4rem 0;
   }
 
   @include for-tablet-portrait-up {
-    margin: 1vw;
-    flex: 1 1 60%;
+    margin: 0 4rem 0 0;
   }
 
-  @include for-tablet-landscape-up {
-    flex: 2 1 100%;
-  }
 }
 
-#profile-container {
-  display: flex;
-  justify-content: center;
+#profile-image-container {
   border-radius: 16px;
-  flex: 1 0 40%;
 
   img {
     border: 2px solid black;
     border-radius: 16px;
   }
 
-  @include for-phone-only {
-    margin: 4rem;
-    height: 55vh;
-    img {
-      height: 55vh;
-      max-width: 350px;
-    }
-  }
 
-  @include for-tablet-portrait-up {
-    height: 40vh;
-    flex: 1 1 40%;
-    img {
-      height: 40vh;
-      min-width: 300px;
-      max-width: 320px;
-    }
-  }
 
-  @include for-tablet-landscape-up {
-    flex: auto;
-  }
-
-  @include for-desktop-up {
-    margin: 0 4rem 0 0;
-    height: 45vh;
-  }
-
-  @include for-big-desktop-up {
-    margin: 0 4rem 0 0;
-    height: 45vh;
-  }
 }
 
 #sub-title {
@@ -92,8 +59,8 @@
 }
 
 .banner-title {
+  margin-top: 0;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-  margin: 4vh;
   text-align: left;
   flex: 0 1 50%;
   @include for-big-desktop-up {
@@ -106,13 +73,11 @@
 
   @include for-tablet-landscape-up {
     font-size: $fontsize-heading-2;
-    margin: 2vh;
   }
 
   @include for-tablet-landscape-only {
     font-size: $fontsize-heading-3;
     line-height: $lineheight-heading-3;
-    margin: 2vh;
   }
 
   @include for-tablet-portrait-only {
@@ -151,17 +116,24 @@
   }
 }
 
-.banner-subtitle {
-  margin: 1rem;
+#banner-subtitle {
+  margin: 0;
+  padding: 0;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.banner-headers {
-  display: flex;
-  flex-direction: column;
-}
-
-.featured-works {
+.featured {
   width: 100%;
   height: 100%;
 }
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8vw;
+  max-width: 1600px;
+}
+
+

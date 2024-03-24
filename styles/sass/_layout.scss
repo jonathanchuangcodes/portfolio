@@ -1,6 +1,10 @@
 @import "./variables";
 @import "./components/responsiveness.scss";
 
+  main {
+    padding: 0 8rem 0 8rem;
+  }
+
 .site-wrapper {
   min-height: 100vh;
   display: flex;

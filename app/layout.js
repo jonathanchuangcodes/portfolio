@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState } from "react"
-import "@/styles/sass/layout.scss"
-import useSticky from "@/hooks/useSticky" 
+import useSticky from "@/hooks/useSticky"
 import NavButton from "@/components/NavButton"
 import PropTypes from "prop-types"
+
 export default function RootLayout({ children }) {
   const [toggleNav, setToggleNav] = useState(false)
   const { isSticky, element } = useSticky()
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
         </nav>
         <main>{children}</main>
         <footer className="site-foot">
-          &copy; {new Date().getFullYear()} &mdash; Built with{" "}
+          &copy; {new Date().getFullYear()} &mdash; Built with ❤️ Remotely on {" "}
           <a
             href="https://nextjs.org"
             target="_blank"

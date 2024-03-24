@@ -1,0 +1,65 @@
+.projects {
+  margin-top: 4rem;
+}
+
+.resume-block {
+  margin: 4rem 0;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.resume-header {
+  text-align: left;
+}
+
+.resume-technologies {
+  display: flex;
+  gap: 4rem;
+  margin-top: 4rem;
+
+  div {
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  a {
+    color: black;
+  }
+}
+
+.resume-projects {
+  margin: 4rem 0;
+  border-radius: 16px;
+  border: 2px solid #000;
+  background: #fff;
+
+  :first-child > .featured-work > .featured-work-content,
+  :first-child > .featured-work {
+    border-radius: 16px 16px 0 0;
+  }
+
+  :first-child
+    > .featured-work
+    > .featured-work-content
+    > .featured-work-text-container {
+    margin-top: 0;
+    border-radius: 16px 0 0 0;
+  }
+
+  :first-child
+    > .featured-work
+    > .featured-work-content
+    > .featured-work-image-container
+    > img {
+    margin-top: 0;
+    border-radius: 0 16px 0 0;
+  }
+
+  :last-child > .featured-work > .featured-work-content,
+  :last-child > .featured-work {
+    border-radius: 0 0 16px 16px;
+  }
+}

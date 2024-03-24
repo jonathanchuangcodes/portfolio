@@ -3,7 +3,6 @@
 import React from "react"
 import Image from "next/image"
 import TableOfContents from "@/components/TableOfContents"
-import "@/styles/sass/global.scss"
 import { MDXProvider } from "@mdx-js/react"
 import PropTypes from "prop-types"
 import { LinkOn } from "akar-icons"

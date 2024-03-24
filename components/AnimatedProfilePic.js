@@ -12,12 +12,13 @@ export default function AnimatedProfilePic() {
     delay: 500,
   })
   return (
-    <animated.div style={props} id="profile-container">
+    <animated.div style={props} id="profile-image-container">
       <Image
         src={ProfilePicture}
         alt="profile picture"
         priority={true}
-        sizes="(max-width: 768px) 35vw, (max-width: 1200px) 40vw, 35vw"
+        width={640 / 2}
+        height={959 /2}
       />
     </animated.div>
   )

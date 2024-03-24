@@ -1,9 +1,6 @@
-@import "../../variables";
-@import "../responsiveness";
-
 .red-flow {
   position: absolute;
-  z-index: -2;
+  z-index: -999;
   width: 100vw;
   height: 100vh;
   margin-top: 8rem;

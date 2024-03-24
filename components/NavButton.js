@@ -1,8 +1,6 @@
 import React from "react"
 import Link from "next/link"
 import PropTypes from "prop-types"
-import "@/styles/sass/components/navButton.scss"
-
 export default function NavButton({ href, setToggleNav, toggleNav, title }) {
   return (
     <button
