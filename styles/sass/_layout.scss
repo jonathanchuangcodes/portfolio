@@ -1,9 +1,9 @@
 @import "./variables";
 @import "./components/responsiveness.scss";
 
-  main {
-    padding: 0 8rem 0 8rem;
-  }
+main {
+  padding: 0 8rem 0 8rem;
+}
 
 .site-wrapper {
   min-height: 100vh;
@@ -13,7 +13,7 @@
 }
 
 .site-foot {
-  margin: 3vw 0 1vw;
+  padding: 3vw 0 1vw;
   text-align: center;
   color: color($color-border l(-20%));
   font-size: 1.4rem;
@@ -31,6 +31,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 2rem;
 }
 
 .site-head {

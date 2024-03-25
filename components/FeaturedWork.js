@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -9,8 +11,10 @@ import {
   NodeFill,
 } from "akar-icons"
 import PropTypes from "prop-types"
+import { useSpring, animated } from "@react-spring/web"
 
 export default function FeaturedWork({ work }) {
+  const [{ y }, set] = useSpring(() => ({ y: 0, color: "#fff" }))
   return (
     <Link href={"/works/" + work.slug} className="featured-work-link">
       <div
@@ -18,7 +22,11 @@ export default function FeaturedWork({ work }) {
           work.thumbnail ? `with-image` : `no-image`
         }`}
       >
-        <div className="featured-work-content">
+        <animated.div
+          className="featured-work-content"
+          onMouseEnter={() => set({ y: 100, color: "#fff" })}
+          onMouseLeave={() => set({ y: 0, color: "#fff" })}
+        >
           <div
             className="featured-work-text-container"
             style={{ backgroundColor: work.color }}
@@ -68,7 +76,9 @@ export default function FeaturedWork({ work }) {
           </div>
           <div
             className="featured-work-image-container"
-            style={{ backgroundColor: work.color }}
+            style={{
+              backgroundColor: work.color,
+            }}
           >
             <Image
               src={work.thumbnail}
@@ -78,7 +88,11 @@ export default function FeaturedWork({ work }) {
               style={{ objectFit: "cover" }}
             />
           </div>
-        </div>
+          <animated.div
+            style={{ transform: y.interpolate(v => `translateY(${v}%`) }}
+            className="glance"
+          />
+        </animated.div>
       </div>
     </Link>
   )

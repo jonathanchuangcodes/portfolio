@@ -5,6 +5,7 @@
   "main": "page.js",
   "author": "Jonathan Chuang <jchuangsa@gmail.com>",
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.16",
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "8.55.0",

@@ -54,6 +54,10 @@
   flex-direction: column;
   justify-content: center;
 
+  h2, p {
+    z-index: 999;
+  }
+
   @include for-phone-only {
     padding: 0.5rem;
     justify-content: center;

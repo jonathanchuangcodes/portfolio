@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="3435.1836"
+   height="2134.3203"
+   version="1.1"
+   id="svg3913"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="gradient_0"
+       gradientUnits="userSpaceOnUse"
+       x1="819.6134"
+       y1="179.67606"
+       x2="706.94574"
+       y2="596.73962"
+       gradientTransform="translate(-3.5546875e-5,53.708442)">
+      <stop
+         offset="0"
+         stop-color="#CCCBCC"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="white"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <path
+     fill="url(#gradient_0)"
+     d="M -3.5546875e-5,120.17574 V 53.708442 H 220.66096 h 25.635 102.867 64.88 6.195 286.216 6.396 107.71 351.31994 84.74 218.13 25.25 v 11.2468 70.989298 1.6262 6.4087 2.9297 9.2663 4.68 3.104 6.693 11.989 17.757 6.199 7.694 0.71 22.805 7.136 4.256 18.049 5.001 67.023 11.112 9.284 6.351 4.645 2.347 6.124 7.123 7.817 9.974 7.038 5.059 36.358 5.512 9 5.702 4.822 5.325 3.008 71.01 2.362 14.276 27.307 49.763 120.844 33.922 1.653 11.572 6.811 3.226 34.052 13.365 10.958 8.817 0.857 8.674 3.057 18.906 0.521 10.434 18.815 8.613 2.855 9.856 1.777 79.76296 14.93 14.09 22.19 12.11 137.15 6.63 10.34 9.97 5.23 261.13 H -3.5546875e-5 v -301.3 -11.49 -42.22 -3.56 -10.93 -6.63 -0.52 -19.37 -16.52 -3.2 -4.76 -7.84 -10.16 -0.81 -7.9 -131.77796 -4.219 -50.413 -3.956 -27.003 -6.372 -17.589 -9.411 -10.733 -4.153 -0.598 -6.78 -7.698 -54.444 -113.016 -35.102 -68.647 -19.723 -26.116 -23.438 -24.389 -23.796 -4.335 -4.964 -6.277 -5.578 -5.054 -4.373 -1.645 -41.735 -1.232 -8.409 -31.41 -2.991 -3.086 -5.087 -0.709 -13.45 -15.165 -8.733 -0.899 -4.971 -2.261 -4.135 -59.31 -2.822 z"
+     id="path2"
+     style="fill:url(#gradient_0)" />
+  <defs
+     id="defs74" />
+  <defs
+     id="defs86" />
+  <defs
+     id="defs119" />
+  <defs
+     id="defs121" />
+  <defs
+     id="defs169" />
+  <defs
+     id="defs175" />
+  <defs
+     id="defs245" />
+  <defs
+     id="defs274" />
+  <defs
+     id="defs279" />
+  <defs
+     id="defs301" />
+  <defs
+     id="defs330" />
+  <defs
+     id="defs364" />
+  <defs
+     id="defs393" />
+  <defs
+     id="defs395" />
+  <defs
+     id="defs409" />
+  <defs
+     id="defs416" />
+  <defs
+     id="defs418" />
+  <defs
+     id="defs431" />
+  <defs
+     id="defs434" />
+  <defs
+     id="defs595" />
+  <defs
+     id="defs614" />
+  <defs
+     id="defs665" />
+  <defs
+     id="defs676" />
+  <defs
+     id="defs718" />
+  <defs
+     id="defs775" />
+  <defs
+     id="defs787" />
+  <defs
+     id="defs848" />
+  <defs
+     id="defs939" />
+  <defs
+     id="defs947" />
+  <defs
+     id="defs963" />
+  <defs
+     id="defs1049" />
+  <defs
+     id="defs1092" />
+  <defs
+     id="defs1099" />
+  <defs
+     id="defs1114" />
+  <defs
+     id="defs1119" />
+  <defs
+     id="defs1125" />
+  <defs
+     id="defs1138" />
+  <defs
+     id="defs1145" />
+  <defs
+     id="defs1148" />
+  <defs
+     id="defs1161" />
+  <defs
+     id="defs1164" />
+  <defs
+     id="defs1166" />
+  <defs
+     id="defs1171" />
+  <defs
+     id="defs1178" />
+  <defs
+     id="defs1193" />
+  <defs
+     id="defs1200" />
+  <defs
+     id="defs1224" />
+  <defs
+     id="defs1227" />
+  <defs
+     id="defs1230" />
+  <defs
+     id="defs1238" />
+  <defs
+     id="defs1241" />
+  <defs
+     id="defs1244" />
+  <defs
+     id="defs1248" />
+  <defs
+     id="defs1252" />
+  <defs
+     id="defs1262" />
+  <defs
+     id="defs1275" />
+  <defs
+     id="defs1282" />
+  <defs
+     id="defs1288" />
+  <defs
+     id="defs1291" />
+  <defs
+     id="defs1356" />
+  <defs
+     id="defs1363" />
+  <defs
+     id="defs1542" />
+  <defs
+     id="defs1660" />
+  <defs
+     id="defs1721" />
+  <defs
+     id="defs1752" />
+  <defs
+     id="defs1832" />
+  <defs
+     id="defs1834" />
+  <defs
+     id="defs1852" />
+  <defs
+     id="defs1878" />
+  <defs
+     id="defs1900" />
+  <defs
+     id="defs1902" />
+  <defs
+     id="defs1909" />
+  <defs
+     id="defs1935" />
+  <defs
+     id="defs1942" />
+  <defs
+     id="defs1951" />
+  <defs
+     id="defs1971" />
+  <defs
+     id="defs1976" />
+  <defs
+     id="defs1999" />
+  <defs
+     id="defs2017" />
+  <defs
+     id="defs2042" />
+  <defs
+     id="defs2053" />
+  <defs
+     id="defs2062" />
+  <defs
+     id="defs2065" />
+  <defs
+     id="defs2087" />
+  <defs
+     id="defs2099" />
+  <defs
+     id="defs2105" />
+  <defs
+     id="defs2112" />
+  <defs
+     id="defs2114" />
+  <defs
+     id="defs2122" />
+  <defs
+     id="defs2125" />
+  <defs
+     id="defs2148" />
+  <defs
+     id="defs2150" />
+  <defs
+     id="defs2153" />
+  <defs
+     id="defs2157" />
+  <defs
+     id="defs2161" />
+  <defs
+     id="defs2166" />
+  <defs
+     id="defs2172" />
+  <defs
+     id="defs2174" />
+  <defs
+     id="defs2503" />
+  <defs
+     id="defs2581" />
+  <defs
+     id="defs2648" />
+  <defs
+     id="defs2664" />
+  <defs
+     id="defs2668" />
+  <defs
+     id="defs2697" />
+  <defs
+     id="defs2706" />
+  <defs
+     id="defs2713" />
+  <defs
+     id="defs2740" />
+  <defs
+     id="defs2794" />
+  <defs
+     id="defs2828" />
+  <defs
+     id="defs2832" />
+  <defs
+     id="defs2848" />
+  <defs
+     id="defs2852" />
+  <defs
+     id="defs2900" />
+  <defs
+     id="defs2902" />
+  <defs
+     id="defs2908" />
+  <defs
+     id="defs2910" />
+  <defs
+     id="defs2943" />
+  <defs
+     id="defs2946" />
+  <defs
+     id="defs2952" />
+  <defs
+     id="defs2989" />
+  <defs
+     id="defs3003" />
+  <defs
+     id="defs3009" />
+  <defs
+     id="defs3012" />
+  <defs
+     id="defs3019" />
+  <defs
+     id="defs3022" />
+  <defs
+     id="defs3088" />
+  <defs
+     id="defs3114" />
+  <defs
+     id="defs3116" />
+  <defs
+     id="defs3118" />
+  <defs
+     id="defs3120" />
+  <defs
+     id="defs3155" />
+  <defs
+     id="defs3210" />
+  <defs
+     id="defs3219" />
+  <defs
+     id="defs3309" />
+  <defs
+     id="defs3311" />
+  <defs
+     id="defs3321" />
+  <defs
+     id="defs3323" />
+  <defs
+     id="defs3346" />
+  <defs
+     id="defs3348" />
+  <defs
+     id="defs3357" />
+  <defs
+     id="defs3371" />
+  <defs
+     id="defs3373" />
+  <defs
+     id="defs3375" />
+  <defs
+     id="defs3386" />
+  <defs
+     id="defs3453" />
+  <defs
+     id="defs3469" />
+  <defs
+     id="defs3474" />
+  <defs
+     id="defs3479" />
+  <defs
+     id="defs3503" />
+  <defs
+     id="defs3520" />
+  <defs
+     id="defs3547" />
+  <defs
+     id="defs3576" />
+  <defs
+     id="defs3621" />
+  <defs
+     id="defs3635" />
+  <defs
+     id="defs3640" />
+  <defs
+     id="defs3662" />
+  <defs
+     id="defs3686" />
+  <defs
+     id="defs3694" />
+  <defs
+     id="defs3722" />
+  <defs
+     id="defs3760" />
+  <defs
+     id="defs3770" />
+  <defs
+     id="defs3777" />
+  <defs
+     id="defs3786" />
+  <defs
+     id="defs3797" />
+  <defs
+     id="defs3813" />
+  <defs
+     id="defs3829" />
+  <defs
+     id="defs3848" />
+  <defs
+     id="defs3858" />
+  <defs
+     id="defs3868" />
+  <defs
+     id="defs3882" />
+  <defs
+     id="defs3884" />
+  <defs
+     id="defs3886" />
+  <defs
+     id="defs3897" />
+  <defs
+     id="defs3899" />
+</svg>

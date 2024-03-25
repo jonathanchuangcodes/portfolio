@@ -4,12 +4,13 @@ import Mountains from "@/public/mountains.png"
 
 export default function FooterImage() {
   return (
-    <Image
-      className="footer-image"
-      src={Mountains}
-      alt="Footer Image"
-      sizes="(max-width: 600px) 100vw, 600px"
-      style={{ position: "relative", top: "100%", zIndex: -999 }}
-    />
+    <div style={{ width: "100%" }}>
+      <Image
+        className="footer-image"
+        src={Mountains}
+        alt="Footer Image"
+        style={{ zIndex: -999, objectFit: "scale-down" }}
+      />
+    </div>
   )
 }

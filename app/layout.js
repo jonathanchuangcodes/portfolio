@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
         </nav>
         <main>{children}</main>
         <footer className="site-foot">
-          &copy; {new Date().getFullYear()} &mdash; Built with ❤️ Remotely on {" "}
+          &copy; {new Date().getFullYear()} &mdash; Built with ❤️ Remotely on{" "}
           <a
             href="https://nextjs.org"
             target="_blank"
