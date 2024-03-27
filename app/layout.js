@@ -1,25 +1,42 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import useSticky from "@/hooks/useSticky"
 import NavButton from "@/components/NavButton"
+import FadeIn from "@/components/FadeIn"
+import Flow from "@/components/background/Flow"
+import Circuit from "@/components/background/Circuit"
 import PropTypes from "prop-types"
+import { useSpring, animated } from "@react-spring/web"
+import MountainsZero from "@/components/background/MountainsZero"
 
 export default function RootLayout({ children }) {
   const [toggleNav, setToggleNav] = useState(false)
   const { isSticky, element } = useSticky()
+  const [{ y }, set] = useSpring(() => ({ y: 0, color: "#fff" }))
+
+  useEffect(() => {
+    if (isSticky) {
+      set({ y: 0 })
+    } else {
+      set({ y: -100 })
+    }
+  }, [isSticky])
   return (
     <html lang="en">
-      <body className={`site-wrapper `}>
+      <body className={`site-wrapper`}>
+        <FadeIn>
+          <Flow />
+          <Circuit />
+        </FadeIn>
+        <animated.div
+          style={{ transform: y.to(v => `translateY(${v}%`) }}
+          className={`${isSticky ? `site-head-sticky` : ``}`}
+        />
         <nav
           ref={element}
           className={`site-head    
-          ${toggleNav ? `site-head-open` : ``}       
-          ${
-            isSticky
-              ? `site-head-sticky site-head-container`
-              : `site-head-container`
-          }`}
+          ${toggleNav ? `site-head-open` : ``}`}
         >
           <button
             className="nav-burger"
@@ -64,7 +81,10 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
+        <MountainsZero />
         <footer className="site-foot">
           &copy; {new Date().getFullYear()} &mdash; Built with ❤️ Remotely on{" "}
           <a

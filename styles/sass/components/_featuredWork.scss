@@ -59,13 +59,13 @@
   }
 
   @include for-phone-only {
-    padding: 0.5rem;
+    padding: 1rem;
     justify-content: center;
     min-height: 300px;
   }
 
   @include for-tablet-portrait-only {
-    padding: 0.5rem;
+    padding: 1rem;
     justify-content: center;
     min-height: 300px;
   }
@@ -90,15 +90,15 @@
 
   h2 {
     @include for-phone-only {
-      font-size: 1rem;
+      font-size: 2rem;
       line-height: 2rem;
-      margin: 0;
+      margin-bottom: 1rem;
     }
 
     @include for-tablet-portrait-up {
       font-size: 2rem;
       line-height: 3rem;
-      margin: 0;
+      margin-bottom: 1rem;
     }
 
     @include for-tablet-landscape-up {

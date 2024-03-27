@@ -10,6 +10,15 @@
 #banner {
   width: 100%;
   @include for-phone-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include for-tablet-portrait-up {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
   }
 
@@ -36,7 +45,6 @@
   @include for-tablet-portrait-up {
     margin: 0 4rem 0 0;
   }
-
 }
 
 #profile-image-container {
@@ -46,9 +54,6 @@
     border: 2px solid black;
     border-radius: 16px;
   }
-
-
-
 }
 
 #sub-title {
@@ -135,5 +140,3 @@
   padding: 8vw;
   max-width: 1600px;
 }
-
-

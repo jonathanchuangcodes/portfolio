@@ -14,7 +14,7 @@ import PropTypes from "prop-types"
 import { useSpring, animated } from "@react-spring/web"
 
 export default function FeaturedWork({ work }) {
-  const [{ y }, set] = useSpring(() => ({ y: 0, color: "#fff" }))
+  const [{ y }, set] = useSpring(() => ({ y: 0 }))
   return (
     <Link href={"/works/" + work.slug} className="featured-work-link">
       <div
@@ -24,8 +24,8 @@ export default function FeaturedWork({ work }) {
       >
         <animated.div
           className="featured-work-content"
-          onMouseEnter={() => set({ y: 100, color: "#fff" })}
-          onMouseLeave={() => set({ y: 0, color: "#fff" })}
+          onMouseEnter={() => set({ y: 100 })}
+          onMouseLeave={() => set({ y: 0 })}
         >
           <div
             className="featured-work-text-container"
@@ -89,7 +89,7 @@ export default function FeaturedWork({ work }) {
             />
           </div>
           <animated.div
-            style={{ transform: y.interpolate(v => `translateY(${v}%`) }}
+            style={{ transform: y.to(v => `translateY(${v}%`) }}
             className="glance"
           />
         </animated.div>
