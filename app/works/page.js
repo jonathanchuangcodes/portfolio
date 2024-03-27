@@ -1,6 +1,7 @@
 import React from "react"
 import WorkCard from "@/components/WorkCard"
 import { getWorks } from "@/lib/works"
+import "@/styles/sass/main.scss"
 
 export default async function Works() {
   let postCounter = 0

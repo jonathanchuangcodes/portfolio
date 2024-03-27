@@ -4,6 +4,7 @@ import React from "react"
 import Image from "next/image"
 import AnimatedLogo from "@/components/AnimatedLogo"
 import ProfilePicture from "@/public/mahface.jpg"
+import "@/styles/sass/main.scss"
 
 import {
   File,
