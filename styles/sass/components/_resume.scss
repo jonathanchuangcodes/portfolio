@@ -4,10 +4,17 @@
 
 .resume-block {
   margin: 4rem 0;
-  padding: 20px;
+  padding: 4rem;
   border-radius: 16px;
   border: 2px solid #000;
   background: #fff;
+
+  @include for-phone-only {
+    padding: 1rem;
+    p {
+      font-size: 12pt;
+    }
+  }
 }
 
 .resume-header {
@@ -17,12 +24,17 @@
 .resume-technologies {
   display: flex;
   gap: 4rem;
-  margin-top: 4rem;
+  margin: 4rem 1rem 0 1rem;
 
   div {
     :hover {
       cursor: pointer;
     }
+  }
+
+  @include for-phone-only {
+    margin: 1rem 1rem 1rem 1rem;
+    gap: 2rem;
   }
 
   a {
