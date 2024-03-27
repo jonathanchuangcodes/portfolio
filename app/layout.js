@@ -9,11 +9,12 @@ import Circuit from "@/components/background/Circuit"
 import PropTypes from "prop-types"
 import { useSpring, animated } from "@react-spring/web"
 import MountainsZero from "@/components/background/MountainsZero"
-
+import { usePathname } from "next/navigation"
 export default function RootLayout({ children }) {
   const [toggleNav, setToggleNav] = useState(false)
   const { isSticky, element } = useSticky()
   const [{ y }, set] = useSpring(() => ({ y: 0, color: "#fff" }))
+  const pathname = usePathname()
 
   useEffect(() => {
     if (isSticky) {
@@ -25,10 +26,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`site-wrapper`}>
-        <FadeIn>
-          <Flow />
-          <Circuit />
-        </FadeIn>
+        {pathname === "/" && (
+          <FadeIn>
+            <Flow />
+            <Circuit />
+          </FadeIn>
+        )}
         <animated.div
           style={{ transform: y.to(v => `translateY(${v}%`) }}
           className={`${isSticky ? `site-head-sticky` : ``}`}
@@ -81,16 +84,23 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
-        <main>
-          {children}
-        </main>
-        <MountainsZero />
-        <footer className="site-foot">
+        <main>{children}</main>
+        {pathname === "/" && <MountainsZero />}
+        <footer
+          className="site-foot"
+          style={{
+            backgroundColor: pathname === "/" ? "#222121" : "#FFF",
+            color: pathname === "/" ? "#FFF" : "#222121",
+          }}
+        >
           &copy; {new Date().getFullYear()} &mdash; Built with ❤️ Remotely on{" "}
           <a
             href="https://nextjs.org"
             target="_blank"
             rel="noopener noreferrer"
+            style={{
+              color: pathname === "/" ? "#FFF" : "#222121",
+            }}
           >
             Nextjs
           </a>
