@@ -44,7 +44,7 @@ const WorkCard = ({ work, count }) => {
               className="work-card-image"
               src={work.thumbnail}
               alt={work.title + " thumbnail"}
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               fill
             />
           </Link>

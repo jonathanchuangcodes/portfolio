@@ -74,7 +74,7 @@
 
   &::before {
     transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      // transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 }
 

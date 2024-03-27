@@ -11,7 +11,7 @@ import { useSpring, animated } from "@react-spring/web"
 import MountainsZero from "@/components/background/MountainsZero"
 import { usePathname } from "next/navigation"
 export default function RootLayout({ children }) {
-  const [toggleNav, setToggleNav] = useState(false)
+  const [navToggle, setNavToggle] = useState(false)
   const { isSticky, element } = useSticky()
   const [{ y }, set] = useSpring(() => ({ y: 0, color: "#fff" }))
   const pathname = usePathname()
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   }, [isSticky])
   return (
     <html lang="en">
-      <body className={`site-wrapper`}>
+      <body>
         {pathname === "/" && (
           <FadeIn>
             <Flow />
@@ -39,13 +39,13 @@ export default function RootLayout({ children }) {
         <nav
           ref={element}
           className={`site-head    
-          ${toggleNav ? `site-head-open` : ``}`}
+          ${navToggle ? `site-head-open` : ``}`}
         >
           <button
             className="nav-burger"
             onClick={e => {
               e.preventDefault()
-              setToggleNav(!toggleNav)
+              setNavToggle(!navToggle)
             }}
           >
             <div
@@ -59,26 +59,23 @@ export default function RootLayout({ children }) {
               </div>
             </div>
           </button>
-          <div id="nav-links">
+          <div className="nav-links">
             <div className="nav site-head-left" role="menu">
               <NavButton
-                setToggleNav={setToggleNav}
+                setToggleNav={setNavToggle}
                 title={"Home"}
-                toggleNav={toggleNav}
                 href={`/`}
               />
             </div>
             <div className="nav site-head-right" role="menu">
               <NavButton
-                setToggleNav={setToggleNav}
+                setToggleNav={setNavToggle}
                 title={"Works"}
-                toggleNav={toggleNav}
                 href={`/works`}
               />
               <NavButton
-                setToggleNav={setToggleNav}
+                setToggleNav={setNavToggle}
                 title={"About"}
-                toggleNav={toggleNav}
                 href={`/about`}
               />
             </div>

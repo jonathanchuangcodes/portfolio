@@ -1,13 +1,15 @@
 import React from "react"
 import Link from "next/link"
 import PropTypes from "prop-types"
-export default function NavButton({ href, setToggleNav, toggleNav, title }) {
+import { usePathname } from "next/navigation"
+export default function NavButton({ href, setToggleNav, title }) {
+  const pathname = usePathname()
   return (
     <button
-      className="nav-button"
+      className={`nav-button ${pathname === href ? "nav-current" : ""}`}
       onClick={e => {
         e.preventDefault()
-        setToggleNav(!toggleNav)
+        setToggleNav(false)
       }}
     >
       <Link href={href}>{title}</Link>

@@ -1,10 +1,6 @@
 @import "./variables";
 @import "./components/responsiveness.scss";
 
-#nav-links {
-  display: none;
-}
-
 body {
   margin-bottom: 0;
   min-height: 100vh;
@@ -30,13 +26,18 @@ main {
 /* Site Navigation
 /* ---------------------------------------------------------- */
 
-#nav-links {
+.nav-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 2rem;
+
+  @include for-phone-only {
+    flex-direction: column;
+    z-index: -1;
+  }
 }
 
 .site-head {
@@ -66,7 +67,7 @@ main {
 
 .site-head-left {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   display: flex;
   align-items: center;
   margin-top: 4rem;
@@ -136,7 +137,7 @@ main {
 
 .site-head-right {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -203,6 +204,9 @@ main {
     height: initial;
     z-index: 9999;
     background: $color-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .nav-burger {
@@ -216,10 +220,7 @@ main {
   .site-head-left,
   .site-head-right {
     position: relative;
-    z-index: -1;
     height: auto;
-    transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition-delay: 1s;
   }
 
   .site-head-left a,
@@ -241,6 +242,7 @@ main {
   }
 
   .nav {
+    display: none;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
@@ -249,6 +251,7 @@ main {
   }
 
   .site-head-left {
+    z-index: 0;
     order: 2;
     margin: 0;
     width: 100%;
@@ -263,6 +266,7 @@ main {
   }
 
   .site-head-right {
+    z-index: 0;
     order: 3;
     width: 100%;
     margin-top: 3vw;
@@ -271,16 +275,6 @@ main {
   .social-links {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .site-head-open {
-    transition: background 0.5s ease-out;
-    transition-delay: 0.25;
-    z-index: 9999;
-  }
-
-  .site-head-open .site-head-container {
-    transition: height 0.2s ease-in;
   }
 
   .site-head-open .site-head-left {
@@ -293,13 +287,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .site-head-open .site-head-left,
   .site-head-open .site-head-right {
     z-index: 9000;
     height: auto;
-    transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    // transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
 
   .site-head-open .site-head-left a,
@@ -324,9 +319,5 @@ main {
     bottom: 0;
     transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: translateY(-4vw);
-  }
-
-  .site-head-open #nav-links {
-    display: initial;
   }
 }

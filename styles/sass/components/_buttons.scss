@@ -162,14 +162,6 @@ input {
   }
 }
 
-button:hover,
-.button:hover {
-  text-decoration: none;
-  color: $color-primary;
-  box-shadow: inset 0 0 0 2px color($color-primary l(-10%));
-  transition: 0.2s ease;
-}
-
 input {
   &[type="submit"].primary,
   &[type="reset"].primary,
@@ -185,17 +177,4 @@ button.primary,
   color: #fff !important;
   background-color: $color-primary;
   box-shadow: none;
-}
-
-input {
-  &[type="submit"].primary:hover,
-  &[type="reset"].primary:hover,
-  &[type="button"].primary:hover {
-    background-color: color($color-primary l(-10%));
-  }
-}
-
-button.primary:hover,
-.button.primary:hover {
-  background-color: color($color-primary l(-10%));
 }
